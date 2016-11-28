@@ -1,7 +1,10 @@
+/* Import Google Fonts selected font */
+@import "https://fonts.googleapis.com/css?family=Ubuntu";
+
 body, html{
     margin: 0 auto;
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    font-family: 'Ubuntu',Arial, "Arial Black", "Times New Roman", serif;
 }
 
 .container {
@@ -15,10 +18,13 @@ body, html{
 }
 .card {
     text-align: center;
-    background-color: rgba(153, 153, 153, 0.49);
+    background-color: #66cc99;
     height: 500px;
     width: 300px;
-    position: absolute;
+    min-height: 500px;
+    min-width: 300px;
+    margin-top: 10%;
+    margin-left: 40%;
     -webkit-transition: -webkit-transform 1s;
     -moz-transition: -moz-transform 1s;
     -o-transition: -o-transform 1s;
@@ -53,28 +59,31 @@ body, html{
 }
 .btn {
     margin-left: 25%;
-    display: block;
-    height: 35px;
+    height: auto;
     width: 50%;
     text-align: center;
-    background: #3498db;
-    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-    background-image: -o-linear-gradient(top, #3498db, #2980b9);
-    background-image: linear-gradient(to bottom, #3498db, #2980b9);
-    font-family: Arial, "Arial Black", "Times New Roman", serif;
+    background: #66cc99;
+    display: block;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
 }
 .btn:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
     text-decoration: none;
+}
+
+
+/* CSS For the rest of the doc*/
+
+.top_label{
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.generic_label{
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 20px;
 }

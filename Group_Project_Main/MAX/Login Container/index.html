@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+
+    FLIP CODE: http://pingmin-tech.com/flipcardjs
+
+    -->
+    <meta charset="UTF-8">
+    <title>Login Card Flip</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script>
+        // JQUERY CODE TO FLIP THE CARD
+
+        function rotate() {
+            $('.card').toggleClass('flipped');
+        }
+    </script>
+</head>
+<body>
+<div class="card">
+    <div class="front">
+        <!-- LOGIN FORM -->
+        <form>
+            <label>Welcome back</label>
+            <br>
+            <br>
+            <label>Username</label>
+            <br>
+            <input type="text"/>
+            <br>
+            <label>Password</label>
+            <br>
+            <input type="password">
+            <br>
+            <br>
+            <input class="btn" type="submit">
+        </form>
+        <button class="btn" onclick="rotate()">REGISTER</button>
+    </div>
+    <div class="back">
+        <!-- REGISTER FORM -->
+        <form>
+            <label>Register here</label>
+            <br>
+            <br>
+            <label>First Name</label>
+            <br>
+            <input type="text"/>
+            <br>
+            <label>Surname</label>
+            <br>
+            <input type="text"/>
+            <br>
+            <label>Email</label>
+            <br>
+            <input type="text"/>
+            <br>
+            <label>Username</label>
+            <br>
+            <input type="text"/>
+            <br>
+            <label>Password</label>
+            <br>
+            <input type="password"/>
+            <br>
+            <label>Password - repeat</label>
+            <br>
+            <input type="password"/>
+            <br>
+            <label>Security Question</label>
+            <br>
+            <input list="questions">
+            <datalist id="questions">
+                <option value="Q1">
+                <option value="Q2">
+                <option value="Q3">
+                <option value="Q4">
+            </datalist>
+            <br>
+            <label>Security Answer</label>
+            <br>
+            <input type="text"/>
+            <br>
+            <br>
+            <input class="btn" type="submit">
+        </form>
+        <button class="btn" onclick="rotate()">Back To Login</button>
+    </div>
+</div>
+</body>
+</html>

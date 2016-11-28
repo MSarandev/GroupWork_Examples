@@ -8,6 +8,9 @@ Gunmetal : #233237 <br>
 Rusty red: #984B43 <br>
 Yellow   : #EAC67A <br>
 
+#Logo img src
+https://lh6.googleusercontent.com/IWKoDNYJCWjvLz75JgiLe2VOPCU5Fvkb_thzSnXKnvExzUX6rjg7K0Qcu0swfBnHrZyHwHGV3bupsNo=w1920-h974-rw
+
 #Extra Info
 
 Add your own folder, and share code ideas you have about the project.

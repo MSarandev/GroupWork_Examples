@@ -3,10 +3,10 @@
 #Colour Scheme
 ![alt tag](https://designschool.canva.com/wp-content/uploads/sites/2/cache/2016/01/Palette_11/Palette_11-662x382.jpg)
 #Colour HEX Tags
-Navy Blue: #18121E
-Gunmetal : #233237
-Rusty red: #984B43
-Yellow   : #EAC67A
+Navy Blue: #18121E <br>
+Gunmetal : #233237 <br>
+Rusty red: #984B43 <br>
+Yellow   : #EAC67A <br>
 
 #Extra Info
 

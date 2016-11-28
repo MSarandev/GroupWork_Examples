@@ -2,14 +2,18 @@
     Main Page CSS
 */
 
+/* Import Google Fonts selected font */
+@import "https://fonts.googleapis.com/css?family=Ubuntu";
+
 
 /* Generic responsive setup for the HTML file */
 body, html{
-    background-color: azure;
+    background-color: #EAC67A;
     width: 100%;
     height: 100%;
     margin: 0 auto;
     overflow-x: hidden;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
 }
 
 /* Style all the divs and display borders - for now */
@@ -20,9 +24,11 @@ body, html{
     border: solid 1px #000000;
     width: 100%;
     /* Give the elements a minimum height to conserve styling */
-    min-height: 150px;
+    min-height: 50px;
     text-align: center;
     margin: 0 auto;
+    background-color: #18121E;
+    color: #ffffff;
 }
 
 .MAIN_DIV{
@@ -30,20 +36,26 @@ body, html{
     border: solid 1px #000000;
     width: 100%;
     /* Give the elements a minimum height to conserve styling */
-    min-height: 300px;
+    min-height: 100px;
     text-align: center;
     margin: 0 auto;
 }
 
 .FOOTER_DIV{
     display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
     border: solid 1px #000000;
     width: 100%;
     /* Give the elements a minimum height to conserve styling */
-    min-height: 100px;
+    min-height: 50px;
     text-align: center;
     margin: 0 auto;
     float: left;
+    background-color: #18121E;
+    color: #ffffff;
 }
 
 /* Some elements need to be above/below others */
@@ -57,3 +69,156 @@ body, html{
     /* WIDTH OVERRIDE */
     flex-direction: column;
 }
+
+#div_main_slot_left_clubs{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
+}
+#div_main_slot_left_filter{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+}
+
+/* Clubs container CSS START */
+
+.clubs_container_btn {
+    display: block;
+    height: auto;
+    width: auto;
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #984B43;
+    border: 1px solid #47231f;
+    text-decoration: none;
+}
+.clubs_container_btn:hover {
+    background-color: #6a352f;
+}
+.clubs_container_img_lg{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 140px;
+    height: 140px;
+}
+.clubs_container_li{
+    border-radius: 20px;
+    border: 1px solid #f5e3bd;
+    display: block;
+    width: 100%;
+    min-width: 70%;
+    margin: auto;
+    height: 150px;
+}
+.clubs_container_int_d_btn{
+    display: block;
+    float: left;
+    width: 100%;
+}
+.clubs_container_container_d{
+    overflow-x: hidden;
+    width: 100%;
+    overflow-y: scroll;
+}
+.clubs_container_ul{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    width: 90%;
+}
+.clubs_container_li_left_d{
+    float: left;
+    width: 20%;
+}
+.clubs_container_li_main_d{
+    margin-left: 50px;
+    float: left;
+    width: 70%;
+}
+.clubs_container_int_d_top{
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+}
+.clubs_container_int_d_btn{
+    min-width: 50px;
+}
+
+/* Clubs container CSS END */
+
+/* Custom Scrollbars code START */
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #aeb4f9;
+}
+::-webkit-scrollbar-thumb:active {
+    background: #000000;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+    border: 0px none #ffffff;
+    border-radius: 61px;
+}
+::-webkit-scrollbar-track:hover {
+    background: #000000;
+}
+::-webkit-scrollbar-track:active {
+    background: #329a9a;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* Custom Scrollbars code END */
+
+
+/* Filter buttons code START */
+/* ######################### */
+/* style the actual buttons */
+.filter_buttons_btn{
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #984B43;
+    border: 1px solid #47231f;
+    margin-right: 50px;
+}
+.filter_buttons_btn:hover{
+    background-color: #6a352f;
+}
+/* style the container */
+.filter_buttons_main_container{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+}
+
+.filter_buttons_row{
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 23%;
+    display: flex;
+    flex-direction: row;
+}
+/* Filter buttons code END */

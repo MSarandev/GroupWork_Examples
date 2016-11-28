@@ -11,7 +11,7 @@ Rusty red: #984B43 <br>
 Yellow   : #EAC67A <br>
 
 #Logo img src
-https://postimg.org/image/5274jl0v7/
+https://s13.postimg.org/ok1rzixt3/logo_blue.jpg
 
 #Extra Info
 

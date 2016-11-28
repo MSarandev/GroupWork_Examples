@@ -1,0 +1,9 @@
+$sql_queryuserID= "SELECT userID FROM USERLOGIN WHERE ";
+$sql_queryusername= "SELECT username FROM USERLOGIN WHERE ";
+$sql_querypassword= "SELECT password FROM USERLOGIN WHERE ";
+$sql_queryaccessLVL= "SELECT accessLVL FROM USERLOGIN WHERE ";
+$sql_queryemail= "SELECT email FROM USERLOGIN WHERE ";
+$sql_querysecQuestion= "SELECT secQuesation FROM USERLOGIN WHERE ";
+$sql_querysecAnswer= "SELECT secAnswer FROM USERLOGIN WHERE ";
+$sql_queryfirstName= "SELECT firstName FROM USERLOGIN WHERE ";
+$sql_querylastName= "SELECT lastName FROM USERLOGIN WHERE ";

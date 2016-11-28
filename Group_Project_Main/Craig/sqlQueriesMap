@@ -1,0 +1,12 @@
+$sql_querymarkerID= "SELECT markerID FROM MAP WHERE ";
+$sql_querymarkerName= "SELECT markerName FROM MAP WHERE ";
+$sql_querymarkerType= "SELECT markerType FROM MAP WHERE ";
+$sql_querymarkerLAT= "SELECT markerLAT FROM MAP WHERE ";
+$sql_querymarkerLNG= "SELECT markerLNG FROM MAP WHERE ";
+$sql_querymarkerImg= "SELECT markerImg FROM MAP WHERE ";
+$sql_querymarkerDescr= "SELECT markerDescr FROM MAP WHERE ";
+$sql_queryadminApproved= "SELECT adminApproved FROM MAP WHERE ";
+
+
+
+

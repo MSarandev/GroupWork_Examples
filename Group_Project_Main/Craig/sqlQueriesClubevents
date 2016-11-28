@@ -1,0 +1,5 @@
+$sql_queryeventID= "SELECT eventID FROM CLUB_EVENTS WHERE ";
+$sql_queryclubID= "SELECT clubID FROM CLUB_EVENTS WHERE ";
+$sql_queryeventDescr= "SELECT eventDescr FROM CLUB_EVENTS WHERE ";
+$sql_queryeventDay= "SELECT eventDay FROM CLUB_EVENTS WHERE ";
+$sql_queryeventTime= "SELECT eventTime FROM CLUB_EVENTS WHERE ";

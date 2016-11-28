@@ -1,0 +1,13 @@
+$sql_queryclubID= "SELECT clubID FROM CLUBS WHERE ";
+$sql_queryclubname= "SELECT clubname FROM CLUBS WHERE ";
+$sql_querycreatorID= "SELECT creatorID FROM CLUBS WHERE ";
+$sql_age_group= "SELECT age_group FROM CLUBS WHERE ";
+$sql_querycontact= "SELECT contact FROM CLUBS WHERE ";
+$sql_querylocation= "SELECT location FROM CLUBS WHERE ";
+$sql_querylongDescr= "SELECT longDescr FROM CLUBS WHERE ";
+$sql_queryheaderImg= "SELECT headerImg FROM CLUBS WHERE ";
+$sql_querybackgroundImg= "SELECT backgroundImg FROM CLUBS WHERE ";
+
+
+
+

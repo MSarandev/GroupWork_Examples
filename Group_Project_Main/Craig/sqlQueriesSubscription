@@ -1,0 +1,3 @@
+$sql_querysubID= "SELECT subID FROM SUBSCRIPTION WHERE ";
+$sql_queryuserID= "SELECT userID FROM SUBSCRIPTION WHERE ";
+$sql_querysclubID= "SELECT clubID FROM SUBSCRIPTION WHERE ";

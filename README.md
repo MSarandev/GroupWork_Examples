@@ -1,4 +1,4 @@
-PROJECT LIVE SRC: http://tmrgoportlethen.azurewebsites.net/
+PROJECT LIVE SRC: http://tmrgoportlethen.azurewebsites.net/Group_Project_Main/index.html
 
 #A working examples directory
 

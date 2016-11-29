@@ -13,21 +13,24 @@ body, html{
 }
 #top{
     background-color: #ffffff;
+    min-width: 310px;
 }
 
 #logo{
     margin: 0 auto;
     display: flex;
-    width: 40%;
-    height: 200px;
+    width: 500px;
+    height: 150px;
 }
 
 #btn_holder{
     width: auto;
-    margin-top: 10%;
-    margin-left: 36%;
     display: flex;
     text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
+    min-width: 500px;
 }
 
 .btnX{
@@ -36,6 +39,9 @@ body, html{
     text-decoration: none;
     text-align: center;
     width: 300px;
+    max-width: 300px;
+    min-width: 150px;
+    min-height: 50px;
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
     font-size: 25px;
     color: #ffffff;

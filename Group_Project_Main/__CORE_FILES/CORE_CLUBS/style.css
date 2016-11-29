@@ -99,7 +99,8 @@ body, html{
 .clubs_container_btn {
     display: block;
     height: auto;
-    width: 80%;
+    width: 50%;
+    min-width: 400px;
     text-align: center;
     font-size: 25px;
     color: #ffffff;
@@ -129,7 +130,6 @@ body, html{
 .clubs_container_int_d_btn{
     display: block;
     float: left;
-    width: 100%;
 }
 .clubs_container_container_d{
     background: #eac67a;
@@ -140,6 +140,7 @@ body, html{
     overflow-x: hidden;
     width: 100%;
     overflow-y: scroll;
+    min-width: 500px;
 }
 .clubs_container_ul{
     /* PERFECT CENTERING */
@@ -167,6 +168,7 @@ body, html{
     align-content: center;          !important;
     /* PERFECT CENTERING */
     flex-direction: row;
+    min-width: 450px;
 }
 .clubs_container_int_d_btn{
     min-width: 50px;
@@ -220,27 +222,6 @@ body, html{
 
 /* Filter buttons code START */
 /* ######################### */
-/* style the actual buttons */
-.filter_buttons_btn{
-    text-decoration: none;
-    text-align: center;
-    width: 100px;
-    min-width: 100px;
-    min-height: 35px;
-    height: 40px;
-    padding-top: 10px;
-    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
-    font-size: 25px;
-    color: #ffffff;
-    background-color: #984B43;
-    border: 1px solid #47231f;
-    margin-right: 50px;
-    margin-bottom: 20px;
-}
-.filter_buttons_btn:hover{
-    text-decoration: none;
-    background-color: #6a352f;
-}
 /* style the container */
 .filter_buttons_main_container{
     background: #eac67a;
@@ -248,43 +229,78 @@ body, html{
     background: -webkit-linear-gradient(top, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
     background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
+    /* PERFECT CENTERING */
+    display: flex;                !important;
+    justify-content: flex-start;    !important;
+    align-items: center;
+    /* PERFECT CENTERING */
+    flex-direction: row;
+    margin-left: 40px;
 }
 .filter_buttons_row{
-    width: 100%;
-    margin-top: auto;
     /* PERFECT CENTERING */
-    display: flex;              !important;
-    justify-content: center;    !important;
-    align-content: center;      !important;
+    display: flex;                !important;
+    justify-content: flex-start;    !important;
+    align-items: center;
     /* PERFECT CENTERING */
+    flex-direction: row;
+}
+/* style the actual buttons */
+.filter_buttons_btn{
+    text-decoration: none;
+    text-align: center;
+    width: 120px;
+    min-width: 100px;
+    min-height: 20px;
+    height: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #984B43;
+    border: 1px solid #47231f;
 }
 /* Filter buttons code END */
 
 /* Search text box & btn code START */
 #div_main_slot_right_search{
-
-}
-.search_text_box{
     /* PERFECT CENTERING */
     display: flex;              !important;
-    justify-content: center;    !important;
+    justify-content: flex-end;    !important;
     align-content: center;      !important;
+    align-items: center;
     /* PERFECT CENTERING */
+    flex-direction: row;
+}
+.search_text_box{
     min-width: 50%;
     max-width: 50%;
-    min-height: 50px;
+    min-height: 30px;
     max-height: 50px;
-    color: #ffffff;
+    color: #000;
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
     font-size: 20px;
-    background-color: #261d30;
-    border: 1px solid #984B43;
+    background-color: #fff;
+    border: 1px solid #e0ab38;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 10px;
 }
 .search_button_btn{
-
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+    min-width: 100px;
+    min-height: 20px;
+    height: 20px;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #984B43;
+    border: 1px solid #47231f;
+    margin-right: 20px;
 }
 /* Search text box & btn code END */

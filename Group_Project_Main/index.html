@@ -11,6 +11,12 @@
     <script type="text/javascript" src="waves.min.js"></script>
 
     <!-- WAVES FILES END   -->
+
+    <!-- JQUERY IMPORT -->
+    <!-- VERY IMPORTANT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- JQUERY IMPORT -->
+    <!-- VERY IMPORTANT -->
 </head>
 <body>
 <div id="top">
@@ -29,6 +35,12 @@
     <script>
         //Attach the waves effect to the btn
         Waves.attach('.btnX');
+        //Ripple on hover
+        $('.btnX').mouseenter(function() {
+            Waves.ripple(this, {wait: null});
+        }).mouseleave(function() {
+            Waves.calm(this);
+        });
         //Init
         Waves.init();
     </script>

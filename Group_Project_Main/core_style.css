@@ -49,10 +49,6 @@ body, html{
     border: 1px solid #47231f;
 }
 
-.btnX:hover{
-    background-color: #6a352f;
-}
-
 #btn1{
     border-top-left-radius: 15%;
     border-bottom-left-radius: 15%;

@@ -13,7 +13,11 @@
     <script type="text/javascript" src="waves.min.js"></script>
 
     <!-- WAVES FILES END   -->
-
+    <!-- JQUERY IMPORT -->
+    <!-- VERY IMPORTANT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- JQUERY IMPORT -->
+    <!-- VERY IMPORTANT -->
 </head>
 <body>
     <div class="HEADER_DIV" id="div_header_slot">
@@ -35,6 +39,12 @@
                         <script>
                             //Attach waves
                             Waves.attach('.filter_buttons_btn');
+                            //Ripple on hover
+                            $('.filter_buttons_btn').mouseenter(function() {
+                                Waves.ripple(this, {wait: null});
+                            }).mouseleave(function() {
+                                Waves.calm(this);
+                            });
                             //Init
                             Waves.init();
                         </script>
@@ -129,6 +139,12 @@
                 <script>
                     //Attach waves
                     Waves.attach('.clubs_container_btn');
+                    //Ripple on hover
+                    $('.clubs_container_btn').mouseenter(function() {
+                        Waves.ripple(this, {wait: null});
+                    }).mouseleave(function() {
+                        Waves.calm(this);
+                    });
                     //Init
                     Waves.init();
                 </script>
@@ -139,8 +155,21 @@
             <div class="MAIN_DIV" id="div_main_slot_right_search">
                 <input type="text"
                        class="search_text_box"
-                       placeholder="Search" />
+                       placeholder="Search Clubs" />
                 <a href="" class="search_button_btn">Search</a>
+                <!-- Attach Waves to these btns -->
+                <script>
+                    //Attach waves
+                    Waves.attach('.search_button_btn');
+                    //Ripple on hover
+                    $('.search_button_btn').mouseenter(function() {
+                        Waves.ripple(this, {wait: null});
+                    }).mouseleave(function() {
+                        Waves.calm(this);
+                    });
+                    //Init
+                    Waves.init();
+                </script>
             </div>
             <div class="MAIN_DIV" id="div_main_slot_right_events">
                 <p>Events box</p>

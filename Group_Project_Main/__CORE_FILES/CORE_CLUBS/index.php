@@ -22,7 +22,7 @@
 <body>
     <div class="HEADER_DIV" id="div_header_slot">
         <!-- DYNAMIC HEADER CODE HERE -->
-        <p>DYNAMIC HEADER!!</p>
+        <?php include 'header.php';?>
     </div>
 
     <div class="MAIN_DIV" id="div_main_slot">

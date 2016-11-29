@@ -142,7 +142,11 @@ body, html{
     overflow-y: scroll;
 }
 .clubs_container_ul{
-    display: flex;
+    /* PERFECT CENTERING */
+    display: flex;              !important;
+    justify-content: center;    !important;
+    align-content: center;      !important;
+    /* PERFECT CENTERING */
     flex-direction: column;
     margin-left: 0;
     width: 90%;
@@ -157,12 +161,20 @@ body, html{
     width: 70%;
 }
 .clubs_container_int_d_top{
-    margin-left: 0;
-    display: flex;
+    /* PERFECT CENTERING */
+    display: flex;                  !important;
+    justify-content: flex-start;    !important;
+    align-content: center;          !important;
+    /* PERFECT CENTERING */
     flex-direction: row;
 }
 .clubs_container_int_d_btn{
     min-width: 50px;
+    display: flex;                  !important;
+    flex-direction: row;            !important;
+    align-content: flex-end;        !important;
+    align-self: flex-end;           !important;
+    /* PERFECT CENTERING */
 }
 
 /* Clubs container CSS END */
@@ -213,6 +225,9 @@ body, html{
     text-decoration: none;
     text-align: center;
     width: 100px;
+    min-width: 100px;
+    min-height: 35px;
+    height: 40px;
     padding-top: 10px;
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
     font-size: 25px;
@@ -238,12 +253,38 @@ body, html{
     width: 100%;
     display: flex;
 }
-
 .filter_buttons_row{
     width: 100%;
-    margin-top: 20px;
-    margin-left: 23%;
-    display: flex;
-    flex-direction: row;
+    margin-top: auto;
+    /* PERFECT CENTERING */
+    display: flex;              !important;
+    justify-content: center;    !important;
+    align-content: center;      !important;
+    /* PERFECT CENTERING */
 }
 /* Filter buttons code END */
+
+/* Search text box & btn code START */
+#div_main_slot_right_search{
+
+}
+.search_text_box{
+    /* PERFECT CENTERING */
+    display: flex;              !important;
+    justify-content: center;    !important;
+    align-content: center;      !important;
+    /* PERFECT CENTERING */
+    min-width: 50%;
+    max-width: 50%;
+    min-height: 50px;
+    max-height: 50px;
+    color: #ffffff;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 20px;
+    background-color: #261d30;
+    border: 1px solid #984B43;
+}
+.search_button_btn{
+
+}
+/* Search text box & btn code END */

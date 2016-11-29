@@ -1,19 +1,3 @@
-
-/**
- * Created by PhpStorm.
- * User: 0702555
- * Date: 22/11/2016
- * Time: 13:53
-
- *Some comments edited on 29/11 by M.S.
-
-
-DOES NOT WORK YET OFC, ONLY SQL QUERIES WRITTEN PHP TO BE ADDED L8R
- */
-
-
-
-//a comment
 USE master
   GO
 
@@ -55,9 +39,9 @@ GO
 
 
 CREATE TABLE CLUBS (
-    clubID			int Identity(1,1)	NOT NULL,
-clubname        int Identity(1,1)	NOT NULL,
-creatorID		int Identity(1,1)	NOT NULL,
+clubID			int Identity(1,1)	NOT NULL,
+clubname        NVARCHAR(30)		NOT NULL,
+creatorID		int	NOT NULL,
 age_group		NVARCHAR(20)		NOT NULL,
 contact			NVARCHAR(30)		NULL,
 location		NVARCHAR(50)		NULL,
@@ -76,14 +60,14 @@ DROP TABLE SUBSCRIPTION
 GO
 
 CREATE TABLE SUBSCRIPTION (
-    subID				int Identity(1,1)	NOT NULL,
-userID				int Identity(1,1)	NOT NULL,
-clubID				int Identity(1,1)	NOT NULL
+subID				int Identity(1,1)	NOT NULL,
+userID				int 	NOT NULL,
+clubID				int 	NOT NULL
 
 CONSTRAINT pk_SUBSCRIPTION PRIMARY KEY (userID,subID,clubID),
-CONSTRAINT fk_SUBSCRIPTION FOREIGN KEY (userID)
+CONSTRAINT fk_userid FOREIGN KEY (userID)
 REFERENCES USERLOGIN(userID),
-CONSTRAINT fk_SUBSCRIPTION FOREIGN KEY (clubID)
+CONSTRAINT fk_clubid FOREIGN KEY (clubID)
 REFERENCES CLUBS(clubID)
 )
 
@@ -93,8 +77,8 @@ DROP TABLE CLUB_EVENTS
 GO
 
 CREATE TABLE CLUB_EVENTS (
-    eventID			int Identity(1,1)	NOT NULL,
-clubID			int Identity(1,1)	NOT NULL,
+    eventID		int Identity(1,1)	NOT NULL,
+clubID			int	NOT NULL,
 eventDescr		NVARCHAR(100)		NOT NULL,
 eventDay		NVARCHAR(20)		NOT NULL,
 eventTime		NVARCHAR(20)		NOT NULL,
@@ -112,13 +96,10 @@ CREATE TABLE MAP (
     markerID		int Identity(1,1)	NOT NULL,
 markerName		NVARCHAR(40)		NOT NULL,
 markerType		int					NOT NULL,
-markerLAT		FLOAT(10,6)		NOT NULL,
-markerLNG		FLOAT(10,6)		NOT NULL,
+markerLAT		numeric(10,6)		NOT NULL,
+markerLNG		numeric(10,6)		NOT NULL,
 markerImg		NVARCHAR(100)		NULL,
 markerDescript	NVARCHAR(100)		NULL,
 adminApproved	bit					NOT NULL
 
 CONSTRAINT pk_MAP PRIMARY KEY (markerID,markerName))
-
-
-

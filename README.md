@@ -10,8 +10,26 @@ Gunmetal : #233237 <br>
 Rusty red: #984B43 <br>
 Yellow   : #EAC67A <br>
 
+#Gradients
+Main (yellow): <br>
+background: #eac67a;<br>
+background: -moz-linear-gradient(top, #eac67a 0%, #e5c07b 53%, #e5c07b 100%);<br>
+background: -webkit-linear-gradient(top, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);<br>
+background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);<br>
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );<br>
+<br>
+<hr>
+Secondary (black/gun-metal): <br>
+background: #4c4c4c;<br>
+background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);<br>
+background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);<br>
+background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);<br>
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 );<br>
+<br>
+
 #Logo img src
-https://s13.postimg.org/ok1rzixt3/logo_blue.jpg
+JPEG: https://s13.postimg.org/ok1rzixt3/logo_blue.jpg <br>
+PNG : https://s21.postimg.org/wap8gtk1j/logo_blue.png
 
 #Extra Info
 

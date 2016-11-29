@@ -17,9 +17,10 @@ body, html{
     perspective: 800px;
 }
 .card {
+    color: #ffffff;
     text-align: center;
-    background-color: #66cc99;
-    height: 500px;
+    background-color: #18121E;
+    height: 565px;
     width: 300px;
     min-height: 500px;
     min-width: 300px;
@@ -58,19 +59,20 @@ body, html{
     transform: rotateY( 180deg );
 }
 .btn {
-    margin-left: 25%;
-    height: auto;
-    width: 50%;
+    float: left;
     text-align: center;
-    background: #66cc99;
-    display: block;
+    margin-left: 20px;
+    width: 120px;
+    height: 80px;
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 20px;
     color: #ffffff;
-    font-size: 18px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
+    background-color: #984B43;
+    border: 2px solid #47231f;
+    border-radius: 10px;
 }
 .btn:hover {
+    background-color: #6a352f;
     text-decoration: none;
 }
 
@@ -84,6 +86,42 @@ body, html{
 }
 
 .generic_label{
+    color: #d9d9d9;
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
     font-size: 20px;
+}
+
+.generic_txt_input{
+    color: #ffffff;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 20px;
+    width: 85%;
+    background-color: #261d30;
+    border: 1px solid #984B43;
+}
+
+#logo_img{
+    width: 100%;
+    height: 50%;
+    background-color: #d9d9d9;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#front_label1, #front_label2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 55px;
+    margin-left: 35%;
+}
+
+#front_label1{
+    margin-top: 50px;
+}
+
+#front_text2{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    margin-left: 6%;
 }

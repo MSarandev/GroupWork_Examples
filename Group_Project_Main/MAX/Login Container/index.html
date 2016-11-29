@@ -23,21 +23,28 @@
     <div class="front">
         <!-- LOGIN FORM -->
         <form>
-            <label class="top_label">Welcome back</label>
+            <img src="https://s21.postimg.org/wap8gtk1j/logo_blue.png"
+                 id="logo_img"/>
             <br>
             <br>
-            <label class="generic_label">Username</label>
+            <label class="generic_label"
+                   id="front_label1">Username</label>
             <br>
-            <input type="text"/>
+            <input class="generic_txt_input"
+                   id="front_text1"
+                   type="text"/>
             <br>
-            <label class="generic_label">Password</label>
+            <label class="generic_label"
+                   id="front_label2">Password</label>
             <br>
-            <input type="password">
+            <input class="generic_txt_input"
+                   id="front_text2"
+                   type="password">
             <br>
             <br>
             <input class="btn" type="submit">
         </form>
-        <button class="btn" onclick="rotate()">REGISTER</button>
+        <button class="btn" onclick="rotate()">Register</button>
     </div>
     <div class="back">
         <!-- REGISTER FORM -->
@@ -47,41 +54,41 @@
             <br>
             <label class="generic_label">First Name</label>
             <br>
-            <input type="text"/>
+            <input class="generic_txt_input" type="text"/>
             <br>
             <label class="generic_label">Surname</label>
             <br>
-            <input type="text"/>
+            <input class="generic_txt_input" type="text"/>
             <br>
             <label class="generic_label">Email</label>
             <br>
-            <input type="text"/>
+            <input class="generic_txt_input" type="text"/>
             <br>
             <label class="generic_label">Username</label>
             <br>
-            <input type="text"/>
+            <input class="generic_txt_input" type="text"/>
             <br>
             <label class="generic_label">Password</label>
             <br>
-            <input type="password"/>
+            <input class="generic_txt_input" type="password"/>
             <br>
             <label class="generic_label">Password - repeat</label>
             <br>
-            <input type="password"/>
+            <input class="generic_txt_input" type="password"/>
             <br>
             <label class="generic_label">Security Question</label>
             <br>
-            <input list="questions">
+            <input class="generic_txt_input" list="questions">
             <datalist id="questions">
-                <option value="Q1">
-                <option value="Q2">
-                <option value="Q3">
-                <option value="Q4">
+                <option value="What was the make of your first car?">
+                <option value="What is your favourite phone?">
+                <option value="What was your first postcode?">
+                <option value="What was the name of your first pet?">
             </datalist>
             <br>
             <label class="generic_label">Security Answer</label>
             <br>
-            <input type="text"/>
+            <input class="generic_txt_input" type="text"/>
             <br>
             <br>
             <input class="btn" type="submit">

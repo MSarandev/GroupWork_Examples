@@ -27,13 +27,21 @@ body, html{
     min-height: 50px;
     text-align: center;
     margin: 0 auto;
-    background-color: #18121E;
+    background: #4c4c4c;
+    background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+    background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+    background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 );
     color: #ffffff;
 }
 
 .MAIN_DIV{
     display: flex;
-    border: solid 1px #000000;
+    background: #eac67a;
+    background: -moz-linear-gradient(top, #eac67a 0%, #e5c07b 53%, #e5c07b 100%);
+    background: -webkit-linear-gradient(top, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
+    background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
     width: 100%;
     /* Give the elements a minimum height to conserve styling */
     min-height: 100px;
@@ -54,7 +62,11 @@ body, html{
     text-align: center;
     margin: 0 auto;
     float: left;
-    background-color: #18121E;
+    background: #4c4c4c;
+    background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+    background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+    background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 );
     color: #ffffff;
 }
 
@@ -88,7 +100,7 @@ body, html{
 .clubs_container_btn {
     display: block;
     height: auto;
-    width: auto;
+    width: 80%;
     text-align: center;
     font-size: 25px;
     color: #ffffff;
@@ -106,6 +118,7 @@ body, html{
     height: 140px;
 }
 .clubs_container_li{
+    background-color: #efd39a;
     border-radius: 20px;
     border: 1px solid #f5e3bd;
     display: block;
@@ -120,6 +133,11 @@ body, html{
     width: 100%;
 }
 .clubs_container_container_d{
+    background: #eac67a;
+    background: -moz-linear-gradient(top, #eac67a 0%, #e5c07b 53%, #e5c07b 100%);
+    background: -webkit-linear-gradient(top, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
+    background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
     overflow-x: hidden;
     width: 100%;
     overflow-y: scroll;
@@ -193,21 +211,29 @@ body, html{
 /* ######################### */
 /* style the actual buttons */
 .filter_buttons_btn{
+    text-decoration: none;
     text-align: center;
     width: 100px;
-    height: 50px;
+    padding-top: 10px;
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
     font-size: 25px;
     color: #ffffff;
     background-color: #984B43;
     border: 1px solid #47231f;
     margin-right: 50px;
+    margin-bottom: 20px;
 }
 .filter_buttons_btn:hover{
+    text-decoration: none;
     background-color: #6a352f;
 }
 /* style the container */
 .filter_buttons_main_container{
+    background: #eac67a;
+    background: -moz-linear-gradient(top, #eac67a 0%, #e5c07b 53%, #e5c07b 100%);
+    background: -webkit-linear-gradient(top, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
+    background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
     text-align: center;
     margin: 0 auto;
     width: 100%;

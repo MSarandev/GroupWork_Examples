@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Main Wireframe</title>
+    <title>Clubs</title>
     <!-- External CSS + JS -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
+
+    <!-- WAVES FILES BELOW -->
+
+    <link rel="stylesheet" type="text/css" href="waves.min.css"/>
+    <script type="text/javascript" src="waves.min.js"></script>
+
+    <!-- WAVES FILES END   -->
+
 </head>
 <body>
     <div class="HEADER_DIV" id="div_header_slot">
@@ -19,11 +27,18 @@
                 <!-- FILTER BUTTONS START -->
                 <div class="filter_buttons_main_container">
                     <div class="filter_buttons_row">
-                        <input type="button" class="filter_buttons_btn" value="BTN"/>
-                        <input type="button" class="filter_buttons_btn" value="BTN"/>
-                        <input type="button" class="filter_buttons_btn" value="BTN"/>
-                        <input type="button" class="filter_buttons_btn" value="BTN"/>
-                    </div>
+                        <a href="" class="filter_buttons_btn">Filter 1</a>
+                        <a href="" class="filter_buttons_btn">Filter 2</a>
+                        <a href="" class="filter_buttons_btn">Filter 3</a>
+                        <a href="" class="filter_buttons_btn">Filter 4</a>
+                        <!-- Attach Waves to these btns -->
+                        <script>
+                            //Attach waves
+                            Waves.attach('.filter_buttons_btn');
+                            //Init
+                            Waves.init();
+                        </script>
+                  </div>
                 </div>
                 <!-- FILTER BUTTONS END -->
             </div>
@@ -109,6 +124,13 @@
                         </li>
                     </ul>
                 </div>
+                <!-- Attach Waves to these btns -->
+                <script>
+                    //Attach waves
+                    Waves.attach('.clubs_container_btn');
+                    //Init
+                    Waves.init();
+                </script>
                 <!-- CLUBS CONTAINER END -->
             </div>
         </div>

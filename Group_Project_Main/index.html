@@ -5,24 +5,34 @@
     <title>Go Portlethen</title>
     <link rel="stylesheet" type="text/css" href="core_style.css">
     <script src="core_script.js"></script>
+    <!-- WAVES FILES BELOW -->
+
+    <link rel="stylesheet" type="text/css" href="waves.min.css"/>
+    <script type="text/javascript" src="waves.min.js"></script>
+
+    <!-- WAVES FILES END   -->
 </head>
 <body>
 <div id="top">
     <img id="logo"
-            src="https://lh6.googleusercontent.com/IWKoDNYJCWjvLz75JgiLe2VOPCU5Fvkb_thzSnXKnvExzUX6rjg7K0Qcu0swfBnHrZyHwHGV3bupsNo=w1920-h974-rw"/>
+            src="https://s13.postimg.org/ok1rzixt3/logo_blue.jpg "/>
 </div>
 <div id="btn_holder">
-    <input class="btnX"
-           id="btn1"
-           type="button"
-           value="Clubs"
-           onclick="window.location = '__CORE_FILES/CORE_CLUBS/index.html'"/>
+    <a href="__CORE_FILES/CORE_CLUBS/index.html"
+       class="btnX"
+       id="btn1">Clubs</a>
 
-    <input class="btnX"
-           id="btn2"
-           type="button"
-           value="Map"
-           onclick="window.location = '__CORE_FILES/CORE_MAP/index.html'"/>
+    <a href="__CORE_FILES/CORE_MAP/index.html"
+       class="btnX"
+       id="btn2">Map</a>
+
+    <script>
+        //Attach the waves effect to the btn
+        Waves.attach('.btnX');
+        //Init
+        Waves.init();
+    </script>
+
 </div>
 </body>
 </html>

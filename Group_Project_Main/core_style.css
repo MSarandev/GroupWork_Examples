@@ -45,8 +45,12 @@ body, html{
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
     font-size: 25px;
     color: #ffffff;
-    background-color: #984B43;
     border: 1px solid #47231f;
+    background: rgb(152,75,67);
+    background: -moz-linear-gradient(top, rgba(152,75,67,1) 0%, rgba(152,75,67,1) 41%, rgba(152,75,67,1) 41%, rgba(147,91,87,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
 }
 
 #btn1{

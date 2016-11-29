@@ -5,6 +5,8 @@
  * Date: 22/11/2016
  * Time: 13:53
 
+ *Some comments edited on 29/11 by M.S.
+
 
 DOES NOT WORK YET OFC, ONLY SQL QUERIES WRITTEN PHP TO BE ADDED L8R
  */
@@ -32,7 +34,7 @@ USE master
 IF OBJECT_ID('USERLOGIN', 'U') IS NOT NULL
   DROP TABLE USERLOGIN
 GO
-/* Create table Driver */
+/* Create table Userlogin */
 CREATE TABLE USERLOGIN (
     userID			 int Identity(1,1)		NOT NULL,
 	username				NVARCHAR(30)	NOT NULL,

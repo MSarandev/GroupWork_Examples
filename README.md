@@ -1,4 +1,6 @@
 PROJECT LIVE SRC: http://tmrgoportlethen.azurewebsites.net/Group_Project_Main/index.html
+<hr>
+<strong>ADMINER: </strong>http://tmrgoportlethen.azurewebsites.net/Group_Project_Main/__CORE_FILES/adminer.php
 
 #A working examples directory
 

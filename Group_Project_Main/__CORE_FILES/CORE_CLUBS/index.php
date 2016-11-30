@@ -52,6 +52,7 @@
                 </div>
                 <!-- FILTER BUTTONS END -->
             </div>
+            <!-- Clubs code below -->
             <div class="MAIN_DIV" id="div_main_slot_left_clubs">
                 <!-- Added code from container file 28/11/2016 -->
                 <!-- CLUBS CONTAINER START -->
@@ -100,7 +101,15 @@
                 <!-- CLUBS CONTAINER END -->
             </div>
         </div>
+        <!--
+            LEFT SECTION ABOVE
+            \/\/\/\/\/\/\/\/\/
+             :: :: :: :: :: ::
+            /\/\/\/\/\/\/\/\/\
+            RIGHT SECTION BELOW
+        -->
         <div class="MAIN_DIV" id="div_main_slot_right">
+            <!-- Search code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_search">
                 <input type="text"
                        class="search_text_box"
@@ -120,6 +129,7 @@
                     Waves.init();
                 </script>
             </div>
+            <!-- Events code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_events">
                 <!-- EVENTS CONTAINER START -->
                 <div class="events_container_container_d">
@@ -162,7 +172,7 @@
                 </script>
                 <!-- EVENTS CONTAINER END -->
             </div>
-            </div>
+            <!-- Bottom right container code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_bottom">
                 <p>Box</p>
             </div>

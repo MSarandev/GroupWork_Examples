@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<!-- EVENTS CONTAINER START -->
+<div class="events_container_container_d">
+    <ul class="events_container_ul">
+        <li class="events_container_li">
+            <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
+            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+            <!-- Description section -->
+            <div class="events_container_li_main_d">
+                <div class="events_container_int_heading_top">
+                    <p class="events_container_int_heading_par">CLUB NAME</p>
+                </div>
+                <div class="events_container_int_d_top">
+                    <p class="events_container_int_d_par">
+                        Event @ 00:00 on 00/00/00
+                    </p>
+                </div>
+            </div>
+            <!-- Button Section -->
+            <div class="events_container_int_d_btn">
+                <a href="" class="events_container_btn">Hide</a>
+            </div>
+            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+            <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->
+        </li>
+    </ul>
+</div>
+<!-- Attach Waves to these btns -->
+<script>
+    //Attach waves
+    Waves.attach('.events_container_btn');
+    //Ripple on hover
+    $('.events_container_btn').mouseenter(function() {
+        Waves.ripple(this, {wait: null});
+    }).mouseleave(function() {
+        Waves.calm(this);
+    });
+    //Init
+    Waves.init();
+</script>
+<!-- EVENTS CONTAINER END -->
+
+
+</body>
+</html>

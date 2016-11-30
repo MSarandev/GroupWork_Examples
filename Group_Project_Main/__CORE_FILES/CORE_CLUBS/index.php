@@ -121,7 +121,7 @@
                 </script>
             </div>
             <div class="MAIN_DIV" id="div_main_slot_right_events">
-                <!-- CLUBS CONTAINER START -->
+                <!-- EVENTS CONTAINER START -->
                 <div class="events_container_container_d">
                     <ul class="events_container_ul">
                         <li class="events_container_li">
@@ -134,7 +134,7 @@
                                 </div>
                                 <div class="events_container_int_d_top">
                                     <p class="events_container_int_d_par">
-                                        This is a clubs description. 100 words limit.
+                                        Event @ 00:00 on 00/00/00
                                     </p>
                                 </div>
                             </div>
@@ -150,7 +150,7 @@
                 <!-- Attach Waves to these btns -->
                 <script>
                     //Attach waves
-                    Waves.attach('.clubs_container_btn');
+                    Waves.attach('.events_container_btn');
                     //Ripple on hover
                     $('.events_container_btn').mouseenter(function() {
                         Waves.ripple(this, {wait: null});
@@ -160,7 +160,7 @@
                     //Init
                     Waves.init();
                 </script>
-                <!-- CLUBS CONTAINER END -->
+                <!-- EVENTS CONTAINER END -->
             </div>
             </div>
             <div class="MAIN_DIV" id="div_main_slot_right_bottom">

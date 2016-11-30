@@ -109,7 +109,8 @@ body, html{
 }
 
 /* Clubs container CSS START */
-
+/* /\/\/\/\/\/\/\/\/\/\/\/\  */
+/* Button styling below */
 .clubs_container_btn {
     display: flex;
     justify-content: center;
@@ -128,11 +129,13 @@ body, html{
     background: linear-gradient(to bottom, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
 }
+/* Club image (logo) styling below */
 .clubs_container_img_lg{
     display: flex;
     width: 80px;
     height: 80px;
 }
+/* LI Container styling below */
 .clubs_container_li{
     background-color: #efd39a;
     border-radius: 20px;
@@ -144,6 +147,7 @@ body, html{
     float: left;
     list-style: none;
 }
+/* Button wrapping container styling below */
 .clubs_container_int_d_btn{
     width: auto;
     max-width: 20%;
@@ -152,6 +156,7 @@ body, html{
     clear: left;        !important;
     margin-top: 5px;
 }
+/* Wrapping DIV styling below */
 .clubs_container_container_d{
     background: #eac67a;
     background: -moz-linear-gradient(top, #eac67a 0%, #e5c07b 53%, #e5c07b 100%);
@@ -163,6 +168,7 @@ body, html{
     overflow-y: scroll;
     min-width: 500px;
 }
+/* UL styling below */
 .clubs_container_ul{
     /* PERFECT CENTERING */
     display: flex;              !important;
@@ -173,6 +179,7 @@ body, html{
     margin-left: 0;
     width: 90%;
 }
+/* Container Left side styling below */
 .clubs_container_li_left_d{
     width: 20%;
     display: flex;
@@ -264,12 +271,14 @@ body, html{
     background-color: #efd39a;
     border-radius: 20px;
     border: 1px solid #f5e3bd;
-    min-width: 400px;
-    max-width: 600px;
-    margin: 0;
+    min-width: 350px;
+    max-width: 430px;
+    margin-top: 5px;
     height: auto;
     float: right;
     list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 .events_container_int_d_btn{
@@ -277,8 +286,8 @@ body, html{
     max-width: 80px;
     display: flex;              !important;
     flex-direction: column;     !important;
-    justify-content: flex-end;
-    clear: right;
+    align-items: flex-end;
+    align-self: flex-end;
     float: right;
 }
 .events_container_container_d{
@@ -313,14 +322,15 @@ body, html{
     /* PERFECT CENTERING */
     flex-direction: column;         !important;
     float: left;                   !important;
-    width: 80%;                     !important;
+    min-width: 350px;
+    max-width: 600px;
     height: 25px;
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0;
 }
 .events_container_int_heading_par{
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     height: 25px;
 }
 
@@ -346,7 +356,7 @@ body, html{
 .events_container_int_d_par{
     margin-top: 0;
     margin-bottom: 5px;
-    margin-left: 5px;
+    margin-left: 10px;
     height: 100%;
 }
 /* Events container CSS END */

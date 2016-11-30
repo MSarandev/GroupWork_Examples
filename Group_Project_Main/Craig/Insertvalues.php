@@ -19,5 +19,12 @@ INSERT INTO MAP (markerName,markerType,marketLAT,markerLNG,markerImg,markerDescr
 VALUES (//variable names)
 
 
+INSERT INTO SUBSCRIPTION (userID,clubID)
+VALUES (//variable names)
 
+INSERT INTO CLUBS (clubname,creatorID,age_group,contact,location,longDescr,headerImg,backgroundImg,shortDescr)
+VALUES (//variable names)
+
+INSERT INTO CLUB_EVENTS (clubID,eventDescr,eventDay,eventTime)
+VALUES (//variable names)
 ?>

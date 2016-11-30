@@ -5,12 +5,12 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="PHP Runtime" type="php">
+      <library name="PHP Runtime">
         <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+          <root url="file://H:/php-debug-pack-7.0.13-Win32-VC14-x86" />
         </CLASSES>
         <SOURCES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+          <root url="file://H:/php-debug-pack-7.0.13-Win32-VC14-x86" />
         </SOURCES>
       </library>
     </orderEntry>

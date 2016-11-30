@@ -22,7 +22,7 @@
 <body>
     <div class="HEADER_DIV" id="div_header_slot">
         <!-- DYNAMIC HEADER CODE HERE -->
-        <?php include 'header.php';?>
+        <?php include '__CORE_DOM_Elements/header.php';?>
     </div>
 
     <div class="MAIN_DIV" id="div_main_slot">
@@ -58,80 +58,29 @@
                 <div class="clubs_container_container_d">
                     <ul class="clubs_container_ul">
                         <li class="clubs_container_li">
-                            <div class="clubs_container_li_left_d">
-                                <img class="clubs_container_img_lg" src="https://iprodev.com/wp-content/uploads/nodejs.png"/>
-                            </div>
+                            <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- Description section -->
                             <div class="clubs_container_li_main_d">
+                                <div class="clubs_container_int_heading_top">
+                                    <p class="clubs_container_int_heading_par">CLUB NAME</p>
+                                </div>
                                 <div class="clubs_container_int_d_top">
-                                    <p>
+                                    <p class="clubs_container_int_d_par">
                                         This is a clubs description. 100 words limit.
-
                                     </p>
                                 </div>
-                                <div class="clubs_container_int_d_btn">
-                                    <a href="" class="clubs_container_btn">Club Name</a>
-                                </div>
                             </div>
-                        </li>
-                        <li class="clubs_container_li">
+                            <!-- Image section -->
                             <div class="clubs_container_li_left_d">
                                 <img class="clubs_container_img_lg" src="https://iprodev.com/wp-content/uploads/nodejs.png"/>
                             </div>
-                            <div class="clubs_container_li_main_d">
-                                <div class="clubs_container_int_d_top">
-                                    <p>
-                                        Club Description....
-                                    </p>
-                                </div>
-                                <div class="clubs_container_int_d_btn">
-                                    <a href="" class="clubs_container_btn">Club Name</a>
-                                </div>
+                            <!-- Button Section -->
+                            <div class="clubs_container_int_d_btn">
+                                <a href="" class="clubs_container_btn">Join Club</a>
                             </div>
-                        </li>
-                        <li class="clubs_container_li">
-                            <div class="clubs_container_li_left_d">
-                                <img class="clubs_container_img_lg" src="https://iprodev.com/wp-content/uploads/nodejs.png"/>
-                            </div>
-                            <div class="clubs_container_li_main_d">
-                                <div class="clubs_container_int_d_top">
-                                    <p>
-                                        Club Description....
-                                    </p>
-                                </div>
-                                <div class="clubs_container_int_d_btn">
-                                    <a href="" class="clubs_container_btn">Club Name</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="clubs_container_li">
-                            <div class="clubs_container_li_left_d">
-                                <img class="clubs_container_img_lg" src="https://iprodev.com/wp-content/uploads/nodejs.png"/>
-                            </div>
-                            <div class="clubs_container_li_main_d">
-                                <div class="clubs_container_int_d_top">
-                                    <p>
-                                        Club Description....
-                                    </p>
-                                </div>
-                                <div class="clubs_container_int_d_btn">
-                                    <a href="" class="clubs_container_btn">Club Name</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="clubs_container_li">
-                            <div class="clubs_container_li_left_d">
-                                <img class="clubs_container_img_lg" src="https://iprodev.com/wp-content/uploads/nodejs.png"/>
-                            </div>
-                            <div class="clubs_container_li_main_d">
-                                <div class="clubs_container_int_d_top">
-                                    <p>
-                                        Club Description....
-                                    </p>
-                                </div>
-                                <div class="clubs_container_int_d_btn">
-                                    <a href="" class="clubs_container_btn">Club Name</a>
-                                </div>
-                            </div>
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->
                         </li>
                     </ul>
                 </div>
@@ -172,7 +121,47 @@
                 </script>
             </div>
             <div class="MAIN_DIV" id="div_main_slot_right_events">
-                <p>Events box</p>
+                <!-- CLUBS CONTAINER START -->
+                <div class="events_container_container_d">
+                    <ul class="events_container_ul">
+                        <li class="events_container_li">
+                            <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- Description section -->
+                            <div class="events_container_li_main_d">
+                                <div class="events_container_int_heading_top">
+                                    <p class="events_container_int_heading_par">CLUB NAME</p>
+                                </div>
+                                <div class="events_container_int_d_top">
+                                    <p class="events_container_int_d_par">
+                                        This is a clubs description. 100 words limit.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Button Section -->
+                            <div class="events_container_int_d_btn">
+                                <a href="" class="events_container_btn">Hide</a>
+                            </div>
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- Attach Waves to these btns -->
+                <script>
+                    //Attach waves
+                    Waves.attach('.clubs_container_btn');
+                    //Ripple on hover
+                    $('.events_container_btn').mouseenter(function() {
+                        Waves.ripple(this, {wait: null});
+                    }).mouseleave(function() {
+                        Waves.calm(this);
+                    });
+                    //Init
+                    Waves.init();
+                </script>
+                <!-- CLUBS CONTAINER END -->
+            </div>
             </div>
             <div class="MAIN_DIV" id="div_main_slot_right_bottom">
                 <p>Box</p>

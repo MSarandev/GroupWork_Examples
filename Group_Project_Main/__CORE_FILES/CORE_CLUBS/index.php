@@ -52,11 +52,137 @@
                 </div>
                 <!-- FILTER BUTTONS END -->
             </div>
+            <!-- Clubs code below -->
             <div class="MAIN_DIV" id="div_main_slot_left_clubs">
                 <!-- Added code from container file 28/11/2016 -->
                 <!-- CLUBS CONTAINER START -->
                 <div class="clubs_container_container_d">
                     <ul class="clubs_container_ul">
+                        <li class="clubs_container_li">
+                            <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- Description section -->
+                            <div class="clubs_container_li_main_d">
+                                <div class="clubs_container_int_heading_top">
+                                    <p class="clubs_container_int_heading_par">CLUB NAME</p>
+                                </div>
+                                <div class="clubs_container_int_d_top">
+                                    <p class="clubs_container_int_d_par">
+                                        This is a clubs description. 100 words limit.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Image section -->
+                            <div class="clubs_container_li_left_d">
+                                <img class="clubs_container_img_lg" src="https://iprodev.com/wp-content/uploads/nodejs.png"/>
+                            </div>
+                            <!-- Button Section -->
+                            <div class="clubs_container_int_d_btn">
+                                <a href="" class="clubs_container_btn">Join Club</a>
+                            </div>
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->
+                        </li>
+                        <li class="clubs_container_li">
+                            <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- Description section -->
+                            <div class="clubs_container_li_main_d">
+                                <div class="clubs_container_int_heading_top">
+                                    <p class="clubs_container_int_heading_par">CLUB NAME</p>
+                                </div>
+                                <div class="clubs_container_int_d_top">
+                                    <p class="clubs_container_int_d_par">
+                                        This is a clubs description. 100 words limit.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Image section -->
+                            <div class="clubs_container_li_left_d">
+                                <img class="clubs_container_img_lg" src="https://iprodev.com/wp-content/uploads/nodejs.png"/>
+                            </div>
+                            <!-- Button Section -->
+                            <div class="clubs_container_int_d_btn">
+                                <a href="" class="clubs_container_btn">Join Club</a>
+                            </div>
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->
+                        </li>
+                        <li class="clubs_container_li">
+                            <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- Description section -->
+                            <div class="clubs_container_li_main_d">
+                                <div class="clubs_container_int_heading_top">
+                                    <p class="clubs_container_int_heading_par">CLUB NAME</p>
+                                </div>
+                                <div class="clubs_container_int_d_top">
+                                    <p class="clubs_container_int_d_par">
+                                        This is a clubs description. 100 words limit.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Image section -->
+                            <div class="clubs_container_li_left_d">
+                                <img class="clubs_container_img_lg" src="https://iprodev.com/wp-content/uploads/nodejs.png"/>
+                            </div>
+                            <!-- Button Section -->
+                            <div class="clubs_container_int_d_btn">
+                                <a href="" class="clubs_container_btn">Join Club</a>
+                            </div>
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->
+                        </li>
+                        <li class="clubs_container_li">
+                            <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- Description section -->
+                            <div class="clubs_container_li_main_d">
+                                <div class="clubs_container_int_heading_top">
+                                    <p class="clubs_container_int_heading_par">CLUB NAME</p>
+                                </div>
+                                <div class="clubs_container_int_d_top">
+                                    <p class="clubs_container_int_d_par">
+                                        This is a clubs description. 100 words limit.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Image section -->
+                            <div class="clubs_container_li_left_d">
+                                <img class="clubs_container_img_lg" src="https://iprodev.com/wp-content/uploads/nodejs.png"/>
+                            </div>
+                            <!-- Button Section -->
+                            <div class="clubs_container_int_d_btn">
+                                <a href="" class="clubs_container_btn">Join Club</a>
+                            </div>
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->
+                        </li>
+                        <li class="clubs_container_li">
+                            <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- Description section -->
+                            <div class="clubs_container_li_main_d">
+                                <div class="clubs_container_int_heading_top">
+                                    <p class="clubs_container_int_heading_par">CLUB NAME</p>
+                                </div>
+                                <div class="clubs_container_int_d_top">
+                                    <p class="clubs_container_int_d_par">
+                                        This is a clubs description. 100 words limit.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Image section -->
+                            <div class="clubs_container_li_left_d">
+                                <img class="clubs_container_img_lg" src="https://iprodev.com/wp-content/uploads/nodejs.png"/>
+                            </div>
+                            <!-- Button Section -->
+                            <div class="clubs_container_int_d_btn">
+                                <a href="" class="clubs_container_btn">Join Club</a>
+                            </div>
+                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                            <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->
+                        </li>
                         <li class="clubs_container_li">
                             <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
                             <!-- /\/\/\/\/\/\/\/\/\/\ -->
@@ -100,7 +226,15 @@
                 <!-- CLUBS CONTAINER END -->
             </div>
         </div>
+        <!--
+            LEFT SECTION ABOVE
+            \/\/\/\/\/\/\/\/\/
+             :: :: :: :: :: ::
+            /\/\/\/\/\/\/\/\/\
+            RIGHT SECTION BELOW
+        -->
         <div class="MAIN_DIV" id="div_main_slot_right">
+            <!-- Search code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_search">
                 <input type="text"
                        class="search_text_box"
@@ -120,8 +254,9 @@
                     Waves.init();
                 </script>
             </div>
+            <!-- Events code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_events">
-                <!-- CLUBS CONTAINER START -->
+                <!-- EVENTS CONTAINER START -->
                 <div class="events_container_container_d">
                     <ul class="events_container_ul">
                         <li class="events_container_li">
@@ -134,7 +269,7 @@
                                 </div>
                                 <div class="events_container_int_d_top">
                                     <p class="events_container_int_d_par">
-                                        This is a clubs description. 100 words limit.
+                                        Event @ 00:00 on 00/00/00
                                     </p>
                                 </div>
                             </div>
@@ -150,7 +285,7 @@
                 <!-- Attach Waves to these btns -->
                 <script>
                     //Attach waves
-                    Waves.attach('.clubs_container_btn');
+                    Waves.attach('.events_container_btn');
                     //Ripple on hover
                     $('.events_container_btn').mouseenter(function() {
                         Waves.ripple(this, {wait: null});
@@ -160,9 +295,9 @@
                     //Init
                     Waves.init();
                 </script>
-                <!-- CLUBS CONTAINER END -->
+                <!-- EVENTS CONTAINER END -->
             </div>
-            </div>
+            <!-- Bottom right container code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_bottom">
                 <p>Box</p>
             </div>

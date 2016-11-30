@@ -108,6 +108,10 @@ body, html{
     height: 10%;
 }
 
+#div_main_slot_right_events{
+    display: block;
+}
+
 /* Clubs container CSS START */
 /* /\/\/\/\/\/\/\/\/\/\/\/\  */
 /* Button styling below */
@@ -257,6 +261,7 @@ body, html{
     display: flex;
     justify-content: center;
     height: auto;
+    min-height: 20px; !important;
     min-width: 80px;
     max-width: 80px;
     text-align: center;
@@ -281,6 +286,7 @@ body, html{
     margin-top: 5px;
     margin-right: 40px;
     height: auto;
+    min-height: 50px; !important;
     float: right;
     list-style: none;
     display: flex;
@@ -304,26 +310,28 @@ body, html{
     background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
     overflow-x: hidden;
-    width: 100%;
     overflow-y: scroll;
+    width: 100%;
     min-width: 500px;
+    max-height: 250px;  !important;
     display: flex;
     justify-content: flex-end;
 }
 
-.events_container_ul{
-    /* PERFECT CENTERING */
-    display: flex;              !important;
-    justify-content: flex-end;    !important;
-    align-content: center;      !important;
-    /* PERFECT CENTERING */
-    flex-direction: column;
-    margin-right: 0;
-    width: auto;
-}
 /*
     DO NOT EDIT THE CODE BELOW
 */
+.events_container_ul{
+    /* PERFECT CENTERING */
+    display: flex;              !important;
+    justify-content: flex-start;    !important;
+    align-content: center;      !important;
+    /* PERFECT CENTERING */
+    flex-direction: column;
+    margin-left: 0;
+    width: auto;
+}
+
 .events_container_int_heading_top{
     /* PERFECT CENTERING */
     display: flex;                  !important;
@@ -335,6 +343,7 @@ body, html{
     min-width: 350px;
     max-width: 600px;
     height: 25px;
+    min-height: 25px; !important;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -343,6 +352,7 @@ body, html{
     margin-top: 0;
     margin-bottom: 0;
     height: 25px;
+    min-height: 25px; !important;
 }
 
 .events_container_li_main_d{
@@ -354,6 +364,7 @@ body, html{
     flex-direction: column;         !important;
     float: left;                    !important;
     height: 100%;                   !important;
+    min-height: 50px; !important;
     margin-top: 0;
 }
 
@@ -507,3 +518,10 @@ body, html{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
 }
 /* Search text box & btn code END */
+
+/* Bottom Right Box code START*/
+#div_main_slot_right_bottom{
+    display: flex;
+    flex-direction: column;
+}
+/* Bottom Right Box code END*/

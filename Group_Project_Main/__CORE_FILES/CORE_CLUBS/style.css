@@ -1,10 +1,16 @@
 /*
     Main Page CSS
+
+    !!!!!!!!
+        THIS IS A CORE FILE!
+        BE CAREFUL OF WHAT YOU DO!
+        DO NOT CHANGE ANYTHING W/O A BACKUP!
+        DO NOT PUSH ANYTHING W/O CHECKING!
+    !!!!!!!!
 */
 
 /* Import Google Fonts selected font */
 @import "https://fonts.googleapis.com/css?family=Ubuntu";
-
 
 /* Generic responsive setup for the HTML file */
 body, html{
@@ -18,6 +24,7 @@ body, html{
 /* Style all the divs and display borders - for now */
 /* Some of the IDs are used to override these styles  */
 
+/* Container styling below */
 .HEADER_DIV{
     display: flex;
     border: solid 1px #000000;
@@ -34,6 +41,7 @@ body, html{
     color: #ffffff;
 }
 
+/* Container styling below */
 .MAIN_DIV{
     display: flex;
     background: #eac67a;
@@ -48,6 +56,7 @@ body, html{
     margin: 0 auto;
 }
 
+/* Container styling below */
 .FOOTER_DIV{
     display: flex;
     position: absolute;
@@ -69,18 +78,21 @@ body, html{
     color: #ffffff;
 }
 
+/* Container elements styling */
 /* Some elements need to be above/below others */
 #div_main_slot_left{
     /* WIDTH OVERRIDE */
     flex-direction: column;
 }
 
+/* Container elements styling */
 /* Some elements need to float to the right of the container */
 #div_main_slot_right{
     /* WIDTH OVERRIDE */
     flex-direction: column;
 }
 
+/* Container elements styling */
 #div_main_slot_left_clubs{
     display: flex;
     flex-direction: row;
@@ -88,6 +100,8 @@ body, html{
     height: 600px;
     max-height: 600px;
 }
+
+/* Container elements styling */
 #div_main_slot_left_filter{
     display: flex;
     flex-direction: row;
@@ -97,39 +111,46 @@ body, html{
 /* Clubs container CSS START */
 
 .clubs_container_btn {
-    display: block;
+    display: flex;
+    justify-content: center;
     height: auto;
-    width: 80%;
+    width: 160px;
+    min-width: 80px;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     color: #ffffff;
-    background-color: #984B43;
     border: 1px solid #47231f;
+    border-bottom-left-radius: 20px;
     text-decoration: none;
-}
-.clubs_container_btn:hover {
-    background-color: #6a352f;
+    background: rgb(152,75,67);
+    background: -moz-linear-gradient(top, rgba(152,75,67,1) 0%, rgba(152,75,67,1) 41%, rgba(152,75,67,1) 41%, rgba(147,91,87,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
 }
 .clubs_container_img_lg{
-    margin-top: 5px;
-    margin-left: 5px;
-    width: 140px;
-    height: 140px;
+    display: flex;
+    width: 80px;
+    height: 80px;
 }
 .clubs_container_li{
     background-color: #efd39a;
     border-radius: 20px;
     border: 1px solid #f5e3bd;
-    display: block;
-    width: 100%;
-    min-width: 70%;
-    margin: auto;
-    height: 150px;
+    min-width: 400px;
+    max-width: 600px;
+    margin: 0;
+    height: auto;
+    float: left;
+    list-style: none;
 }
 .clubs_container_int_d_btn{
-    display: block;
-    float: left;
-    width: 100%;
+    width: auto;
+    max-width: 20%;
+    display: flex;      !important;
+    flex-direction: row;!important;
+    clear: left;        !important;
+    margin-top: 5px;
 }
 .clubs_container_container_d{
     background: #eac67a;
@@ -140,6 +161,7 @@ body, html{
     overflow-x: hidden;
     width: 100%;
     overflow-y: scroll;
+    min-width: 500px;
 }
 .clubs_container_ul{
     /* PERFECT CENTERING */
@@ -152,32 +174,182 @@ body, html{
     width: 90%;
 }
 .clubs_container_li_left_d{
-    float: left;
     width: 20%;
-}
-.clubs_container_li_main_d{
-    margin-left: 50px;
-    float: left;
-    width: 70%;
-}
-.clubs_container_int_d_top{
-    /* PERFECT CENTERING */
-    display: flex;                  !important;
-    justify-content: flex-start;    !important;
-    align-content: center;          !important;
-    /* PERFECT CENTERING */
+    display: flex;
     flex-direction: row;
+    justify-content: center;
 }
-.clubs_container_int_d_btn{
-    min-width: 50px;
-    display: flex;                  !important;
-    flex-direction: row;            !important;
-    align-content: flex-end;        !important;
-    align-self: flex-end;           !important;
+/*
+    DO NOT EDIT THE CODE BELOW
+*/
+.clubs_container_int_heading_top{
     /* PERFECT CENTERING */
+    display: flex;                  !important;
+    align-content: center;          !important;
+    align-items: center;            !important;
+    /* PERFECT CENTERING */
+    flex-direction: column;         !important;
+    float: right;                   !important;
+    width: 80%;                     !important;
+    height: 25px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.clubs_container_int_heading_par{
+    margin-top: 0;
+    margin-bottom: 5px;
+    height: 25px;
+}
+
+.clubs_container_li_main_d{
+    /* PERFECT CENTERING */
+    display: flex;                  !important;
+    align-content: flex-start;      !important;
+    align-items: flex-start;        !important;
+    /* PERFECT CENTERING */
+    flex-direction: column;         !important;
+    float:right;                    !important;
+    width: 80%;                     !important;
+    height: 100%;                   !important;
+}
+
+/*
+    DO NOT EDIT THE CODE ABOVE
+*/
+.clubs_container_int_d_top{
+    margin-top: 0;
+    width: auto;
+}
+.clubs_container_int_d_par{
+    margin-top: 0;
+    margin-bottom: 5px;
+    height: 100%;
 }
 
 /* Clubs container CSS END */
+
+/*
+    THE EVENTS CSS IS A COPY OF THE CLUBS
+    /\/\/\/\/\
+    Minor changes include:
+        floating right, instead of left
+        Generally lining up to the right of the screen
+
+    M.S.
+    30/11/2016
+*/
+
+/* Events container CSS START */
+
+.events_container_btn {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    border: 1px solid #47231f;
+    border-bottom-right-radius: 20px;
+    text-decoration: none;
+    background: rgb(152,75,67);
+    background: -moz-linear-gradient(top, rgba(152,75,67,1) 0%, rgba(152,75,67,1) 41%, rgba(152,75,67,1) 41%, rgba(147,91,87,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
+}
+
+.events_container_li{
+    background-color: #efd39a;
+    border-radius: 20px;
+    border: 1px solid #f5e3bd;
+    min-width: 400px;
+    max-width: 600px;
+    margin: 0;
+    height: auto;
+    float: right;
+    list-style: none;
+}
+
+.events_container_int_d_btn{
+    min-width: 80px;
+    max-width: 80px;
+    display: flex;              !important;
+    flex-direction: column;     !important;
+    justify-content: flex-end;
+    clear: right;
+    float: right;
+}
+.events_container_container_d{
+    background: #eac67a;
+    background: -moz-linear-gradient(top, #eac67a 0%, #e5c07b 53%, #e5c07b 100%);
+    background: -webkit-linear-gradient(top, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
+    background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
+    overflow-x: hidden;
+    width: 100%;
+    overflow-y: scroll;
+    min-width: 500px;
+}
+.events_container_ul{
+    /* PERFECT CENTERING */
+    display: flex;              !important;
+    justify-content: center;    !important;
+    align-content: center;      !important;
+    /* PERFECT CENTERING */
+    flex-direction: column;
+    margin-left: 0;
+    width: 90%;
+}
+/*
+    DO NOT EDIT THE CODE BELOW
+*/
+.events_container_int_heading_top{
+    /* PERFECT CENTERING */
+    display: flex;                  !important;
+    align-content: center;          !important;
+    align-items: center;            !important;
+    /* PERFECT CENTERING */
+    flex-direction: column;         !important;
+    float: left;                   !important;
+    width: 80%;                     !important;
+    height: 25px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.events_container_int_heading_par{
+    margin-top: 0;
+    margin-bottom: 5px;
+    height: 25px;
+}
+
+.events_container_li_main_d{
+    /* PERFECT CENTERING */
+    display: flex;                  !important;
+    align-content: flex-start;      !important;
+    align-items: flex-start;        !important;
+    /* PERFECT CENTERING */
+    flex-direction: column;         !important;
+    float: left;                    !important;
+    height: 100%;                   !important;
+    margin-top: 0;
+}
+
+/*
+    DO NOT EDIT THE CODE ABOVE
+*/
+.events_container_int_d_top{
+    margin-top: 0;
+    width: auto;
+}
+.events_container_int_d_par{
+    margin-top: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    height: 100%;
+}
+/* Events container CSS END */
 
 /* Custom Scrollbars code START */
 
@@ -220,27 +392,6 @@ body, html{
 
 /* Filter buttons code START */
 /* ######################### */
-/* style the actual buttons */
-.filter_buttons_btn{
-    text-decoration: none;
-    text-align: center;
-    width: 100px;
-    min-width: 100px;
-    min-height: 35px;
-    height: 40px;
-    padding-top: 10px;
-    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
-    font-size: 25px;
-    color: #ffffff;
-    background-color: #984B43;
-    border: 1px solid #47231f;
-    margin-right: 50px;
-    margin-bottom: 20px;
-}
-.filter_buttons_btn:hover{
-    text-decoration: none;
-    background-color: #6a352f;
-}
 /* style the container */
 .filter_buttons_main_container{
     background: #eac67a;
@@ -248,43 +399,86 @@ body, html{
     background: -webkit-linear-gradient(top, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
     background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
+    /* PERFECT CENTERING */
+    display: flex;                !important;
+    justify-content: flex-start;    !important;
+    align-items: center;
+    /* PERFECT CENTERING */
+    flex-direction: row;
+    margin-left: 40px;
 }
 .filter_buttons_row{
-    width: 100%;
-    margin-top: auto;
     /* PERFECT CENTERING */
-    display: flex;              !important;
-    justify-content: center;    !important;
-    align-content: center;      !important;
+    display: flex;                !important;
+    justify-content: flex-start;    !important;
+    align-items: center;
     /* PERFECT CENTERING */
+    flex-direction: row;
+}
+/* style the actual buttons */
+.filter_buttons_btn{
+    text-decoration: none;
+    text-align: center;
+    width: 120px;
+    min-width: 100px;
+    min-height: 20px;
+    height: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 20px;
+    color: #ffffff;
+    border: 1px solid #47231f;
+    background: rgb(152,75,67);
+    background: -moz-linear-gradient(top, rgba(152,75,67,1) 0%, rgba(152,75,67,1) 41%, rgba(152,75,67,1) 41%, rgba(147,91,87,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
 }
 /* Filter buttons code END */
 
 /* Search text box & btn code START */
 #div_main_slot_right_search{
-
-}
-.search_text_box{
     /* PERFECT CENTERING */
     display: flex;              !important;
-    justify-content: center;    !important;
+    justify-content: flex-end;    !important;
     align-content: center;      !important;
+    align-items: center;
     /* PERFECT CENTERING */
+    flex-direction: row;
+}
+.search_text_box{
     min-width: 50%;
     max-width: 50%;
-    min-height: 50px;
+    min-height: 30px;
     max-height: 50px;
-    color: #ffffff;
+    color: #000;
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
     font-size: 20px;
-    background-color: #261d30;
-    border: 1px solid #984B43;
+    background-color: #fff;
+    border: 1px solid #e0ab38;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 10px;
 }
 .search_button_btn{
-
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+    min-width: 100px;
+    min-height: 20px;
+    height: 20px;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 20px;
+    color: #ffffff;
+    border: 1px solid #47231f;
+    margin-right: 20px;
+    background: rgb(152,75,67);
+    background: -moz-linear-gradient(top, rgba(152,75,67,1) 0%, rgba(152,75,67,1) 41%, rgba(152,75,67,1) 41%, rgba(147,91,87,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
 }
 /* Search text box & btn code END */

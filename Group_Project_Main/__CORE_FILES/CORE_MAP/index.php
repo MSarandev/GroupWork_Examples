@@ -6,6 +6,11 @@
     <!-- External CSS + JS -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
+    <!-- JQUERY IMPORT -->
+    <!-- VERY IMPORTANT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- JQUERY IMPORT -->
+    <!-- VERY IMPORTANT -->
 </head>
 <body>
     <div class="HEADER_DIV" id="div_header_slot">

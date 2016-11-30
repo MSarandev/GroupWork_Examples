@@ -11,6 +11,12 @@
     <script type="text/javascript" src="waves.min.js"></script>
 
     <!-- WAVES FILES END   -->
+
+    <!-- JQUERY IMPORT -->
+    <!-- VERY IMPORTANT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- JQUERY IMPORT -->
+    <!-- VERY IMPORTANT -->
 </head>
 <body>
 <div id="top">
@@ -18,17 +24,23 @@
             src="https://s13.postimg.org/ok1rzixt3/logo_blue.jpg "/>
 </div>
 <div id="btn_holder">
-    <a href="__CORE_FILES/CORE_CLUBS/index.html"
+    <a href="__CORE_FILES/CORE_CLUBS/index.php"
        class="btnX"
        id="btn1">Clubs</a>
 
-    <a href="__CORE_FILES/CORE_MAP/index.html"
+    <a href="__CORE_FILES/CORE_MAP/index.php"
        class="btnX"
        id="btn2">Map</a>
 
     <script>
         //Attach the waves effect to the btn
         Waves.attach('.btnX');
+        //Ripple on hover
+        $('.btnX').mouseenter(function() {
+            Waves.ripple(this, {wait: null});
+        }).mouseleave(function() {
+            Waves.calm(this);
+        });
         //Init
         Waves.init();
     </script>

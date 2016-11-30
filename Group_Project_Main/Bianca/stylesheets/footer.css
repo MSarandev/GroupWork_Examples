@@ -1,0 +1,37 @@
+#gpmap {
+  margin-top: 5%;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 5px 0px 5px #14191a;
+}
+
+/* line 249, ../sass/style.scss */
+ul.social li {
+  display: inline;
+}
+/* line 251, ../sass/style.scss */
+ul.social li img {
+  height: 60px;
+}
+
+/* line 256, ../sass/style.scss */
+footer {
+  background: #333333;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.90;
+}
+/* line 261, ../sass/style.scss */
+footer p, footer h3, footer a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* line 267, ../sass/style.scss */
+#second {
+  border-top: 1px solid #4D4E50;
+  background-color: #333333;
+  max-height: 50px;
+  text-align: center;
+  opacity: 0.95;
+}

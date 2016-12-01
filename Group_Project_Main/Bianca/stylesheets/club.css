@@ -1,0 +1,68 @@
+.paragraph {
+  overflow: hidden;
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  transform-style: inherit;
+}
+
+.paragraph, .paragraph:before {
+  background: 50% 50% / cover;
+}
+
+#cimg {
+  margin-top: 5%;
+  height: 100px;
+  border-radius: 50%;
+}
+
+section .block {
+  width: 100%;
+  float: left;
+  margin: 10% 2%;
+  text-align: left;
+  display: flex;
+}
+
+section .block p {
+  width: 300%;
+  background-color: white;
+  text-align: left;
+}
+
+section .block section {
+  width: 100%;
+  background-color: white;
+}
+
+input[type=submit] , input[type=reset]{
+    width: 100%;
+    background-color: #8E50A0;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover , input[type=reset]:hover{
+    background-color: #5D3C86;
+}
+
+@media screen and (max-width: 478px) {
+  section .block {
+    float: left;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+  }
+
+  section .block p {
+    width: 100%;
+  }
+}

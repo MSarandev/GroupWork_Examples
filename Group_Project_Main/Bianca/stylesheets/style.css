@@ -1,20 +1,19 @@
 @import "https://fonts.googleapis.com/css?family=Coda";
 @import "navbar.css";
 @import "footer.css";
-/* line 7, ../sass/style.scss */
+@import "club.css";
+
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 12, ../sass/style.scss */
 body {
   overflow-x: hidden;
   font-family: 'Coda', cursive;
   background-color: #fafafa;
 }
 
-/* line 18, ../sass/style.scss */
 h1 {
   text-align: center;
   font-size: 180%;
@@ -23,19 +22,16 @@ h1 {
   color: #7d7d7d;
 }
 
-/* line 26, ../sass/style.scss */
 h3 {
   line-height: 110%;
   padding: 5% 0;
 }
 
-/* line 31, ../sass/style.scss */
 p {
   padding: 1%;
   color: #4f4f4f;
 }
 
-/* line 191, ../sass/style.scss */
 header {
   background: url("../assets/images/black.jpg") no-repeat center center;
   -webkit-background-size: cover;
@@ -45,25 +41,22 @@ header {
   padding-top: 20%;
   padding-bottom: 20%;
 }
+
 @media screen and (max-width: 414px) {
-  /* line 191, ../sass/style.scss */
   header {
     padding-top: 70%;
     padding-bottom: 70%;
   }
 }
 
-/* line 202, ../sass/style.scss */
 .container {
   height: 150px;
 }
 
-/* line 206, ../sass/style.scss */
 .flexi {
   height: auto;
 }
 
-/* line 210, ../sass/style.scss */
 .header-intro {
   text-align: center;
   color: white;
@@ -71,52 +64,23 @@ header {
   max-width: 728px;
   margin: auto;
 }
-/* line 216, ../sass/style.scss */
+
 .header-intro::before {
   content: "";
   margin-right: 10px;
 }
 
-/* line 222, ../sass/style.scss */
-.paragraph {
-  overflow: hidden;
-  position: relative;
-  padding: 25vh 10%;
-  min-height: 100vh;
-  width: 100vw;
-  box-sizing: border-box;
-  transform-style: inherit;
-}
-/* line 230, ../sass/style.scss */
-.paragraph, .paragraph:before {
-  background: 50% 50% / cover;
-}
-
-/* line 235, ../sass/style.scss */
-section {
-  width: 29%;
-  float: left;
-  margin: 2% 2%;
-  text-align: center;
-}
-
-/* line 242, ../sass/style.scss */
-
-
 @media screen and (max-width: 478px) {
-  /* line 276, ../sass/style.scss */
   body {
     position: absolute;
   }
 
-  /* line 280, ../sass/style.scss */
   .header-intro {
     font-size: 100%;
     margin-left: 5%;
     margin-right: 5%;
   }
 
-  /* line 286, ../sass/style.scss */
   section {
     float: left;
     width: 100%;

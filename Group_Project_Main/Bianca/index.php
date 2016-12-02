@@ -16,11 +16,7 @@
 
 	<div class="paragraph">
         <section class="block">
-	        <?php 
-	        	require("components/club.html");
-	        	require("components/club.html");
-	        	require("components/club.html");
-	        ?>    
+	       <?php require("components/club.php") ?>     
         </section>
     </div>
 

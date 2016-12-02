@@ -49,6 +49,37 @@ header {
   }
 }
 
+.buttons-container {
+  padding-left: 5%;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.button {
+  background-color: #a6a6a6;
+  size: 5%;
+  padding: 1.5%;
+  margin: 0.5%;
+  margin-top: 0;
+  text-align: center;
+  border-radius: 2%;
+}
+
+.button:hover {
+  background-color: #6BBAA7;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -ms-transition: background 0.3s linear;
+  -o-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+
+.button a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #4f4f4f;
+}
+
 .container {
   height: 150px;
 }

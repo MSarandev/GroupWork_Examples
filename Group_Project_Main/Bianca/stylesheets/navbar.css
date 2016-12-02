@@ -186,3 +186,10 @@ nav {
   transition: all 0.400s;
   transition-delay: 0.370s;
 }
+
+@media screen and (max-width: 478px) {
+  .menu-links li a {
+    float: right;
+    clear: right;
+  }
+}

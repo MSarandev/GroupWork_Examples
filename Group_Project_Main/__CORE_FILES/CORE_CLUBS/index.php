@@ -142,7 +142,10 @@ session_start();
             </div>
             <!-- Bottom right container code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_bottom">
-                <p>Box</p>
+                <!-- generate the options here based on user acc. lvl -->
+                <?php
+                    include("../CORE SCRIPTS/is_admin.php");
+                ?>
             </div>
         </div>
     </div>

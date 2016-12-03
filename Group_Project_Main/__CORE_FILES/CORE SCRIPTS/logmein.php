@@ -46,7 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // run the query
                 if(mysqli_query($db, $sql)){
                     // show clubs
-                    header("location: ../CORE_CLUBS/index.php");
+                    // header("location: ../CORE_CLUBS/index.php");
+                    echo $sql;
                 }else{
                     echo '<script language="javascript">alert("SQL ERROR!")</script>';
 

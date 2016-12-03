@@ -51,7 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         // parse the user's name to the welcome script
                         $_SESSION["user_fname"] = $row["firstName"];
                         // open the clubs page
-                        header("location: ../CORE_CLUBS/index.php");
+                        echo $row["firstName"];
+                        //header("location: ../CORE_CLUBS/index.php");
                     } else {
                         // data false, reload
                         header("location: ../CORE_LOGIN/login.php");

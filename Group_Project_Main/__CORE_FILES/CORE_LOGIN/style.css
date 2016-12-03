@@ -13,8 +13,6 @@ body, html{
     height: 260px;
     position: relative;
     -webkit-perspective: 800px;
-    -moz-perspective: 800px;
-    -o-perspective: 800px;
     perspective: 800px;
 }
 .card {
@@ -32,8 +30,6 @@ body, html{
     -o-transition: -o-transform 1s;
     transition: transform 1s;
     -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transform-origin: 50% 50%;
 }
@@ -43,20 +39,14 @@ body, html{
     width: 300px;
     position: absolute;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 .card .back {
     -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
 }
 .card.flipped {
     -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
 }
 .btn {
@@ -99,15 +89,6 @@ body, html{
     background-color: #261d30;
     border: 1px solid #984B43;
 }
-#question_select{
-    color: #ffffff;
-    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
-    font-size: 16px;
-    width: 85%;
-    background-color: #261d30;
-    border: 1px solid #984B43;
-}
-
 #logo_img{
     width: 100%;
     height: 50%;
@@ -132,4 +113,14 @@ body, html{
     flex-direction: row;
     margin-bottom: 50px;
     margin-left: 6%;
+}
+
+
+#question_select{
+    color: #ffffff;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 16px;
+    width: 85%;
+    background-color: #261d30;
+    border: 1px solid #984B43;
 }

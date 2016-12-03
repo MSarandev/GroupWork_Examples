@@ -53,11 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // re-load login
                     //header("location: ../CORE_LOGIN/login.php");
                 }
-
-
-                // close the conn
-                $db.close();
-
             }
         }
     }

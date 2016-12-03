@@ -19,19 +19,6 @@ $db = new mysqli(
 // test our connection
 if ($db->connect_errno) {
     die ('Connection Failed :'.$db->connect_error );
+    $db->close();
 }
-
-$dom = new DOMDocument("1.0");
-$node = $dom->createElement("markers");
-$parnode = $dom->appendChild($node);
-
-
-$query = "SELECT username FROM USERLOGIN WHERE ";
-$result = $db->query($query);
-if (!$result) {
-    die('Nothing in result: ');
-}
-
-$result->close();
-$db->close();
 ?>

@@ -27,11 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // now that we have the details, connect to the DB
 
                 // Connect to the DB
-                $db = new mysqli(
-                    'eu-cdbr-azure-north-e.cloudapp.net',
-                    'bc3bbc9f5fc3c2',
-                    '0d11dcd6',
-                    'goportlethen_db' );
+                include("../core_db_connect.php");
 
                 // test our connection
                 if ($db->connect_errno) {
@@ -53,6 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // re-load login
                     //header("location: ../CORE_LOGIN/login.php");
                 }
+
+                // close the conn
+                $db->close();
             }
         }
     }

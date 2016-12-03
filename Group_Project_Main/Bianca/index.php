@@ -15,6 +15,21 @@
 	?>
 
 	<div class="paragraph">
+		<div class="buttons-container">
+            <div class="button">
+                <a href="#">Age group 1</a>
+            </div>
+            <div class="button">
+                <a href="#">Age group 2</a>
+            </div>
+            <div class="button">
+                <a href="#">Age group 3</a>
+            </div>
+            <div class="button">
+                <a href="#">New clubs</a>
+            </div>
+        </div>
+		
         <section class="block">
 	       <?php require("components/club.php") ?>     
         </section>

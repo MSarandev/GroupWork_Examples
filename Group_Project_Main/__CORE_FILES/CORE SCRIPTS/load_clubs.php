@@ -6,6 +6,8 @@
  * Time: 5:58 PM
  */
 
+echo "1";
+
 // get the user ID from the session
 $userID = $_SESSION['userID'];
 

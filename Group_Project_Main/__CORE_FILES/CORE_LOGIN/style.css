@@ -5,6 +5,11 @@ body, html{
     margin: 0 auto;
     width: 100%;
     font-family: 'Ubuntu',Arial, "Arial Black", "Times New Roman", serif;
+    background: #eac67a;
+    background: -moz-linear-gradient(top, #eac67a 0%, #e5c07b 53%, #e5c07b 100%);
+    background: -webkit-linear-gradient(top, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
+    background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
 }
 
 .container {
@@ -99,11 +104,19 @@ body, html{
     background-color: #261d30;
     border: 1px solid #984B43;
 }
+#questions{
+    color: #ffffff;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 16px;
+    width: 85%;
+    background-color: #261d30;
+    border: 1px solid #984B43;
+}
 
 #logo_img{
     width: 100%;
     height: 50%;
-    background-color: #d9d9d9;
+    background-color: #fff;
     padding-bottom: 5px;
     padding-top: 5px;
 }

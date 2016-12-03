@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // - - - - - -
                     // create sql query
                     try {
-                        $sql = "INSERT INTO USERLOGIN (username,pass,accessLvl,email,sedQues,secAns,firstName,lastName)
+                        $sql = "INSERT INTO USERLOGIN (username,pass,accessLvl,email,secQues,secAns,firstName,lastName)
                             VALUES ('".$username."','"
                             .$password."','"
                             .$access."','"

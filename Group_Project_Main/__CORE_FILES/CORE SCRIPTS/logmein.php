@@ -13,9 +13,6 @@ error_reporting(E_ALL);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Make sure that the register form is calling
     if (isset($_POST['submit_register'])) {
-        //DEBUG
-        echo '<script language="javascript">alert("1")</script>';
-        //DEBUG
         // Init all vars
         $first_name = "";
         $last_name = "";
@@ -47,9 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             isset($_POST["sec_a_txt"])
         ){
 
-            //DEBUG
-            echo '<script language="javascript">alert("2")</script>';
-            //DEBUG
             // store data in vars
             $username = trim($_POST["username_txt"]);
             $first_name = trim($_POST["first_name_txt"]);
@@ -64,10 +58,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // - - - -
                 // store the pass in a var
                 $password = trim($_POST["password_txt"]);
-
-                //DEBUG
-                echo '<script language="javascript">alert("3")</script>';
-                //DEBUG
 
                 // connect to the db
                 include("../core_db_connect.php");
@@ -84,9 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // run the query
                 if(mysqli_query($db, $sql)){
-                    //DEBUG
-                    echo '<script language="javascript">alert("4")</script>';
-                    //DEBUG
                     // check the return amount
                     if ($result->num_rows > 0) {
                         // check each entry for dupes
@@ -128,7 +115,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             .$last_name.
                             ")";
 
-                        echo '<script language="javascript">alert("Registration complete. Please login")</script>';
+                        // attach the query to the conn and run it
+                        if ($db->query($sql) === TRUE) {
+                            // insert OK
+                            echo '<script language="javascript">alert("Registration complete. Please login")</script>';
+                        }else{
+                            // insert FAILED
+                            echo '<script language="javascript">alert("Something went wrong. Try again")</script>';
+                        }
                     }catch(PDOException $e){
                         // error while adding record
                         echo $sql . "<br>" . $e->getMessage();

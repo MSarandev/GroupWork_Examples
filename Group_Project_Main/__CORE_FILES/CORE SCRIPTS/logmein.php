@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // run the query
                 if(mysqli_query($db, $sql)){
                     // add the results to an array
-                    while( $row = mysqli_fetch_assoc( $result)){
+                    while( $row = mysqli_fetch_assoc( $sql)){
                         $res_arr[] = $row; // Inside while loop
                     }
 

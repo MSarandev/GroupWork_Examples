@@ -119,27 +119,10 @@ session_start();
                 <!-- EVENTS CONTAINER START -->
                 <div class="events_container_container_d">
                     <ul class="events_container_ul">
-                        <li class="events_container_li">
-                            <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
-                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
-                            <!-- Description section -->
-                            <div class="events_container_li_main_d">
-                                <div class="events_container_int_heading_top">
-                                    <p class="events_container_int_heading_par">CLUB NAME</p>
-                                </div>
-                                <div class="events_container_int_d_top">
-                                    <p class="events_container_int_d_par">
-                                        Event @ 00:00 on 00/00/00
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- Button Section -->
-                            <div class="events_container_int_d_btn">
-                                <a href="" class="events_container_btn">Hide</a>
-                            </div>
-                            <!-- /\/\/\/\/\/\/\/\/\/\ -->
-                            <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->
-                        </li>
+                       <!-- Include the PHP script to load events -->
+                        <?php
+                            include("../CORE SCRIPTS/load_events.php");
+                        ?>
                     </ul>
                 </div>
                 <!-- Attach Waves to these btns -->

@@ -9,6 +9,11 @@
 $club_array = array(); // init
 $current_club = ""; //init
 
+// XSS vars
+$_SESSION["GLOBAL_club_names"] = array();
+$_SESSION["GLOBAL_club_ids"] = array();
+// XSS
+
 // get the user ID from the session
 $userID = $_SESSION['userID'];
 
@@ -55,6 +60,7 @@ if(count($club_array) != 0){
     // - - - -
     // prepare the variables
     $club_name = "";
+    $clubID = "";
     $creator_ID = "";
     $age_group = "";
     $contact_info = "";
@@ -89,6 +95,10 @@ if(count($club_array) != 0){
                     $header_img = $row["headerImg"];
                     $bck_img = $row["backgroundImg"];
                     $short_desc = $row["shortDescr"];
+
+                    // parse to GLOBAL
+                    array_push($_SESSION["GLOBAL_club_names"], $club_name);
+                    array_push($_SESSION["GLOBAL_club_ids"], $clubID);
 
                     // now we have the clubs' details
                     // - - - - - - -

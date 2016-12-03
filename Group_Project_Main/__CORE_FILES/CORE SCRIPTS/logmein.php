@@ -48,13 +48,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // check the return amount
                     if ($result->num_rows > 0) {
                         // data checks out
-                        // parse the user's name to the welcome script
+                        // parse the user's details to the session
                         while($row = $result->fetch_assoc()) {
+                            $_SESSION["user_ac_lvl"] = $row["accessLvl"];
                             $_SESSION["user_fname"] = $row["firstName"];
+                            $_SESSION["user_lname"] = $row["lastName"];
                         }
                         // open the clubs page
-                        echo $_SESSION["user_fname"];
-                        //header("location: ../CORE_CLUBS/index.php");
+                        header("location: ../CORE_CLUBS/index.php");
                     } else {
                         // data false, reload
                         header("location: ../CORE_LOGIN/login.php");

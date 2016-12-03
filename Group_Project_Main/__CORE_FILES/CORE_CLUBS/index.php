@@ -15,8 +15,8 @@ session_start();
 
     <!-- WAVES FILES BELOW -->
 
-    <link rel="stylesheet" type="text/css" href="waves.min.css"/>
-    <script type="text/javascript" src="waves.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CORE%20WAVES/waves.min.css"/>
+    <script type="text/javascript" src="../CORE%20WAVES/waves.min.js"></script>
 
     <!-- WAVES FILES END   -->
     <!-- JQUERY IMPORT -->
@@ -312,7 +312,7 @@ session_start();
 
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
-        <p>DYNAMIC FOOTER!!</p>
+        <?php include("../__CORE_DOM_Elements/footer.php"); ?>
     </div>
 </body>
 </html>

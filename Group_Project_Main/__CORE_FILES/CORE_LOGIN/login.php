@@ -7,6 +7,13 @@ include("../CORE SCRIPTS/logmein.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- WAVES FILES BELOW -->
+
+    <link rel="stylesheet" type="text/css" href="../CORE%20WAVES/waves.min.css"/>
+    <script type="text/javascript" src="../CORE%20WAVES/waves.min.js"></script>
+
+    <!-- WAVES FILES END   -->
+
     <!--
 
     FLIP CODE: http://pingmin-tech.com/flipcardjs
@@ -131,6 +138,19 @@ include("../CORE SCRIPTS/logmein.php");
             <input class="btn" type="submit" name="submit_register">
         </form>
         <button class="btn" onclick="rotate()">Back To Login</button>
+        <!-- Attach Waves to these btns -->
+        <script>
+            //Attach waves
+            Waves.attach('.btn');
+            //Ripple on hover
+            $('.btn').mouseenter(function() {
+                Waves.ripple(this, {wait: null});
+            }).mouseleave(function() {
+                Waves.calm(this);
+            });
+            //Init
+            Waves.init();
+        </script>
     </div>
 </div>
 </body>

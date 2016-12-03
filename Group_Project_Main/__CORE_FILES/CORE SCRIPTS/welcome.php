@@ -7,3 +7,6 @@
  */
 
 $name = "";
+
+echo "<p style='color:white;'>".$name."</p>";
+echo "THIS";

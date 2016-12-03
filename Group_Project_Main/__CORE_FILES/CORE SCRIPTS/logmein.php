@@ -49,9 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     if ($result->num_rows > 0) {
                         // data checks out
                         // parse the user's name to the welcome script
-                        $_SESSION["user_fname"] = $row["firstName"];
+                        while($row = $result->fetch_assoc()) {
+                            $_SESSION["user_fname"] = $row["firstName"];
+                        }
                         // open the clubs page
-                        echo $row["firstName"];
+                        echo $_SESSION["user_fname"];
                         //header("location: ../CORE_CLUBS/index.php");
                     } else {
                         // data false, reload

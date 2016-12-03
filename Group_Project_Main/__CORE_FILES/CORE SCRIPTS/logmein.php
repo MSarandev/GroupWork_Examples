@@ -10,8 +10,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$error = ""; //init the error var
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = "";
     $pass = "";
@@ -26,15 +24,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // get the pass
                 $pass = $_POST['pass_field'];
 
-                echo $username;
-                echo $pass;
+                // now that we have the details,
+
             }else{
-                $error = "Password cannot be empty";
+                echo '<script language="javascript">';
+                echo 'alert("Password cannot be empty!")';
+                echo '</script>';
             }
         }else{
-            $error = "Username cannot be empty";
+            echo '<script language="javascript">';
+            echo 'alert("Username cannot be empty!")';
+            echo '</script>';
         }
-        echo $username;
-        echo $pass;
     }
 }

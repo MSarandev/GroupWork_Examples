@@ -13,6 +13,9 @@ error_reporting(E_ALL);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Make sure that the register form is calling
     if (isset($_POST['submit_register'])) {
+        //DEBUG
+        echo '<script language="javascript">alert("1")</script>';
+        //DEBUG
         // Init all vars
         $first_name = "";
         $last_name = "";
@@ -43,6 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             and
             isset($_POST["sec_a_txt"])
         ){
+
+            //DEBUG
+            echo '<script language="javascript">alert("2")</script>';
+            //DEBUG
             // store data in vars
             $username = trim($_POST["username_txt"]);
             $first_name = trim($_POST["first_name_txt"]);
@@ -58,6 +65,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // store the pass in a var
                 $password = trim($_POST["password_txt"]);
 
+                //DEBUG
+                echo '<script language="javascript">alert("3")</script>';
+                //DEBUG
+
                 // connect to the db
                 include("../core_db_connect.php");
 
@@ -67,12 +78,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
 
                 // grab all usernames
-                $sql = "SELECT username FROM userlogin";
+                $sql = "SELECT * FROM userlogin";
                 // parse as res
                 $result = $db->query($sql);
 
                 // run the query
                 if(mysqli_query($db, $sql)){
+                    //DEBUG
+                    echo '<script language="javascript">alert("4")</script>';
+                    //DEBUG
                     // check the return amount
                     if ($result->num_rows > 0) {
                         // check each entry for dupes
@@ -103,11 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // - - - - - -
                     // create sql query
                     try {
-                        $sql = "INSERT INTO USERLOGIN (username,password,accessLVL,email,sedQuestion,secAnswer,firstName,lastName)
-                    VALUES ($username, $password, $access, $email, $sec_q, $sec_a, $first_name, $last_name)";
-
-                        //finally, close the conn
-                        $db->close();
+                        $sql = "INSERT INTO USERLOGIN (username,password,accessLVL,email,sedQuestion,secAnswer,firstName,lastName) VALUES ('$username', '$password', '$access', '$email', '$sec_q', '$sec_a', '$first_name', '$last_name')";
 
                         echo '<script language="javascript">alert("Registration complete. Please login")</script>';
                     }catch(PDOException $e){
@@ -115,12 +125,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         echo $sql . "<br>" . $e->getMessage();
                     }
                 }
+
+                //finally, close the conn
+                $db->close();
             }
         }
     }
 
     // check if login
-    if(isset($_POST['submit'])){
+    if(isset($_POST['submit_login'])){
         $username = "";
         $pass = "";
         //Check if the fields are empty

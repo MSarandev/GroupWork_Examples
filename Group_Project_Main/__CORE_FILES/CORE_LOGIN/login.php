@@ -55,7 +55,7 @@ include("../CORE SCRIPTS/logmein.php");
                    placeholder="*****">
             <br>
             <br>
-            <input name="submit" type="submit" class="btn"/>
+            <input name="submit_login" type="submit" class="btn"/>
         </form>
         <button class="btn" onclick="rotate()">Register</button>
     </div>
@@ -103,14 +103,21 @@ include("../CORE SCRIPTS/logmein.php");
             <br>
             <label class="generic_label">Security Question</label>
             <br>
-            <input class="generic_txt_input" list="questions">
-            <datalist id="questions"
+            <select id="questions"
                       name="sec_q_txt">
                 <option value="What was the make of your first car?">
+                    What was the make of your first car?
+                </option>
                 <option value="What is your favourite phone?">
-                <option value="What was your first postcode?">
+                    What is your favourite phone?
+                </option>
+                <option value="What is your favourite colour?">
+                    What is your favourite colour?
+                </option>
                 <option value="What was the name of your first pet?">
-            </datalist>
+                    What was the name of your first pet?
+                </option>
+            </select>
             <br>
             <label class="generic_label">Security Answer</label>
             <br>

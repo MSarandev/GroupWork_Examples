@@ -125,7 +125,7 @@ if(count($club_array) != 0){
                         </div>
                         <!-- Button Section -->
                         <div class="clubs_container_int_d_btn">
-                            <a href="" class="clubs_container_btn">Join Club</a>
+                            <p>Already a member</p>
                         </div>
                         <!-- /\/\/\/\/\/\/\/\/\/\ -->
                         <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->

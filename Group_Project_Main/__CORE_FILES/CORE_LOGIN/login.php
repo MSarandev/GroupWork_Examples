@@ -1,6 +1,5 @@
 <?php
 include("../CORE SCRIPTS/logmein.php");
-include("../CORE SCRIPTS/registerme.php");
 // !!!!!!!!!!
 // DO NOT ADD ANY CODE ABOVE. THE SESSION MUST START
 // !!!!!!!!!!

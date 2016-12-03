@@ -13,7 +13,6 @@ error_reporting(E_ALL);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = "";
     $pass = "";
-    $res_arr[]= "";
 
     // check if the user submitted
     if(isset($_POST['submit'])){
@@ -37,22 +36,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // form the sql query
                 $sql = "SELECT username, pass FROM USERLOGIN";
+                $sql = "SELECT username, pass FROM USERLOGIN WHERE `username` = '"
+                    .mysqli_real_escape_string($username). "' AND WHERE 'pass' = '"
+                    .mysqli_real_escape_string($pass). "'";
 
                 // run the query
                 if(mysqli_query($db, $sql)){
-                    // add the results to an array
-                    while( $row = mysqli_fetch_assoc( $sql)){
-                        $res_arr[] = $row; // Inside while loop
-                    }
-
-                    for($x = 0; $x < count($res_arr); $x++) {
-                        echo $res_arr[$x];
-                        echo "<br>";
-                    }
-
-
                     // show clubs
-                    //header("location: ../CORE_CLUBS/index.php");
+                    header("location: ../CORE_CLUBS/index.php");
                 }else{
                     echo '<script language="javascript">alert("SQL ERROR!")</script>';
 

@@ -27,7 +27,7 @@ include("../CORE SCRIPTS/logmein.php");
 <body>
 
 <!-- DEBUG LINES, REMOVE FROM STABLE -->
-<p>VERSION: 1.16</p>
+<p>VERSION: 1.17</p>
 <!-- DEBUG LINES, REMOVE FROM STABLE -->
 
 <div class="card">

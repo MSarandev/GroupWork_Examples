@@ -37,10 +37,10 @@ session_start();
                 <!-- FILTER BUTTONS START -->
                 <div class="filter_buttons_main_container">
                     <div class="filter_buttons_row">
-                        <a href="" class="filter_buttons_btn">Filter 1</a>
-                        <a href="" class="filter_buttons_btn">Filter 2</a>
-                        <a href="" class="filter_buttons_btn">Filter 3</a>
-                        <a href="" class="filter_buttons_btn">Filter 4</a>
+                        <a href="" class="filter_buttons_btn">My clubs</a>
+                        <a href="" class="filter_buttons_btn">Age group 1</a>
+                        <a href="" class="filter_buttons_btn">Age group 2</a>
+                        <a href="" class="filter_buttons_btn">Age group 3</a>
                         <!-- Attach Waves to these btns -->
                         <script>
                             //Attach waves

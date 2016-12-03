@@ -117,7 +117,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // - - - - - -
                     // create sql query
                     try {
-                        $sql = "INSERT INTO USERLOGIN (username,password,accessLVL,email,sedQuestion,secAnswer,firstName,lastName) VALUES ('$username', '$password', '$access', '$email', '$sec_q', '$sec_a', '$first_name', '$last_name')";
+                        $sql = "INSERT INTO USERLOGIN (username,pass,accessLvl,email,sedQues,secAns,firstName,lastName)
+                            VALUES (".$username.","
+                            .$password.","
+                            .$access.","
+                            .$email.","
+                            .$sec_q.","
+                            .$sec_a.","
+                            .$first_name.","
+                            .$last_name.
+                            ")";
 
                         echo '<script language="javascript">alert("Registration complete. Please login")</script>';
                     }catch(PDOException $e){

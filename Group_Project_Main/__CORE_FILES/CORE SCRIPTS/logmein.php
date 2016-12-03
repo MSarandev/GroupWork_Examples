@@ -102,7 +102,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // check if the username exists
                 if($user_dupe == 1){
                     // Alert the user to the issue
-                    echo '<script language="javascript">alert("Pick another username")</script>';
+                    echo '<script language="javascript">alert("Username Taken. Pick another one")</script>';
+                    // reload
+                    header("location: ../CORE_LOGIN/login.php");
                 }else{
                     // Username is ok, insert the data
                     // - - - - - -
@@ -123,7 +125,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         if(mysqli_query($db, $sql)){
                             // insert OK
                             echo '<script language="javascript">alert("Registration complete. Please login")</script>';
-
+                            // reload
+                            header("location: ../CORE_LOGIN/login.php");
                         }else{
                             // SQL error
                             echo '<script language="javascript">alert("SQL ERROR!")</script>';
@@ -138,6 +141,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 //finally, close the conn
                 $db->close();
+            }else{
+                // Passwords don't match
+                echo '<script language="javascript">alert("Passwords are different")</script>';
+                // reload
+                header("location: ../CORE_LOGIN/login.php");
             }
         }
     }

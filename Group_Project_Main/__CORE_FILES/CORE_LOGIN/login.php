@@ -108,16 +108,16 @@ include("../CORE SCRIPTS/logmein.php");
             <select id="questions"
                       name="sec_q_txt">
                 <option value="What was the make of your first car">
-                    What was the make of your first car?
+                    What was the make of your first car
                 </option>
                 <option value="What is your favourite phone">
-                    What is your favourite phone?
+                    What is your favourite phone
                 </option>
                 <option value="What is your favourite colour">
-                    What is your favourite colour?
+                    What is your favourite colour
                 </option>
                 <option value="What was the name of your first pet">
-                    What was the name of your first pet?
+                    What was the name of your first pet
                 </option>
             </select>
             <br>

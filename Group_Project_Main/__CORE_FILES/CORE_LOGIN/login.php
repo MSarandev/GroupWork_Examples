@@ -26,10 +26,6 @@ include("../CORE SCRIPTS/logmein.php");
 </head>
 <body>
 
-<!-- DEBUG LINES, REMOVE FROM STABLE -->
-<p>VERSION: 1.26    </p>
-<!-- DEBUG LINES, REMOVE FROM STABLE -->
-
 <div class="card">
     <div class="front">
         <!-- LOGIN FORM -->

@@ -22,7 +22,9 @@
 <body>
     <div class="HEADER_DIV" id="div_header_slot">
         <!-- DYNAMIC HEADER CODE HERE -->
-        <?php include '__CORE_DOM_Elements/header.php';?>
+        <?php include("../CORE SCRIPTS/welcome.php");
+            echo "<p style='color:white;'>".$name."</p>";
+        ?>
     </div>
 
     <div class="MAIN_DIV" id="div_main_slot">

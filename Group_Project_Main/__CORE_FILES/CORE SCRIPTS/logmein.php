@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // form the query
                 // !! Added security features - guard against injection
-                $sql = "SELECT userID, username, pass FROM userlogin WHERE username = '"
+                $sql = "SELECT * FROM userlogin WHERE username = '"
                     .mysqli_real_escape_string($db, $username)."' AND pass = '"
                     .mysqli_real_escape_string($db, $pass). "'";
                 // parse as res
@@ -47,7 +47,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if(mysqli_query($db, $sql)){
                     // check the return amount
                     if ($result->num_rows > 0) {
-                        // data checks out, go to clubs
+                        // data checks out
+                        include("welcome.php");
+                        // parse the user's name to the welcome script
+                        $name = $row["firstName"];
+                        // open the clubs page
                         header("location: ../CORE_CLUBS/index.php");
                     } else {
                         // data false, reload

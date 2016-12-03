@@ -125,8 +125,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         if(mysqli_query($db, $sql)){
                             // insert OK
                             echo '<script language="javascript">alert("Registration complete. Please login")</script>';
-                            // reload
-                            header("location: ../CORE_LOGIN/login.php");
                         }else{
                             // SQL error
                             echo '<script language="javascript">alert("SQL ERROR!")</script>';
@@ -144,8 +142,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }else{
                 // Passwords don't match
                 echo '<script language="javascript">alert("Passwords are different")</script>';
-                // reload
-                header("location: ../CORE_LOGIN/login.php");
             }
         }
     }

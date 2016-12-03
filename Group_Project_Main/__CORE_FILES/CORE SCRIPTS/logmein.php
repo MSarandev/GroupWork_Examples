@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
 
                 // form the sql query
-                $sql = "SELECT username, pass FROM USERLOGIN WHERE username = '".$username."' AND pass = '".$pass."'";
+                $sql = "SELECT username, pass FROM USERLOGIN WHERE username = $username AND pass = $pass";
 
                 // run the query
                 if(mysqli_query($db, $sql)){

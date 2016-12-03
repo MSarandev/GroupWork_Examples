@@ -310,7 +310,9 @@ session_start();
 
                     // checking user params
 
-                    echo $_SESSION;
+                    echo $_SESSION["user_ac_lvl"];
+                    echo $_SESSION["user_fname"];
+                    echo $_SESSION["user_lname"];
                 ?>
             </div>
         </div>

@@ -90,7 +90,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
                     } else {
                         // general get error
-                        echo '<script language="javascript">alert("Interesting, you broke something I see")</script>';
+                        echo '<script language="javascript">alert("Interesting, you broke something I see");';
+                        // reload
+                        echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                     }
                 }else{
                     // SQL error
@@ -102,7 +104,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // check if the username exists
                 if($user_dupe == 1){
                     // Alert the user to the issue
-                    echo '<script language="javascript">alert("Username Taken. Pick another one")</script>';
+                    echo '<script language="javascript">alert("Username Taken. Pick another one");';
+                    // reload
+                    echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                     // reload
                     header("location: ../CORE_LOGIN/login.php");
                 }else{
@@ -124,7 +128,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         // attach the query to the conn and run it
                         if(mysqli_query($db, $sql)){
                             // insert OK
-                            echo '<script language="javascript">alert("Registration complete. Please login")</script>';
+                            echo '<script language="javascript">alert("Registration complete. Please login");';
+                            // reload
+                            echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                         }else{
                             // SQL error
                             echo '<script language="javascript">alert("SQL ERROR!")</script>';
@@ -141,7 +147,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $db->close();
             }else{
                 // Passwords don't match
-                echo '<script language="javascript">alert("Passwords are different")</script>';
+                echo '<script language="javascript">alert("Passwords are different");';
+                // reload
+                echo 'window.location = "../CORE_LOGIN/login.php";</script>';
             }
         }
     }

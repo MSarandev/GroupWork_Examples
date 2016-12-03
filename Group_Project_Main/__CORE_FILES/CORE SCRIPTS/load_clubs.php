@@ -64,7 +64,13 @@ if($club_array.count() != 0){
     $bck_img = "";
     $short_desc = "";
 
+    //DEBUG
+    echo '<script language="javascript">alert("1")</script>';
+
     foreach($club_array as $arr_val){
+        //DEBUG
+        echo '<script language="javascript">alert("2")</script>';
+
         // create another query to pull the clubs' details & gen HTML
         $sql = "SELECT * FROM clubs WHERE clubID = '"
             .mysqli_real_escape_string($db, $arr_val)."'";
@@ -74,10 +80,20 @@ if($club_array.count() != 0){
 
         // run the query to get the club data
         if(mysqli_query($db, $sql)){
+            //DEBUG
+            echo '<script language="javascript">alert("3")</script>';
+
             // check the return amount
             if ($result->num_rows > 0) {
                 // data checks out
+
+                //DEBUG
+                echo '<script language="javascript">alert("4")</script>';
+
                 while($row = $result->fetch_assoc()) {
+                    //DEBUG
+                    echo '<script language="javascript">alert("5")</script>';
+
                     // start filling in the variables
                     $club_name = $row["clubname"];
                     $creator_ID = $row["creatorID"];
@@ -91,6 +107,10 @@ if($club_array.count() != 0){
 
                     // now we have the clubs' details
                     // - - - - - - -
+
+                    //DEBUG
+                    echo '<script language="javascript">alert("6")</script>';
+
                     // echo the html to show the club as a tab
                     echo '
                     <li class="clubs_container_li">

@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     echo mysqli_error($db);
 
                     // re-load login
-                    header("location: ../CORE_LOGIN/login.php");
+                    //header("location: ../CORE_LOGIN/login.php");
                 }
 
 

@@ -6,9 +6,6 @@
  * Time: 5:58 PM
  */
 
-//DEBUG
-echo '<script language="javascript">alert("v. 1.4")</script>';
-
 $club_array = array(); // init
 $current_club = ""; //init
 
@@ -38,6 +35,8 @@ if(mysqli_query($db, $sql)){
         while($row = $result->fetch_assoc()) {
             // store all ids in an array
             $club_array.array_push($row["clubID"]);
+
+            echo '<script language="javascript">alert("'.$club_array.count().'")</script>';
         }
     } else {
         // data false, reload

@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     if ($result->num_rows > 0) {
                         // output data of each row
                         while($row = $result->fetch_assoc()) {
-                            echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+                            echo "id: " . $row["userID"]. " - ID: " . $row["username"]. " " . $row["pass"]. "<br>";
                         }
                     } else {
                         echo "0 results";

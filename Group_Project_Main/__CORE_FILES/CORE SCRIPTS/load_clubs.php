@@ -6,6 +6,9 @@
  * Time: 5:58 PM
  */
 
+//DEBUG
+echo '<script language="javascript">alert("v. 1.4")</script>';
+
 $club_array = array(); // init
 $current_club = ""; //init
 

@@ -22,7 +22,7 @@
 <body>
     <div class="HEADER_DIV" id="div_header_slot">
         <!-- DYNAMIC HEADER CODE HERE -->
-        <?php include("../CORE SCRIPTS/welcome.php");?>
+        <?php echo "<p>".$_SESSION["user_fname"]."</p>";?>
     </div>
 
     <div class="MAIN_DIV" id="div_main_slot">

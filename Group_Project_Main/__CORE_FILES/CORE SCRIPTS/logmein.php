@@ -48,9 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // check the return amount
                     if ($result->num_rows > 0) {
                         // data checks out
-                        include("welcome.php");
                         // parse the user's name to the welcome script
-                        $name = $row["firstName"];
+                        $_SESSION["user_fname"] = $row["firstName"];
                         // open the clubs page
                         header("location: ../CORE_CLUBS/index.php");
                     } else {

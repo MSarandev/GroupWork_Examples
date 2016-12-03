@@ -37,7 +37,7 @@ if(mysqli_query($db, $sql)){
         // data checks out
         while($row = $result->fetch_assoc()) {
             // store all ids in an array
-            $club_array.array_push($row["clubID"]);
+            array_push($club_array, $row["clubID"]);
 
             //DEBUG
             echo '<script language="javascript">alert("'.count($club_array).'")</script>';

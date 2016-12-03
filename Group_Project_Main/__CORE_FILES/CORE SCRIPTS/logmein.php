@@ -11,11 +11,12 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = "";
-    $pass = "";
+    // THE BOTTOM LINE KNOWS IT'S THE LOGIN FORM CALLING
 
     // check if the user submitted
     if(isset($_POST['submit'])){
+        $username = "";
+        $pass = "";
         //Check if the fields are empty
         if(isset($_POST['username_field'])){
             if(isset($_POST['pass_field'])){

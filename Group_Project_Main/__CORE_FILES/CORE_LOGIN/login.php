@@ -1,5 +1,6 @@
 <?php
 include("../CORE SCRIPTS/logmein.php");
+include("../CORE SCRIPTS/registerme.php");
 // !!!!!!!!!!
 // DO NOT ADD ANY CODE ABOVE. THE SESSION MUST START
 // !!!!!!!!!!
@@ -29,7 +30,9 @@ include("../CORE SCRIPTS/logmein.php");
 <div class="card">
     <div class="front">
         <!-- LOGIN FORM -->
-        <form action="" method="post">
+        <form action=""
+              method="post"
+              name="login_form">
             <img src="https://s21.postimg.org/wap8gtk1j/logo_blue.png"
                  id="logo_img"/>
             <br>
@@ -65,32 +68,45 @@ include("../CORE SCRIPTS/logmein.php");
             <br>
             <label class="generic_label">First Name</label>
             <br>
-            <input class="generic_txt_input" type="text"/>
+            <input class="generic_txt_input"
+                   type="text"
+                   name="first_name_txt"/>
             <br>
             <label class="generic_label">Surname</label>
             <br>
-            <input class="generic_txt_input" type="text"/>
+            <input class="generic_txt_input"
+                   type="text"
+                   name="last_name_txt"/>
             <br>
             <label class="generic_label">Email</label>
             <br>
-            <input class="generic_txt_input" type="text"/>
+            <input class="generic_txt_input"
+                   type="text"
+                   name="email_txt"/>
             <br>
             <label class="generic_label">Username</label>
             <br>
-            <input class="generic_txt_input" type="text"/>
+            <input class="generic_txt_input"
+                   type="text"
+                   name="username_txt"/>
             <br>
             <label class="generic_label">Password</label>
             <br>
-            <input class="generic_txt_input" type="password"/>
+            <input class="generic_txt_input"
+                   type="password"
+                   name="password_txt"/>
             <br>
             <label class="generic_label">Password - repeat</label>
             <br>
-            <input class="generic_txt_input" type="password"/>
+            <input class="generic_txt_input"
+                   type="password"
+                   name="password_txt_2"/>
             <br>
             <label class="generic_label">Security Question</label>
             <br>
             <input class="generic_txt_input" list="questions">
-            <datalist id="questions">
+            <datalist id="questions"
+                      name="sec_q_txt">
                 <option value="What was the make of your first car?">
                 <option value="What is your favourite phone?">
                 <option value="What was your first postcode?">
@@ -99,10 +115,12 @@ include("../CORE SCRIPTS/logmein.php");
             <br>
             <label class="generic_label">Security Answer</label>
             <br>
-            <input class="generic_txt_input" type="text"/>
+            <input class="generic_txt_input"
+                   type="text"
+                   name="sec_a_txt"/>
             <br>
             <br>
-            <input class="btn" type="submit">
+            <input class="btn" type="submit" name="submit_register">
         </form>
         <button class="btn" onclick="rotate()">Back To Login</button>
     </div>

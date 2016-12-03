@@ -306,14 +306,6 @@ session_start();
             <!-- Bottom right container code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_bottom">
                 <p>Box</p>
-                <?php
-
-                    // checking user params
-
-                    echo $_SESSION["user_ac_lvl"];
-                    echo $_SESSION["user_fname"];
-                    echo $_SESSION["user_lname"];
-                ?>
             </div>
         </div>
     </div>

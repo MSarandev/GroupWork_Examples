@@ -196,6 +196,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $_SESSION["user_ac_lvl"] = $row["accessLvl"];
                             $_SESSION["user_fname"] = $row["firstName"];
                             $_SESSION["user_lname"] = $row["lastName"];
+                            $_SESSION["userID"] = $row["userID"];
                         }
                         // open the clubs page
                         header("location: ../CORE_CLUBS/index.php");

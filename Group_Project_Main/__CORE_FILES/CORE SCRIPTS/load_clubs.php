@@ -36,7 +36,7 @@ if(mysqli_query($db, $sql)){
             // store all ids in an array
             $club_array.array_push($row["clubID"]);
 
-            echo '<script language="javascript">alert("'.$club_array.count().'")</script>';
+            echo '<script language="javascript">alert("'.count($club_array).'")</script>';
         }
     } else {
         // data false, reload
@@ -52,7 +52,7 @@ if(mysqli_query($db, $sql)){
 // - - - - - -
 
 // before we run the query, assign the current club to the first arr. element
-if($club_array.count() != 0){
+if(count($club_array) != 0){
     // the clubs array has 1+ elements
     // - - - -
     // prepare the variables

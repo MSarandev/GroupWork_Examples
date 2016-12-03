@@ -61,7 +61,9 @@ include("../CORE SCRIPTS/logmein.php");
     </div>
     <div class="back">
         <!-- REGISTER FORM -->
-        <form>
+        <form action=""
+              method="post"
+              name="register_form">
             <label class="top_label">Register here</label>
             <br>
             <br>

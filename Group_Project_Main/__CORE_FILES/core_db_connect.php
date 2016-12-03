@@ -26,7 +26,7 @@ $node = $dom->createElement("markers");
 $parnode = $dom->appendChild($node);
 
 
-$query = "SELECT * FROM markers WHERE 1";
+$query = "SELECT username FROM USERLOGIN WHERE ";
 $result = $db->query($query);
 if (!$result) {
     die('Nothing in result: ');

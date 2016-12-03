@@ -7,10 +7,30 @@
     <orderEntry type="module-library">
       <library name="PHP Runtime">
         <CLASSES>
-          <root url="file://H:/php-debug-pack-7.0.13-Win32-VC14-x86" />
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
         </CLASSES>
         <SOURCES>
-          <root url="file://H:/php-debug-pack-7.0.13-Win32-VC14-x86" />
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://D:/PHP SRC" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://D:/PHP SRC" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://D:/PHP SRC/pharcommand.phar/" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://D:/PHP SRC/pharcommand.phar/" />
         </SOURCES>
       </library>
     </orderEntry>

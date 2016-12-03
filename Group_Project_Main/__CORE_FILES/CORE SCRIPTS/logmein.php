@@ -93,16 +93,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
                     } else {
                         // general get error
-                        // WE ARE SENDING TO CLIENT - SECURITY ISSUE
-                        echo htmlentities('<script language="javascript">alert("Interesting, you broke something I see");');
+                        echo '<script language="javascript">alert("Interesting, you broke something I see");';
                         // reload
-                        // WE ARE SENDING TO CLIENT - SECURITY ISSUE
-                        echo htmlentities('window.location = "../CORE_LOGIN/login.php";</script>');
+                        echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                     }
                 }else{
                     // SQL error
-                    // WE ARE SENDING TO CLIENT - SECURITY ISSUE
-                    echo htmlentities('<script language="javascript">alert("SQL ERROR!")</script>');
+                    echo '<script language="javascript">alert("SQL ERROR!")</script>';
                     // echo the error
                     echo mysqli_error($db);
                 }
@@ -110,8 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // check if the username exists
                 if($user_dupe == 1){
                     // Alert the user to the issue
-                    // WE ARE SENDING TO CLIENT - SECURITY ISSUE
-                    echo htmlentities('<script language="javascript">alert("Username Taken. Pick another one");');
+                    echo '<script language="javascript">alert("Username Taken. Pick another one");';
                     // reload
                     echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                 }else{
@@ -133,15 +129,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         // attach the query to the conn and run it
                         if(mysqli_query($db, $sql)){
                             // insert OK
-                            // WE ARE SENDING TO CLIENT - SECURITY ISSUE
-                            echo htmlentities('<script language="javascript">alert("Registration complete. Please login");');
+                            echo '<script language="javascript">alert("Registration complete. Please login");';
                             // reload
-                            // WE ARE SENDING TO CLIENT - SECURITY ISSUE
-                            echo htmlentities('window.location = "../CORE_LOGIN/login.php";</script>');
+                            echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                         }else{
                             // SQL error
-                            // WE ARE SENDING TO CLIENT - SECURITY ISSUE
-                            echo htmlentities('<script language="javascript">alert("SQL ERROR!")</script>');
+                            echo '<script language="javascript">alert("SQL ERROR!")</script>';
                             // echo the error
                             echo mysqli_error($db);
                         }
@@ -157,8 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Passwords don't match
                 echo '<script language="javascript">alert("Passwords are different");';
                 // reload
-                // WE ARE SENDING TO CLIENT - SECURITY ISSUE
-                echo htmlentities('window.location = "../CORE_LOGIN/login.php";</script>');
+                echo 'window.location = "../CORE_LOGIN/login.php";</script>';
             }
         }
     }

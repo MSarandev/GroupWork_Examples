@@ -6,10 +6,6 @@ body, html{
     width: 100%;
     font-family: 'Ubuntu',Arial, "Arial Black", "Times New Roman", serif;
     background: #eac67a;
-    background: -moz-linear-gradient(top, #eac67a 0%, #e5c07b 53%, #e5c07b 100%);
-    background: -webkit-linear-gradient(top, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
-    background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
 }
 
 .container {

@@ -1,3 +1,9 @@
+<?php
+session_start();
+// !!!!!!!!!!
+// DO NOT ADD ANY CODE ABOVE. THE SESSION MUST START
+// !!!!!!!!!!
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +28,7 @@
 <body>
     <div class="HEADER_DIV" id="div_header_slot">
         <!-- DYNAMIC HEADER CODE HERE -->
-        <?php include '__CORE_DOM_Elements/header.php';?>
+        <?php echo "<p>Welcome, ".$_SESSION["user_fname"]."</p>";?>
     </div>
 
     <div class="MAIN_DIV" id="div_main_slot">

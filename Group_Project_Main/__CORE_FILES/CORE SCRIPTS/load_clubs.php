@@ -24,6 +24,9 @@ if ($db->connect_errno) {
 $sql = "SELECT clubID FROM subscription WHERE userID = '"
     .mysqli_real_escape_string($db, $userID)."'";
 
+//DEBUG
+echo '<script language="javascript">alert("'.$userID.'")</script>';
+
 // parse as res
 $result = $db->query($sql);
 
@@ -36,7 +39,9 @@ if(mysqli_query($db, $sql)){
             // store all ids in an array
             $club_array.array_push($row["clubID"]);
 
+            //DEBUG
             echo '<script language="javascript">alert("'.count($club_array).'")</script>';
+            echo '<script language="javascript">alert("'.$row['clubID'].'")</script>';
         }
     } else {
         // data false, reload

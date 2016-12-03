@@ -90,9 +90,6 @@ if(count($club_array) != 0){
                     $bck_img = $row["backgroundImg"];
                     $short_desc = $row["shortDescr"];
 
-                    //DEBUG
-                    echo '<script language="javascript">alert("'.$header_img.'")</script>';
-
                     // now we have the clubs' details
                     // - - - - - - -
                     // echo the html to show the club as a tab

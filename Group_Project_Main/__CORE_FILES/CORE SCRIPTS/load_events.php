@@ -10,9 +10,9 @@
 // in: $_SESSION["GLOBAL_club_names"] and "GLOBAL_club_ids"
 
 foreach($_SESSION["GLOBAL_club_names"] as $var){
-    echo $var;
+    echo '<script language="javascript">alert("'.$var.'")</script>';
 }
 
 foreach($_SESSION["GLOBAL_club_ids"] as $var){
-    echo $var;
+    echo '<script language="javascript">alert("'.$var.'")</script>';
 }

@@ -95,6 +95,7 @@ if(count($club_array) != 0){
                     $header_img = $row["headerImg"];
                     $bck_img = $row["backgroundImg"];
                     $short_desc = $row["shortDescr"];
+                    $clubID = $row["clubID"];
 
                     // parse to GLOBAL
                     array_push($_SESSION["GLOBAL_club_names"], $club_name);

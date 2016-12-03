@@ -42,12 +42,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $sql = "SELECT * FROM userlogin WHERE username = '"
                     .mysqli_real_escape_string($db, $username)."' AND pass = '"
                     .mysqli_real_escape_string($db, $pass). "'";
+                $result = $conn->query($sql);
+
 
                 // run the query
                 if(mysqli_query($db, $sql)){
                     // show clubs
                     // header("location: ../CORE_CLUBS/index.php");
-                    echo $sql;
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
                 }else{
                     echo '<script language="javascript">alert("SQL ERROR!")</script>';
 

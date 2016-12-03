@@ -119,6 +119,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         if ($db->query($sql) === TRUE) {
                             // insert OK
                             echo '<script language="javascript">alert("Registration complete. Please login")</script>';
+
+                            echo mysqli_error($db);
                         }else{
                             // insert FAILED
                             echo '<script language="javascript">alert("Something went wrong. Try again")</script>';

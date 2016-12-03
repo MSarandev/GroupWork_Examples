@@ -35,9 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
 
                 // form the sql query
-                $sql = "SELECT username, pass FROM USERLOGIN WHERE username = '"
-                    .mysqli_real_escape_string($db, $username). "' AND WHERE pass = '"
-                    .mysqli_real_escape_string($db, $pass). "'";
+                //$sql = "SELECT username, pass FROM USERLOGIN WHERE username = '"
+                //    .mysqli_real_escape_string($db, $username). "' AND WHERE pass = '"
+                //    .mysqli_real_escape_string($db, $pass). "'";
+
+                $sql = "SELECT username, pass FROM userlogin WHERE username = '"
+                    .$username."' AND pass = '" . $pass . "'";
 
                 // run the query
                 if(mysqli_query($db, $sql)){

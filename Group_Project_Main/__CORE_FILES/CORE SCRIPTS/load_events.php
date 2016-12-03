@@ -87,7 +87,7 @@ foreach($_SESSION["GLOBAL_club_ids"] as $clubID){
             }
         }else{
             // data false, reload
-            echo '<script language="javascript">alert("404 - Data Not Found")</script>';
+            echo 'No events found';
         }
     }else{
         // SQL error

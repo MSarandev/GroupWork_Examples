@@ -24,7 +24,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // get the pass
                 $pass = $_POST['pass_field'];
 
-                // now that we have the details,
+                // now that we have the details, connect to the DB
+
+                // Connect to the DB
+                $db = new mysqli(
+                    'eu-cdbr-azure-north-e.cloudapp.net',
+                    'bc3bbc9f5fc3c2',
+                    '0d11dcd6',
+                    'goportlethen_db' );
+
+                // test our connection
+                if ($db->connect_errno) {
+                    die ('Connection Failed :'.$db->connect_error );
+                }
+
+                // form the sql query
+                $sql = "SELECT username, pass FROM USERLOGIN WHERE username = $username AND pass = $pass";
+
+                // run the query
+                if(mysqli_query($db, $sql)){
+                    echo '<script language="javascript">alert("LOGIN OK")</script>';
+                }else{
+                    echo '<script language="javascript">alert("NO DATA FOUND!")</script>';
+                }
 
             }else{
                 echo '<script language="javascript">';

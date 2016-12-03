@@ -90,6 +90,7 @@ if(count($club_array) != 0){
             //DEBUG
             echo '<script language="javascript">alert("3")</script>';
 
+
             // check the return amount
             if ($result->num_rows > 0) {
                 // data checks out

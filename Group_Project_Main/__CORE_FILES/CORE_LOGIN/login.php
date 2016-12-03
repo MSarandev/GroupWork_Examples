@@ -85,7 +85,7 @@ include("../CORE SCRIPTS/logmein.php");
                    type="password"
                    name="password_txt_2"/>
             <label class="generic_label">Security Question</label>
-            <select id="questions"
+            <select id="question_select"
                       name="sec_q_txt">
                 <option value="What was the make of your first car">
                     What was the make of your first car

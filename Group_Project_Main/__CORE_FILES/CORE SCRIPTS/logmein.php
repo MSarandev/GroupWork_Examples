@@ -43,25 +43,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // run the query
                 if(mysqli_query($db, $sql)){
+
+                    // show clubs
+                    header("location: ../CORE_CLUBS/index.php");
                 }else{
                     echo '<script language="javascript">alert("NO DATA FOUND!")</script>';
                 }
 
-                // show clubs
-                header("location: ../CORE_CLUBS/index.php");
 
                 // close the conn
                 $db.close();
 
             }else{
-                echo '<script language="javascript">';
-                echo 'alert("Password cannot be empty!")';
-                echo '</script>';
+                echo '<script language="javascript">alert("Password cannot be empty!")</script>';
             }
         }else{
-            echo '<script language="javascript">';
-            echo 'alert("Username cannot be empty!")';
-            echo '</script>';
+            echo '<script language="javascript">alert("Username cannot be empty!")</script>';
         }
     }
 }

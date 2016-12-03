@@ -116,14 +116,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             ")";
 
                         // attach the query to the conn and run it
-                        if ($db->query($sql) === TRUE) {
+                        if(mysqli_query($db, $sql)){
                             // insert OK
                             echo '<script language="javascript">alert("Registration complete. Please login")</script>';
 
-                            echo mysqli_error($db);
                         }else{
-                            // insert FAILED
-                            echo '<script language="javascript">alert("Something went wrong. Try again")</script>';
+                            // SQL error
+                            echo '<script language="javascript">alert("SQL ERROR!")</script>';
+                            // echo the error
+                            echo mysqli_error($db);
                         }
                     }catch(PDOException $e){
                         // error while adding record

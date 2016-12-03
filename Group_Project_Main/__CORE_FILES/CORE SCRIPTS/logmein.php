@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
 
                 // form the sql query
-                $sql = "SELECT username, pass FROM USERLOGIN WHERE username LIKE $username AND pass LIKE $pass";
+                $sql = "SELECT username, pass FROM USERLOGIN WHERE username LIKE '$username' AND pass LIKE '$pass'";
 
                 // run the query
                 if(mysqli_query($db, $sql)){

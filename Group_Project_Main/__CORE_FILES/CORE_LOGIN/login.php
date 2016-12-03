@@ -59,6 +59,7 @@ include("../CORE SCRIPTS/logmein.php");
     <div class="back">
         <!-- REGISTER FORM -->
         <form>
+            <?php echo $error; // disp error here?>
             <label class="top_label">Register here</label>
             <br>
             <br>

@@ -11,6 +11,8 @@ error_reporting(E_ALL);
 
 // check if the user submitted
 if(isset($_POST['submit'])){
-    echo "@";
+    if(isset($_POST['user'])){
+        echo $_POST['user'];
+    }
 }
 

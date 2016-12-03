@@ -34,36 +34,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     die ('Connection Failed :'.$db->connect_error );
                 }
 
-                // form the sql query
-                //$sql = "SELECT username, pass FROM USERLOGIN WHERE username = '"
-                //    .mysqli_real_escape_string($db, $username). "' AND WHERE pass = '"
-                //    .mysqli_real_escape_string($db, $pass). "'";
-
+                // form the query
+                // !! Added security features - guard against injection
                 $sql = "SELECT userID, username, pass FROM userlogin WHERE username = '"
                     .mysqli_real_escape_string($db, $username)."' AND pass = '"
                     .mysqli_real_escape_string($db, $pass). "'";
+                // parse as res
                 $result = $db->query($sql);
 
 
                 // run the query
                 if(mysqli_query($db, $sql)){
-                    // show clubs
-                    // header("location: ../CORE_CLUBS/index.php");
+                    // check the return amount
                     if ($result->num_rows > 0) {
-                        // output data of each row
-                        while($row = $result->fetch_assoc()) {
-                            echo "id: " . $row["userID"]. " - ID: " . $row["username"]. " " . $row["pass"]. "<br>";
-                        }
+                        // data checks out, go to clubs
+                        header("location: ../CORE_CLUBS/index.php");
                     } else {
-                        echo "0 results";
+                        // data false, reload
+                        header("location: ../CORE_LOGIN/login.php");
                     }
                 }else{
+                    // SQL error
+
                     echo '<script language="javascript">alert("SQL ERROR!")</script>';
 
                     echo mysqli_error($db);
-
-                    // re-load login
-                    //header("location: ../CORE_LOGIN/login.php");
                 }
 
                 // close the conn

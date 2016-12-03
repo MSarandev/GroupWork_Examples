@@ -87,7 +87,7 @@ foreach($_SESSION["GLOBAL_club_ids"] as $clubID){
             }
         }else{
             // data false, reload
-            echo 'No events found';
+            echo '<p>No events found</p>';
         }
     }else{
         // SQL error

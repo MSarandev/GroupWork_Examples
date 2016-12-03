@@ -43,7 +43,7 @@ if(mysqli_query($db, $sql)){
         }
     } else {
         // data false, reload
-        echo '<script language="javascript">alert("404 - Data Not Found")</script>';
+        //echo '<script language="javascript">alert("404 - Data Not Found")</script>';
     }
 }else{
     // SQL error
@@ -144,7 +144,7 @@ if(count($club_array) != 0){
     }
 }else{
     // Empty array error
-    echo '<script language="javascript">alert("Empty clubs array - are you subbed?")</script>';
+    echo '<p>You have not subbed to any clubs</p>';
 }
 
 

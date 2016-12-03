@@ -1,3 +1,9 @@
+<?php
+session_start();
+// !!!!!!!!!!
+// DO NOT ADD ANY CODE ABOVE. THE SESSION MUST START
+// !!!!!!!!!!
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

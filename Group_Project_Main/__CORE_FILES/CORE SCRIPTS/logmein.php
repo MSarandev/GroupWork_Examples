@@ -109,15 +109,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // create sql query
                     try {
                         $sql = "INSERT INTO USERLOGIN (username,pass,accessLvl,email,sedQues,secAns,firstName,lastName)
-                            VALUES (".$username.","
-                            .$password.","
-                            .$access.","
-                            .$email.","
-                            .$sec_q.","
-                            .$sec_a.","
-                            .$first_name.","
+                            VALUES ('".$username."','"
+                            .$password."','"
+                            .$access."','"
+                            .$email."','"
+                            .$sec_q."','"
+                            .$sec_a."','"
+                            .$first_name."','"
                             .$last_name.
-                            ")";
+                            "')";
 
                         // attach the query to the conn and run it
                         if(mysqli_query($db, $sql)){

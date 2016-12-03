@@ -49,6 +49,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $first_name = trim($_POST["first_name_txt"]);
             $last_name = trim($_POST["last_name_txt"]);
             $email = trim($_POST["email_txt"]);
+
+            // edit the email to remove the @ symbol
+            $email = str_replace("@", "AT", $email);
+
             $sec_q = trim($_POST["sec_q_txt"]);
             $sec_a = trim($_POST["sec_a_txt"]);
 

@@ -100,6 +100,7 @@ include("../CORE SCRIPTS/logmein.php");
                     What was the name of your first pet
                 </option>
             </select>
+            <br>
             <label class="generic_label">Security Answer</label>
             <input class="generic_txt_input"
                    type="text"

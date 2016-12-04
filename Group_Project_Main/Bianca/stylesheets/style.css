@@ -133,4 +133,11 @@ header {
     margin-bottom: 10%;
     padding: 0;
   }
+
+  #events {
+    float: left;
+    width: 100%;
+    border-left: none;
+    padding: 0;
+  }
 }

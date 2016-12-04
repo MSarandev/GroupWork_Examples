@@ -33,6 +33,33 @@
         <section class="block">
 	       <?php require("components/club.php") ?>     
         </section>
+
+        <section class="block" id="events">
+            <h1>Events</h1>
+            <section class="block">
+              <img  id="cimg" src="assets/images/club.jpg" />
+              <section>
+                <h2>CLUB</h2>
+                <h5>04/12/16 Union Square, Aberdeen</h5>
+              </section>
+            </section>
+
+            <section class="block">
+              <img  id="cimg" src="assets/images/club.jpg" />
+              <section>
+                <h2>CLUB</h2>
+                <h5>04/12/16 Union Square, Aberdeen</h5>
+              </section>
+            </section>
+
+            <section class="block">
+              <img  id="cimg" src="assets/images/club.jpg" />
+              <section>
+                <h2>CLUB</h2>
+                <h5>04/12/16 Union Square, Aberdeen</h5>
+              </section>
+            </section>
+        </section>
     </div>
 
     <?php

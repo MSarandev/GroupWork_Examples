@@ -5,6 +5,9 @@
  * Date: 03-Dec-16
  * Time: 12:36 AM
  */
+
+// SECURITY ADDED ON 03/12 @ 4:15
+
 session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -13,9 +16,6 @@ error_reporting(E_ALL);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Make sure that the register form is calling
     if (isset($_POST['submit_register'])) {
-        //DEBUG
-        echo '<script language="javascript">alert("1")</script>';
-        //DEBUG
         // Init all vars
         $first_name = "";
         $last_name = "";
@@ -47,14 +47,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             isset($_POST["sec_a_txt"])
         ){
 
-            //DEBUG
-            echo '<script language="javascript">alert("2")</script>';
-            //DEBUG
             // store data in vars
             $username = trim($_POST["username_txt"]);
             $first_name = trim($_POST["first_name_txt"]);
             $last_name = trim($_POST["last_name_txt"]);
             $email = trim($_POST["email_txt"]);
+
+            // edit the email to remove the @ symbol
+            $email = str_replace("@", "AT", $email);
+
             $sec_q = trim($_POST["sec_q_txt"]);
             $sec_a = trim($_POST["sec_a_txt"]);
 
@@ -64,10 +65,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // - - - -
                 // store the pass in a var
                 $password = trim($_POST["password_txt"]);
-
-                //DEBUG
-                echo '<script language="javascript">alert("3")</script>';
-                //DEBUG
 
                 // connect to the db
                 include("../core_db_connect.php");
@@ -84,9 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // run the query
                 if(mysqli_query($db, $sql)){
-                    //DEBUG
-                    echo '<script language="javascript">alert("4")</script>';
-                    //DEBUG
                     // check the return amount
                     if ($result->num_rows > 0) {
                         // check each entry for dupes
@@ -99,7 +93,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
                     } else {
                         // general get error
-                        echo '<script language="javascript">alert("Interesting, you broke something I see")</script>';
+                        echo '<script language="javascript">alert("Interesting, you broke something I see");';
+                        // reload
+                        echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                     }
                 }else{
                     // SQL error
@@ -111,15 +107,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // check if the username exists
                 if($user_dupe == 1){
                     // Alert the user to the issue
-                    echo '<script language="javascript">alert("Pick another username")</script>';
+                    echo '<script language="javascript">alert("Username Taken. Pick another one");';
+                    // reload
+                    echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                 }else{
                     // Username is ok, insert the data
                     // - - - - - -
                     // create sql query
                     try {
-                        $sql = "INSERT INTO USERLOGIN (username,password,accessLVL,email,sedQuestion,secAnswer,firstName,lastName) VALUES ('$username', '$password', '$access', '$email', '$sec_q', '$sec_a', '$first_name', '$last_name')";
+                        $sql = "INSERT INTO USERLOGIN (username,pass,accessLvl,email,secQues,secAns,firstName,lastName)
+                            VALUES ('".$username."','"
+                            .$password."','"
+                            .$access."','"
+                            .$email."','"
+                            .$sec_q."','"
+                            .$sec_a."','"
+                            .$first_name."','"
+                            .$last_name.
+                            "')";
 
-                        echo '<script language="javascript">alert("Registration complete. Please login")</script>';
+                        // attach the query to the conn and run it
+                        if(mysqli_query($db, $sql)){
+                            // insert OK
+                            echo '<script language="javascript">alert("Registration complete. Please login");';
+                            // reload
+                            echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+                        }else{
+                            // SQL error
+                            echo '<script language="javascript">alert("SQL ERROR!")</script>';
+                            // echo the error
+                            echo mysqli_error($db);
+                        }
                     }catch(PDOException $e){
                         // error while adding record
                         echo $sql . "<br>" . $e->getMessage();
@@ -128,6 +146,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 //finally, close the conn
                 $db->close();
+            }else{
+                // Passwords don't match
+                echo '<script language="javascript">alert("Passwords are different");';
+                // reload
+                echo 'window.location = "../CORE_LOGIN/login.php";</script>';
             }
         }
     }
@@ -173,6 +196,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $_SESSION["user_ac_lvl"] = $row["accessLvl"];
                             $_SESSION["user_fname"] = $row["firstName"];
                             $_SESSION["user_lname"] = $row["lastName"];
+                            $_SESSION["userID"] = $row["userID"];
                         }
                         // open the clubs page
                         header("location: ../CORE_CLUBS/index.php");

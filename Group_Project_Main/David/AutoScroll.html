@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<body onload="autoScroll">
+
+
+
+<script language = "javascript">
+    var scroll = setInterval(autoScroll, 3000)
+    var reverse = False
+
+    function autoScroll() {
+
+        document.getElementById("MyDivName").scrollBy(0, 100);
+
+
+    }
+
+    function pauseDiv() {
+        clearInterval(myVar);
+    }
+</script>
+
+<div id="MyDivName" style="overflow:scroll;width:200px;height:100px" onMouseOver="pauseDiv()" onmouseout="autoScroll()">
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+    test <br>
+
+
+</div>
+
+</body>
+</html>

@@ -2,6 +2,7 @@
 @import "navbar.css";
 @import "footer.css";
 @import "club.css";
+@import "events.css";
 
 * {
   margin: 0;
@@ -101,20 +102,6 @@ header {
   margin-right: 10px;
 }
 
-#events {
-  float: right;
-  border-left: 3px solid grey;
-  width: 25%;
-}
-
-#events .block #cimg {
-  height: 80px;
-}
-
-#events .block h5 {
-  color: grey;
-}
-
 @media screen and (max-width: 478px) {
   body {
     position: absolute;
@@ -131,13 +118,6 @@ header {
     width: 100%;
     margin-top: 10%;
     margin-bottom: 10%;
-    padding: 0;
-  }
-
-  #events {
-    float: left;
-    width: 100%;
-    border-left: none;
     padding: 0;
   }
 }

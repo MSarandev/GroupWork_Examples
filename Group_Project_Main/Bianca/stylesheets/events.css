@@ -1,0 +1,22 @@
+#events {
+  float: right;
+  border-left: 3px solid grey;
+  width: 25%;
+}
+
+#events .block #cimg {
+  height: 80px;
+}
+
+#events .block h5 {
+  color: grey;
+}
+
+@media screen and (max-width: 478px) {
+  #events {
+    float: left;
+    width: 100%;
+    border-right: none;
+    padding: 0;
+  }
+}

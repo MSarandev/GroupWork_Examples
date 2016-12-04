@@ -1,4 +1,3 @@
-
 <?php
 	define('DB_SERVER'  , 'us-cdbr-azure-southcentral-f.cloudapp.net');
 	define('DB_USERNAME', 'b63846e152e580');

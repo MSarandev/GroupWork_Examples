@@ -32,6 +32,11 @@ section .block p {
   text-align: left;
 }
 
+section .block h1 {
+  width: 300%;
+  align-self: left;
+}
+
 section .block section {
   width: 100%;
   background-color: white;

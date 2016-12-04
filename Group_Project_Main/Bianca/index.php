@@ -12,7 +12,6 @@
 	<?php 
 	    require("components/navbar.html");
 	    require("components/header.html");
-        require("components/connect_database.html");
 	?>
 
 	<div class="paragraph">

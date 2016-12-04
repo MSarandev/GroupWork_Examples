@@ -11,16 +11,16 @@
 		die('Connection failed [' . $db -> connect_errno . ']');
 	}
 
-	$sql_query = "SELECT * FROM marvelmovies";
+	$sql_query = "SELECT * FROM clubs";
 	$result = $db -> query($sql_query);
 
 	while ($row = $result -> fetch_array()) {
 		echo "<section class='block'>
-		  		<img  id='cimg' src='assets/images/club.jpg' />
+		  		<img  id='cimg' src='assets/images/club.jpg'/>
 		  		<section>
-		  			<h1>" . $row['title'] . "</h1>
-			    	<p>" . $row['notes'] . "</p>
-			    	<div class='age-gr'>" . $row['yearReleased'] . "</div>
+		  			<h1>" . $row['clubname'] . "</h1>
+			    	<p>" . $row['longDescr'] . "</p>
+			    	<div class='age-gr'>" . $row['age_group'] . "</div>
 			    </section>
 			  </section>";
 	}

@@ -16,13 +16,16 @@
 
 	while ($row = $result -> fetch_array()) {
 		echo "<section class='block'>
-		  		<img  id='cimg' src='assets/images/club.jpg'/>
-		  		<section>
-		  			<h1>" . $row['clubname'] . "</h1>
+		  	<img  id='cimg' src='assets/images/club.jpg'/>
+		  	<section>
+		  		<h1>" . $row['clubname'] . "</h1>
 			    	<p>" . $row['longDescr'] . "</p>
-			    	<div class='age-gr'>" . $row['age_group'] . "</div>
-			    </section>
-			  </section>";
+            			<section class='block'>
+			    		<div class='age'><h4>" . $row['age_group'] . "</h4></div>
+              				<div class='age'><h4>" . $row['age_group'] . "</h4></div>
+            			</section>
+			</section>
+		      </section>";
 	}
 
 	$result -> close();

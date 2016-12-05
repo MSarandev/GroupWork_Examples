@@ -1,7 +1,7 @@
 #events {
   float: right;
   border-left: 3px solid grey;
-  width: 25%;
+  width: 30%;
 }
 
 #events .block #cimg {
@@ -12,11 +12,28 @@
   color: grey;
 }
 
+#events .block {
+  width: 100%;
+  margin: 0 20%;
+}
+
 @media screen and (max-width: 478px) {
   #events {
     float: left;
     width: 100%;
     border-left: none;
     padding: 0;
+  }
+
+  #events .block {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 478px) {
+  #events h1 {
+    float: left;
+    margin: 0 20%;
   }
 }

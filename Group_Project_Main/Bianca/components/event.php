@@ -16,7 +16,7 @@
 	while ($row = $result -> fetch_array()) {
 		echo "<section class='block'>
 		  		<img  id='cimg' src='assets/images/club.jpg' />
-		  		<section>
+		  		<section class='event'>
 		  			<h2>" . $row['title'] . "</h2>
 			    	<h5>" . $row['notes'] . "</h5>
 			    </section>

@@ -17,13 +17,13 @@
 	<div class="paragraph">
 		<div class="buttons-container">
             <div class="button">
-                <a href="#">Age group 1</a>
+                <a href="#">Sports</a>
             </div>
             <div class="button">
-                <a href="#">Age group 2</a>
+                <a href="#">Arts</a>
             </div>
             <div class="button">
-                <a href="#">Age group 3</a>
+                <a href="#">Others</a>
             </div>
             <div class="button">
                 <a href="#">New clubs</a>

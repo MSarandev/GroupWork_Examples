@@ -43,13 +43,6 @@ header {
   padding-bottom: 20%;
 }
 
-@media screen and (max-width: 414px) {
-  header {
-    padding-top: 70%;
-    padding-bottom: 70%;
-  }
-}
-
 .buttons-container {
   padding-left: 5%;
   display: -webkit-flex;
@@ -102,6 +95,20 @@ header {
   margin-right: 10px;
 }
 
+input[type=submit] {
+    width: 100%;
+    background-color: #8E50A0;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover , input[type=reset]:hover{
+    background-color: #5D3C86;
+}
+
 @media screen and (max-width: 478px) {
   body {
     position: absolute;
@@ -119,5 +126,14 @@ header {
     margin-top: 10%;
     margin-bottom: 10%;
     padding: 0;
+  }
+
+  header {
+    padding-top: 70%;
+    padding-bottom: 70%;
+  }
+
+  .button {
+    padding: 4% 2%;
   }
 }

@@ -19,7 +19,7 @@
 }
 
 section .block {
-  width: 100%;
+  width: 200%;
   float: left;
   margin: 10% 2%;
   text-align: left;
@@ -27,14 +27,8 @@ section .block {
 }
 
 section .block p {
-  width: 300%;
-  background-color: white;
+  width: 100%;
   text-align: left;
-}
-
-section .block h1 {
-  width: 300%;
-  align-self: left;
 }
 
 section .block section {
@@ -42,18 +36,14 @@ section .block section {
   background-color: white;
 }
 
-input[type=submit] , input[type=reset]{
-    width: 100%;
-    background-color: #8E50A0;
-    color: white;
-    padding: 14px 25px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover , input[type=reset]:hover{
-    background-color: #5D3C86;
+.age {
+  width: 50%;
+  background-color: #6BBAA7;
+  align-self: center;
+  padding: 1.5%;
+  margin: 0 6%;
+  text-align: center;
+  border-radius: 2%;
 }
 
 @media screen and (max-width: 478px) {
@@ -70,4 +60,16 @@ input[type=submit]:hover , input[type=reset]:hover{
   section .block p {
     width: 100%;
   }
+
+  .age {
+    width: 80%;
+    margin: 2% 4%;
+  }
+}
+
+@media screen and (min-width: 478px) {
+    section .block h1 {
+      width: 100%;
+      align-self: center;
+    }
 }

@@ -80,11 +80,26 @@ function longDescChange() {
     // get the value
     txt_value = txt_value.value;
 
-    // define the other element
-    var thing = document.getElementById('preview_long');
+    // -- -- -- -- -- --
+    // Count the characters and display
+    var char_count = "";
+    var stat_count = "/500";
+    var lbl = document.getElementById('char_count_lbl');
 
-    // change the text to new text
-    thing.innerHTML = txt_value.toString();
+    char_count = txt_value.length.toString();
+
+    if(char_count < 500) {
+        lbl.innerHTML = char_count + stat_count.toString();
+
+        // define the other element
+        var thing = document.getElementById('preview_long');
+
+        // change the text to new text
+        thing.innerHTML = txt_value.toString();
+ 
+    }else{
+        alert("Character limit - 500!");
+    }
 }
 
 // Creator

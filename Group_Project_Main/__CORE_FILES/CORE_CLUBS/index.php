@@ -144,6 +144,7 @@ session_start();
             <div class="MAIN_DIV" id="div_main_slot_right_bottom">
                 <!-- generate the options here based on user acc. lvl -->
                 <?php
+                    include("../CORE SCRIPTS/buttonClickMuch.php");
                     include("../CORE SCRIPTS/is_admin.php");
                 ?>
             </div>

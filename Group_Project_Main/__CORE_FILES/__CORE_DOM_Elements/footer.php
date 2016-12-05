@@ -6,4 +6,4 @@
  * Time: 3:41 PM
  */
 
-echo "<p>I'm the footer now</p>";
+echo "©Copyright TMR 2016";

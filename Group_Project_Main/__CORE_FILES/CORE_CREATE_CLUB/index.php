@@ -1,5 +1,5 @@
 <?php
-session_start();
+include("../CORE SCRIPTS/storeClubs.php");
 // !!!!!!!!!!
 // DO NOT ADD ANY CODE ABOVE. THE SESSION MUST START
 // !!!!!!!!!!
@@ -39,6 +39,7 @@ session_start();
     <!-- HOLDS THE SIDEBAR -->
     <div class="MAIN_DIV" id="div_main_sidebar">
         <div>
+            <form action="" method="post">
             <br>
             <!-- Controls -->
             <label class="label_gen">Club Name</label>
@@ -46,6 +47,7 @@ session_start();
                    type="text"
                    placeholder="Club Name"
                    id="club_name_txt"
+                   name="club_name_txt"
                    onkeyup="clubNameChange()"/>
             <br>
             <label class="label_gen">Short Description</label>
@@ -53,6 +55,7 @@ session_start();
                    type="text"
                    placeholder="Short Description"
                    id="short_des_txt"
+                   name="short_des_txt"
                    onkeyup="shortDescChange()"/>
             <br>
             <label class="label_gen">Contact Info</label>
@@ -60,13 +63,16 @@ session_start();
                    type="text"
                    placeholder="Contact Info"
                    id="contact_txt"
+                   name="contact_txt"
                    onkeyup="contactChange()"/>
             <br>
             <label class="label_gen">Location</label>
+            <br>
             <input class="input_field"
                    type="text"
                    placeholder="Location"
                    id="location_txt"
+                   name="location_txt"
                    onkeyup="locationChange()"/>
             <br>
             <label class="label_gen">Long Description</label>
@@ -76,6 +82,7 @@ session_start();
                     rows="5"
                     placeholder="Long Description"
                     id="long_desc_txt"
+                    name="long_desc_txt"
                     onkeyup="longDescChange()"></textarea>
             <br>
             <label class="label_gen">Creator</label>
@@ -84,6 +91,7 @@ session_start();
                    type="text"
                    placeholder="Creator"
                    id="creator_txt"
+                   name="creator_txt"
                    onkeyup="creatorChange()"/>
             <br>
             <label class="label_gen">Background Image</label>
@@ -91,6 +99,7 @@ session_start();
                    type="url"
                    placeholder="Background image"
                    id="bck_img_txt"
+                   name="bck_img_txt"
                    onkeyup="bckImgChange()"/>
             <br>
             <div id="color_pic_div">
@@ -98,26 +107,42 @@ session_start();
                 <input type="color"
                        placeholder="Header COLOUR"
                        id="header_c_txt"
+                       name="header_c_txt"
                        onchange="headCChange()"/>
                 <br>
                 <label class="label_gen">Footer Colour</label>
                 <input type="color"
                        placeholder="Footer COLOUR"
                        id="footer_c_txt"
+                       name="footer_c_txt"
                        onchange="footCChange()"/>
                 <br>
                 <label class="label_gen">Text Colour</label>
                 <input type="color"
                        placeholder="Text COLOUR"
                        id="text_c_txt"
+                       name="text_c_txt"
                        onchange="textCChange()"/>
             </div>
             <br>
             <br>
-            <a href=""
-               id="preview_submit_btn"
-               class="preview_btn"
-               onclick="submitMe()">Submit</a>
+            <label class="label_gen">Select Age Group</label>
+            <br>
+            <select id="age_group_select"
+                    name="sec_q_txt">
+                <option value="group_1">
+                    Group 1
+                </option>
+                <option value="group_2">
+                    Group 2
+                </option>
+                <option value="group_3">
+                    Group 3
+                </option>
+            </select>
+            <br>
+            <br>
+            <input class="preview_btn" type="submit" value="Submit" />
             <!--
                 SO, THE CLEAR BTN IS NOT BEHAVING. WELL THEN
 
@@ -127,6 +152,7 @@ session_start();
                class="preview_btn">Clear</a>
 
             -->
+            </form>
         </div>
     </div>
     <!-- HOLDS THE LIVE PREVIEW -->

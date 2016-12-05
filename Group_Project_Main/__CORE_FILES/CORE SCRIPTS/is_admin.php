@@ -13,7 +13,6 @@ if($user_a_lvl == 10){
     // user is admin - show all
     echo '
     <!-- Display the admin menu, if admin -->
-    <?php include("../CORE SCRIPTS/buttonClickMuch.php"); ?>
     <a href="../CORE_CREATE_CLUB/index.php" class="admin_btn">Create Club</a>
     <form action="" method="post">
         <input type="submit" name="approve_club_btn" class="admin_btn" value="Approve clubs" />

@@ -11,6 +11,7 @@ $user_a_lvl = $_SESSION["user_ac_lvl"];
 
 if($user_a_lvl == 10){
     // user is admin - show all
+    echo "<?php include('../CORE SCRIPTS/buttonClickMuch.php'); ?>";
     echo '
     <!-- Display the admin menu, if admin -->
     <a href="../CORE_CREATE_CLUB/index.php" class="admin_btn">Create Club</a>

@@ -6,8 +6,4 @@
  * Time: 3:41 PM
  */
 
-echo "
-    <footer id=\"second\">
-        <p>©Copyright TMR 2016</p>
-    </footer>
-";
+echo "©Copyright TMR 2016";

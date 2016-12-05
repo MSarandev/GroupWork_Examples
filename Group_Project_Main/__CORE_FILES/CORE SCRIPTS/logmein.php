@@ -116,14 +116,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // create sql query
                     try {
                         $sql = "INSERT INTO USERLOGIN (username,pass,accessLvl,email,secQues,secAns,firstName,lastName)
-                            VALUES ('".$username."','"
-                            .$password."','"
-                            .$access."','"
-                            .$email."','"
-                            .$sec_q."','"
-                            .$sec_a."','"
-                            .$first_name."','"
-                            .$last_name.
+                            VALUES ('".mysqli_real_escape_string($db,$username)."','"
+                            .mysqli_real_escape_string($db,$password)."','"
+                            .mysqli_real_escape_string($db,$access)."','"
+                            .mysqli_real_escape_string($db,$email)."','"
+                            .mysqli_real_escape_string($db,$sec_q)."','"
+                            .mysqli_real_escape_string($db,$sec_a)."','"
+                            .mysqli_real_escape_string($db,$first_name)."','"
+                            .mysqli_real_escape_string($db,$last_name).
                             "')";
 
                         // attach the query to the conn and run it

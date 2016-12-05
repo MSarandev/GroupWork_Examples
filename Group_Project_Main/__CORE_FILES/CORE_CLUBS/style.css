@@ -51,7 +51,7 @@ body, html{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
     width: 100%;
     /* Give the elements a minimum height to conserve styling */
-    min-height: 100px;
+    min-height: 90%;
     text-align: center;
     margin: 0 auto;
 }

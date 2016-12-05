@@ -129,7 +129,7 @@ include("../CORE SCRIPTS/storeClubs.php");
             <label class="label_gen">Select Age Group</label>
             <br>
             <select id="age_group_select"
-                    name="sec_q_txt">
+                    name="age_group_txt">
                 <option value="group_1">
                     Group 1
                 </option>

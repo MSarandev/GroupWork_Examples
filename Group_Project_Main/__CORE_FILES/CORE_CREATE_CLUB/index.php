@@ -142,7 +142,10 @@ include("../CORE SCRIPTS/storeClubs.php");
             </select>
             <br>
             <br>
-            <input class="preview_btn" type="submit" value="Submit" />
+            <input class="preview_btn"
+                   type="submit"
+                   value="Submit"
+                   name="submit_btn"/>
             <!--
                 SO, THE CLEAR BTN IS NOT BEHAVING. WELL THEN
 

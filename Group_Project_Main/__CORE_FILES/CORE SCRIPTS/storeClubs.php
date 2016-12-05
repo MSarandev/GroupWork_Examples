@@ -107,6 +107,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo '<script language="javascript">alert("Something in your values is not OK. Try again!")</script>';
         }
     }
-}
 
-$db->close();
+    $db->close();
+}

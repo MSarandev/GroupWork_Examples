@@ -96,7 +96,7 @@ function longDescChange() {
 
         // change the text to new text
         thing.innerHTML = txt_value.toString();
-
+ 
     }else{
         alert("Character limit - 500!");
     }

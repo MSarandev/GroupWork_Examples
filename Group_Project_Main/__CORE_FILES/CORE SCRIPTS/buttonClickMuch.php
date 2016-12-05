@@ -6,6 +6,9 @@
  * Time: 15:40
  */
 
+echo '<script language="javascript">alert("Approving clubs I see")</script>';
+
+/*
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Make sure that the register form is calling
     if (isset($_POST['approve_club_btn'])) {
@@ -17,3 +20,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<script language="javascript">alert("Approving markers I see")</script>';
     }
 }
+*/

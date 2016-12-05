@@ -14,14 +14,12 @@ if($user_a_lvl == 10){
     echo '
     <!-- Display the admin menu, if admin -->
     <?php include("../CORE SCRIPTS/buttonClickMuch.php"); ?>
+    <a href="../CORE_CREATE_CLUB/index.php" class="admin_btn">Create Club</a>
     <form action="" method="post">
-        <input type="button" name="create_club_btn" class="admin_btn" value="Create a club" />
+        <input type="submit" name="approve_club_btn" class="admin_btn" value="Approve clubs" />
     </form>
     <form action="" method="post">
-        <input type="button" name="create_club_btn" class="admin_btn" value="Approve clubs" />
-    </form>
-    <form action="" method="post">
-        <input type="button" name="create_club_btn" class="admin_btn" value="Approve markers" />
+        <input type="submit" name="approve_marker_btn" class="admin_btn" value="Approve markers" />
     </form>
         <!-- Attach Waves to these btns -->
         <script>
@@ -41,10 +39,7 @@ if($user_a_lvl == 10){
     // user is not admin - show create only
     echo '
         <!-- Display the admin menu, if admin -->
-        <?php include("../CORE SCRIPTS/buttonClickMuch.php"); ?>
-        <form action="" method="post">
-            <input type="button" name="create_club_btn" class="admin_btn" value="Create a club" />
-        </form>
+        <a href="../CORE_CREATE_CLUB/index.php" class="admin_btn">Create Club</a>
         <!-- Attach Waves to these btns -->
         <script>
             //Attach waves

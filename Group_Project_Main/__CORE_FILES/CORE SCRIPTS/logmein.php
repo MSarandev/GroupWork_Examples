@@ -56,9 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $last_name = trim($_POST["last_name_txt"]);
             $email = trim($_POST["email_txt"]);
 
-            // edit the email to remove the @ symbol
-            $email = str_replace("@", "AT", $email);
-
             $sec_q = trim($_POST["sec_q_txt"]);
             $sec_a = trim($_POST["sec_a_txt"]);
 
@@ -85,8 +82,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         // last name OK
                         if($email != "" &&
                             $email !== "" &&
-                            strpos($email, '@') !== false &&
-                            strpos($email, '.') !== false){
+                            contains("@", $email) &&
+                            contains(".", $email)){
                             // email OK
                             if($username != "" &&
                                 $username !== "" &&
@@ -123,6 +120,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
                 if($vals_check_out == 1) {
+                    // SECURITY
+
+                    // edit the email to remove the @ symbol
+                    $email = str_replace("@", "AT", $email);
+
+                    // edit the email to remove the @ symbol
+                    $email = str_replace(".", "DOT", $email);
+
+
                     // connect to the db
                     include("../core_db_connect.php");
 

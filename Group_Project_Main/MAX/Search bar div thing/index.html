@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #div_main_slot_right_search{
+        /* PERFECT CENTERING */
+        display: flex;              !important;
+        justify-content: flex-end;    !important;
+        align-content: center;      !important;
+        align-items: center;
+        /* PERFECT CENTERING */
+        margin-top: 20px;
+    }
+
+    .search_text_box{
+        min-width: 50%;
+        max-width: 50%;
+        min-height: 30px;
+        max-height: 50px;
+        color: #000;
+        font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+        font-size: 20px;
+        background-color: #fff;
+        border: 1px solid #e0ab38;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        padding-left: 10px;
+    }
+
+    .search_button_btn{
+        text-align: center;
+        width: 100px;
+        min-width: 100px;
+        min-height: 35px;
+        height: 35px;
+        /*
+        padding-top: 3px;
+        padding-bottom: 7px;
+        */
+        font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+        font-size: 20px;
+        color: #ffffff;
+        border: 1px solid #47231f;
+        background: rgb(152,75,67);
+    }
+    #search_res_holder{
+        background-color: #fff;
+        border: 1px solid black;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        min-width: 180px;
+        max-width: 180px;
+        min-height: 50px;
+        max-height: 200px;
+        z-index: 0;
+        position: absolute;
+        right: 175px;
+        top: 55px;
+        overflow-y: scroll;
+    }
+    .search_res_inner{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        border: 1px solid #000;
+    }
+    .search_res_btn_link{
+        text-align: center;
+        width: 100%;
+        min-width: 100%;
+        min-height: 20px;
+        height: 20px;
+        font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+        font-size: 15px;
+        color: #ffffff;
+        border: 1px solid #47231f;
+        background: rgb(152,75,67);
+    }
+</style>
+<body>
+<div class="MAIN_DIV" id="div_main_slot_right_search">
+    <form action="" method="post">
+        <input type="text"
+               class="search_text_box"
+               name="search_club_txt"
+               placeholder="Search Clubs" />
+        <input type="submit"
+               class="search_button_btn"
+               name="search_club_btn"
+               value="Search" />
+        <p style="z-index: 1">v. 1.1</p>
+    </form>
+    <div id="search_res_holder">
+        <div class="search_res_inner">
+            <p>Club Name</p>
+            <p>Age Group</p>
+            <a href="" class="search_res_btn_link">LINK</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

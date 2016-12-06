@@ -105,12 +105,14 @@ session_start();
                            class="search_button_btn"
                            name="search_club_btn"
                            value="Search" />
-                    <p>v. 1.0</p>
+                    <p>v. 1.2</p>
                 </form>
-                <!-- Include the script to handle searches -->
-                <?php
-                    include("../CORE SCRIPTS/searchClubs.php");
-                ?>
+                <div id="search_res_holder">
+                    <!-- Include the script to handle searches -->
+                    <?php
+                        include("../CORE SCRIPTS/searchClubs.php");
+                    ?>
+                </div>
                 <!-- Attach Waves to these btns -->
                 <script>
                     //Attach waves

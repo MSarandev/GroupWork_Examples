@@ -542,9 +542,10 @@ body, html{
     justify-content: center;
 }
 #admin_inner_section{
+    padding-left: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     align-content: center;
     width: 100%;

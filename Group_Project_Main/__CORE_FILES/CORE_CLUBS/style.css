@@ -574,12 +574,17 @@ body, html{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
 }
 #admin_btn_form{
+    margin-left: 20px;
     display: flex;
     justify-content: flex-end;
     align-content: center;
 }
-p.admin_inner_section{
-    margin-left: 10px;
+.admin_p{
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
 }
 /* ADMIN PHP STYLE End*/
 

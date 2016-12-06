@@ -502,7 +502,7 @@ body, html{
     min-height: 0;
     max-height: 200px;
     position: absolute;
-    right: 175px;
+    right: 140px;
     top: 110px;
     z-index: 0;
     overflow-y: scroll;
@@ -513,6 +513,8 @@ body, html{
     align-content: center;
     align-items: center;
     border: 1px solid #000;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .search_res_btn_link{
     text-align: center;

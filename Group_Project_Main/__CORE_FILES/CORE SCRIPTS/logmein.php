@@ -74,15 +74,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // The nesting if/else should be changed if we have the time (MS)
                 // -- -- -- -- -- -- --
                 // Check all fields for empty chars
-                if($first_name != " "){
+                if($first_name != " " && $first_name !== preg_match('~[0-9]~', $first_name)){
                     // first name OK
-                    if($last_name != " "){
+                    if($last_name != " " && $last_name !== preg_match('~[0-9]~', $last_name)){
                         // last name OK
                         if($email != " "){
                             // email OK
                             if($username != " "){
                                 // username OK
-                                if($password != " "){
+                                if($password != " " && strlen($password) >= 6){
                                     // password OK
                                     if($sec_a != " "){
                                         // sec ans OK
@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         $err_txt = "Security Answer contains empty char";
                                     }
                                 }else{
-                                    $err_txt = "Password contains empty char";
+                                    $err_txt = "Password must be 6+ chars and can't contain empty chars";
                                 }
                             }else{
                                 $err_txt = "Username contains empty char";
@@ -103,10 +103,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $err_txt = "Email contains empty char";
                         }
                     }else{
-                        $err_txt = "Last Name contains empty char";
+                        $err_txt = "Last Name contains empty char OR has numbers";
                     }
                 }else{
-                    $err_txt = "First Name contains empty char";
+                    $err_txt = "First Name contains empty char OR has numbers";
                 }
 
 

@@ -37,15 +37,88 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (strpos($key, 'admin_approve') === 0) {
             // the key variable contains the ID - find it
             $index_of_q = strpos($key, "?"); // find where the q mark is
+            // we add 1 to the index to push it PAST the question mark
+            // we then get the substring and like clockwork - we have the club ID
             $clubID_final = substr($key, $index_of_q+1, strlen($key));
 
-            echo $clubID_final;
+            // to approve the club read on
+
+            // link to to db
+            include("../core_db_connect.php");
+
+            // test the conn
+            if ($db->connect_errno) {
+                die ('Connection Failed :'.$db->connect_error );
+            }
+
+            // create the query
+            $sql = "UPDATE clubs SET approved = 1 WHERE clubID = '"
+                .mysqli_real_escape_string($db, $clubID_final)."'";
+
+            // try to run the query
+            try {
+                // attach the query to the conn and run it
+                if (mysqli_query($db, $sql)) {
+                    // insert OK
+                    echo '<script language="javascript">alert("Club approved. Refreshing");';
+                    // reload
+                    echo 'window.location = "../CORE_CLUBS/index.php";</script>';
+                } else {
+                    // SQL error
+                    echo '<script language="javascript">alert("SQL ERROR!")</script>';
+                    // echo the error
+                    echo mysqli_error($db);
+                }
+            } catch (PDOException $e) {
+                // error while adding record
+                echo $sql . "<br>" . $e->getMessage();
+            }
+
+            // close the conn
+            $db->close();
+
         }elseif (strpos($key, 'admin_delete') === 0){
             // the key variable contains the ID - find it
             $index_of_q = strpos($key, "?"); // find where the q mark is
+            // we add 1 to the index to push it PAST the question mark
+            // we then get the substring and like clockwork - we have the club ID
             $clubID_final = substr($key, $index_of_q+1, strlen($key));
 
-            echo $clubID_final;
+            // to delete the club read on
+
+            // link to to db
+            include("../core_db_connect.php");
+
+            // test the conn
+            if ($db->connect_errno) {
+                die ('Connection Failed :'.$db->connect_error );
+            }
+
+            // create the query
+            $sql = "DELETE FROM clubs WHERE clubID = '"
+                .mysqli_real_escape_string($db, $clubID_final)."'";
+
+            // try to run the query
+            try {
+                // attach the query to the conn and run it
+                if (mysqli_query($db, $sql)) {
+                    // insert OK
+                    echo '<script language="javascript">alert("Club deleted. Refreshing");';
+                    // reload
+                    echo 'window.location = "../CORE_CLUBS/index.php";</script>';
+                } else {
+                    // SQL error
+                    echo '<script language="javascript">alert("SQL ERROR!")</script>';
+                    // echo the error
+                    echo mysqli_error($db);
+                }
+            } catch (PDOException $e) {
+                // error while adding record
+                echo $sql . "<br>" . $e->getMessage();
+            }
+
+            // close the conn
+            $db->close();
         }
     }
 }

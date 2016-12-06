@@ -551,6 +551,7 @@ body, html{
     height: auto;
     background-color: #7a7b7b;
     color: #fff;
+    border: 1px solid #fff;
 }
 #admin_approve, #admin_delete{
     text-decoration: none;

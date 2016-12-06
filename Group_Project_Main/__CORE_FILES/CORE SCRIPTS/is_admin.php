@@ -13,5 +13,44 @@ $user_a_lvl = $_SESSION["user_ac_lvl"];
 if($user_a_lvl != 0 && $user_a_lvl > 1){
     // the user is an admin
     // generate the divs
-    echo "<button type='button'>BTN1</button>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
+    echo "<p>This</p>";
 }

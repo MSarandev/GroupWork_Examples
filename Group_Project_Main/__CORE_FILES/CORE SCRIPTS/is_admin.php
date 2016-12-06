@@ -58,7 +58,7 @@ if($user_a_lvl != 0 && $user_a_lvl > 1){
                         <input type='submit' name='admin_approve?".$row['clubID']."' id='admin_approve' value='Approve'/>
                         <input type='submit' name='admin_delete?".$row['clubID']."' id='admin_delete' value='Delete'>
                     </form>
-                    <p id='admin_version_p'><strong>v. 2.7</strong></p>
+                    <p id='admin_version_p'><strong>v. 2.8</strong></p>
                 </div>
                 ";
             }

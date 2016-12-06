@@ -3,15 +3,17 @@
  */
 // .. .. .. .. .. ..
 // Magical AJAX below, watch out
+/*
 function submitMe() {
     $.ajax({
         type: "POST",
-        url: "../CORE SCRIPTS/saveNewClub.php",
+        url: "../CORE SCRIPTS/DEPRICATED-saveNewClub.php",
         data: { name: "John" }
     }).done(function( msg ) {
         alert( "Club Submitted! " + msg );
     });
 }
+*/
 // .. .. .. .. .. .. 
 
 

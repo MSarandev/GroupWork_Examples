@@ -565,7 +565,6 @@ body, html{
     font-size: 16px;
     color: #ffffff;
     border: 1px solid #47231f;
-    margin-right: 20px;
     background: rgb(152,75,67);
     background: -moz-linear-gradient(top, rgba(152,75,67,1) 0%, rgba(152,75,67,1) 41%, rgba(152,75,67,1) 41%, rgba(147,91,87,1) 100%);
     background: -webkit-linear-gradient(top, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);

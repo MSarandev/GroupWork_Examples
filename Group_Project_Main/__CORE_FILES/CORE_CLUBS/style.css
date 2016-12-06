@@ -508,6 +508,8 @@ body, html{
 
 /* Admin buttons START*/
 .search_button_btn{
+    display:flex;
+    align-self: center;
     text-decoration: none;
     text-align: center;
     width: 100px;

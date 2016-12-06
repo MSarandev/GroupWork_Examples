@@ -119,11 +119,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // error while adding record
                 echo $sql . "<br>" . $e->getMessage();
             }
+
+            // close the conn
+            $db->close();
         }else{
             echo '<script language="javascript">alert("Something in your values is not OK. Try again!")</script>';
         }
-
-        // close the conn
-        $db->close();
     }
 }

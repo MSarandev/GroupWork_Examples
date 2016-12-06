@@ -192,7 +192,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $db->close();
                 }else{
                     // data didn't pass the redundancy tests, display the error
-                    echo '<script language="javascript">alert("Issues found when registering");';
+                    echo '<script language="javascript">alert("'.$err_txt.'");';
                     // reload
                     echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                 }

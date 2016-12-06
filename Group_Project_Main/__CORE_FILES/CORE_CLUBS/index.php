@@ -105,7 +105,7 @@ session_start();
                            class="search_button_btn"
                            name="search_club_btn"
                            value="Search" />
-                    <p>v. 1.5</p>
+                    <p style="z-index: 1">v. 1.5</p>
                 </form>
                 <div id="search_res_holder">
                     <!-- Include the script to handle searches -->

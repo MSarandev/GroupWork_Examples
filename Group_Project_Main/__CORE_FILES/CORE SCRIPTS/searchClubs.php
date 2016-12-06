@@ -73,6 +73,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 echo mysqli_error($db);
             }
+
+            // close the conn
+            $db->close();
         }else{
             // Alert the user
             echo '<script language="javascript">alert("INVALID format. Reloading")</script>';

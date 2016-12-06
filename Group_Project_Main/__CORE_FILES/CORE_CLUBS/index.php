@@ -96,10 +96,21 @@ session_start();
         <div class="MAIN_DIV" id="div_main_slot_right">
             <!-- Search code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_search">
-                <input type="text"
-                       class="search_text_box"
-                       placeholder="Search Clubs" />
-                <a href="" class="search_button_btn">Search</a>
+                <form action="" method="post">
+                    <input type="text"
+                           class="search_text_box"
+                           name="search_club_txt"
+                           placeholder="Search Clubs" />
+                    <input type="submit"
+                           class="search_button_btn"
+                           name="search_club_btn"
+                           value="Search" />
+                    <p>v. 1.0</p>
+                </form>
+                <!-- Include the script to handle searches -->
+                <?php
+                    include("../CORE SCRIPTS/searchClubs.php");
+                ?>
                 <!-- Attach Waves to these btns -->
                 <script>
                     //Attach waves
@@ -158,7 +169,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Version: 3.8 | ";
+            echo "Version: 3.9 | ";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

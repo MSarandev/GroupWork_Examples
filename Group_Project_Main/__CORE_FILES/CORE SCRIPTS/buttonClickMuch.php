@@ -7,8 +7,6 @@
  */
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Make sure that the register form is calling
-
     /**
      * Ok, so there's a bit of magic happening below
      * There's a loop that goes through all post calling elements in the page

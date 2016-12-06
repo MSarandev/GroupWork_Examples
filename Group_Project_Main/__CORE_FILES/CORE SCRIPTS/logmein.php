@@ -75,18 +75,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // -- -- -- -- -- -- --
                 // Check all fields for empty chars
                 if($first_name !== "" &&
-                    $first_name === ctype_alpha($first_name) &&
+                    ctype_alpha($first_name) &&
                     $first_name != ""){
                     // first name OK
                     if($last_name !== "" &&
-                        $last_name === ctype_alpha($last_name) &&
+                        ctype_alpha($last_name) &&
                         $last_name != ""){
                         // last name OK
                         if($email != "" && $email !== ""){
                             // email OK
                             if($username != "" &&
                                 $username !== "" &&
-                                $username === ctype_alpha($username)){
+                                ctype_alpha($username)){
                                 // username OK
                                 if($password != "" &&
                                     strlen($password) >= 6 &&

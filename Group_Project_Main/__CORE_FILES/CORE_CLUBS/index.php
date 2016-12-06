@@ -147,6 +147,7 @@ session_start();
                 <div id="admin_div_panel">
                     <?php
                     include("../CORE SCRIPTS/is_admin.php");
+                    include("../CORE SCRIPTS/buttonClickMuch.php");
                     ?>
                 </div>
             </div>
@@ -156,7 +157,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Version: 2.12 | ";
+            echo "Version: 2.13 | ";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

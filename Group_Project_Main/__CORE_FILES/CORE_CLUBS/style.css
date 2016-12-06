@@ -558,7 +558,7 @@ body, html{
     width: 100px;
     min-width: 100px;
     min-height: 20px;
-    height: 20px;
+    height: 100%;
     padding-top: 3px;
     padding-bottom: 7px;
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;

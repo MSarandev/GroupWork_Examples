@@ -115,5 +115,8 @@ include("../CORE SCRIPTS/logmein.php");
         <button class="btn" onclick="rotate()">Back To Login</button>
     </div>
 </div>
+<footer>
+    <p style="position: absolute; bottom: 0; left: 0; right: 0;">Registration version: 1.12</p>
+</footer>
 </body>
 </html>

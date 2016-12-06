@@ -51,8 +51,8 @@ if($user_a_lvl != 0 && $user_a_lvl > 1){
                     <p>".$club_name."</p>
                     <p>".$age_group."</p>
                     <a href='".$url."'>LINK</a>
-                    <button type='button'>Approve</button>
-                    <button type='button'>Delete</button>
+                    <button type='button' id='admin_approve'>Approve</button>
+                    <button type='button' id='admin_delete'>Delete</button>
                 </div>
                 ";
             }

@@ -82,8 +82,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         // last name OK
                         if($email != "" &&
                             $email !== "" &&
-                            contains("@", $email) &&
-                            contains(".", $email)){
+                            strpos($email, '@') !== false &&
+                            strpos($email, '.') !== false){
                             // email OK
                             if($username != "" &&
                                 $username !== "" &&

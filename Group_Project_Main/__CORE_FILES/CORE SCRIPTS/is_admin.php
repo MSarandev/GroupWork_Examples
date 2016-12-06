@@ -48,17 +48,17 @@ if($user_a_lvl != 0 && $user_a_lvl > 1){
                 // generate the HTML
                 echo "
                 <div id='admin_inner_section'>
-                    <p>Club name: <strong>".$club_name."</strong>, </p>
+                    <p>Club name: <em>".$club_name."</em>, </p>
                     <br>
-                    <p>Age Group: <strong>".$age_group."</strong>, </p>
+                    <p>Age Group: <em>".$age_group."</em>, </p>
                     <br>
-                    <a href='".$url."'>LINK</a>
+                    <a href='".$url."'><em>LINK</em></a>
                     <br>
                     <form id='admin_btn_form' action='' method='post'>
                         <input type='submit' name='admin_approve?".$row['clubID']."' id='admin_approve' value='Approve'/>
                         <input type='submit' name='admin_delete?".$row['clubID']."' id='admin_delete' value='Delete'>
                     </form>
-                    <p>v. 2.3</p>
+                    <p><strong>v. 2.4</strong></p>
                 </div>
                 ";
             }

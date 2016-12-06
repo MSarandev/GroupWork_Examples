@@ -578,6 +578,9 @@ body, html{
     justify-content: flex-end;
     align-content: center;
 }
+p.admin_inner_section{
+    margin-left: 10px;
+}
 /* ADMIN PHP STYLE End*/
 
 /* footer slot START */

@@ -573,6 +573,11 @@ body, html{
     background: linear-gradient(to bottom, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
 }
+#admin_btn_form{
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
 /* ADMIN PHP STYLE End*/
 
 /* footer slot START */

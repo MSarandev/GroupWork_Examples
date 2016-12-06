@@ -467,7 +467,7 @@ body, html{
     align-items: center;
     /* PERFECT CENTERING */
     flex-direction: row;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .search_text_box{
@@ -549,3 +549,13 @@ body, html{
     min-height: 300px;
 }
 /* ADMIN PHP STYLE End*/
+
+/* footer slot START */
+#div_footer_slot{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+/* footer slot END */

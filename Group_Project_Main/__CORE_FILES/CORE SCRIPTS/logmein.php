@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $access = 0; // default for security
         $user_dupe = 0; // check if username exists (DEF = 0)
         $vals_check_out = 0; // data redundancy check (DEF = 0)
-        $err_txt = ""; // tell the user where the issue was
+        $err_txt = "Generic Error"; // tell the user where the issue was
 
         //Check if all fields are filled in
         if(
@@ -89,7 +89,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         // |*|*|*|*|
                                         // Everything OK
                                         $vals_check_out = 1;
-                                        echo $vals_check_out;
                                     }else{
                                         $err_txt = "Security Answer contains empty char";
                                     }
@@ -193,7 +192,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $db->close();
                 }else{
                     // data didn't pass the redundancy tests, display the error
-                    echo '<script language="javascript">alert("Value error<br><br>'.$err_txt.')</script>';
+                    echo '<script language="javascript">alert(';
+                    echo $err_txt;
+                    echo ')</script>';
                     // reload
                     echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                 }

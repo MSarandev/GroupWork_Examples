@@ -587,7 +587,8 @@ body, html{
     color: #e5e7e7;
     position: absolute;
     right: 0;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
+    padding-right: 5px;
 }
 /* ADMIN PHP STYLE End*/
 

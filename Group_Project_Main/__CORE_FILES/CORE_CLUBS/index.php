@@ -156,8 +156,9 @@ session_start();
 
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
+        <p id="admin_approval_top_p">Approval Section</p>
         <?php
-            echo "Version: 3.0 | ";
+            echo "Version: 3.1 | ";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

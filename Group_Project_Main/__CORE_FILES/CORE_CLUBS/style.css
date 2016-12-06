@@ -590,6 +590,14 @@ body, html{
     padding-bottom: 20px;
     padding-right: 5px;
 }
+#admin_approval_top_p{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    color: #000;
+}
 /* ADMIN PHP STYLE End*/
 
 /* footer slot START */

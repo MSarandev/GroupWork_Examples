@@ -89,6 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         // |*|*|*|*|
                                         // Everything OK
                                         $vals_check_out = 1;
+                                        echo $vals_check_out;
                                     }else{
                                         $err_txt = "Security Answer contains empty char";
                                     }

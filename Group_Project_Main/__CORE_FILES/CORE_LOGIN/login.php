@@ -116,7 +116,7 @@ include("../CORE SCRIPTS/logmein.php");
     </div>
 </div>
 <footer>
-    <p style="position: absolute; bottom: 0; left: 0; right: 0;">Registration version: 1.12</p>
+    <p style="position: absolute; bottom: 0; left: 0; right: 0;">Registration version: 1.13</p>
 </footer>
 </body>
 </html>

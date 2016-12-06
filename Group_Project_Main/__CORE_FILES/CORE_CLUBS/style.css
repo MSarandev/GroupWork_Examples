@@ -548,3 +548,13 @@ body, html{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
 }
 /* Admin buttons END*/
+
+/* ADMIN PHP STYLE Start*/
+#admin_div_panel{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: inherit;
+    background-color: red;
+}
+/* ADMIN PHP STYLE End*/

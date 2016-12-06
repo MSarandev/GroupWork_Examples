@@ -581,10 +581,11 @@ body, html{
 }
 .admin_p{
     margin-right: 10px;
+}
+#admin_version_p{
+    color: #4D4E50;
     position: absolute;
     right: 0;
-    bottom: 0;
-    top: 0;
 }
 /* ADMIN PHP STYLE End*/
 

@@ -38,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $location_info != ""&&
             $long_desc != ""&&
             $creator_info != ""&&
-            $bck_img_url != ""&&
             $header_c_value != ""&&
             $footer_c_value != ""&&
             $text_c_value != ""&&

@@ -156,7 +156,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Version: 2.4 | ";
+            echo "Version: 2.5 | ";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

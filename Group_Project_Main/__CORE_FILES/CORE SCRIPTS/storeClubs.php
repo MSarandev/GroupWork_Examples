@@ -125,7 +125,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }else{
             //echo '<script language="javascript">alert("Something in your values is not OK. Try again!")</script>';
             $error_message = "Something in your values is not OK. Try fixing them.";
-            trigger_error($error_message, E_USER_ERROR);
+            //trigger_error($error_message, E_USER_NOTICE);
+            echo $error_message->getMessage();
         }
     }
 }

@@ -37,13 +37,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (strpos($key, 'admin_approve') === 0) {
             // the key variable contains the ID - find it
             $index_of_q = strpos($key, "?"); // find where the q mark is
-            $clubID_final = substr($key, $index_of_q, 1);
+            $clubID_final = substr($key, $index_of_q, strlen($key));
 
             echo $clubID_final;
         }elseif (strpos($key, 'admin_delete') === 0){
             // the key variable contains the ID - find it
             $index_of_q = strpos($key, "?"); // find where the q mark is
-            $clubID_final = substr($key, $index_of_q, 1);
+            $clubID_final = substr($key, $index_of_q, strlen($key));
 
             echo $clubID_final;
         }

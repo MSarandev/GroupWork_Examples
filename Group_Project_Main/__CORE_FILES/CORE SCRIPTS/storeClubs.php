@@ -31,20 +31,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $text_c_value = trim($_POST["text_c_txt"]);
         $age_group = trim($_POST["age_group_txt"]);
 
-        //check if the vals are empty, and fill in default ones
-        if($club_name != "" ||
-            $short_des != ""||
-            $contact_info != ""||
-            $location_info != ""||
-            $long_desc != ""||
-            $creator_info != ""||
-            $bck_img_url != ""||
-            $header_c_value != ""||
-            $footer_c_value != ""||
-            $text_c_value != "" ||
+        //check if the vals are empty
+        if($club_name != "" &&
+            $short_des != ""&&
+            $contact_info != ""&&
+            $location_info != ""&&
+            $long_desc != ""&&
+            $creator_info != ""&&
+            $bck_img_url != ""&&
+            $header_c_value != ""&&
+            $footer_c_value != ""&&
+            $text_c_value != ""&&
             $age_group != ""){
 
-            // vals OK, fill in
+            // values OK, fill in
             $vals_ok = 1;
         }else{
             echo '<script language="javascript">alert("Check your values")</script>';
@@ -53,16 +53,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //default the approved to 0
         $approved = 0;
 
-        // connect to the db
-        include("../core_db_connect.php");
-
-        // test the conn
-        if ($db->connect_errno) {
-            die ('Connection Failed :'.$db->connect_error );
+        // check if the user changed the colours
+        // DEFs are #000000
+        if($header_c_value == "#000000"){
+            // default value, set to black
+            $header_c_value = "#000000";
+        }
+        if($footer_c_value == "#000000"){
+            // default value, set to black
+            $footer_c_value = "#000000";
+        }
+        if($text_c_value == "#000000"){
+            // default value, set to WHITE
+            $text_c_value = "#FFFFFF";
         }
 
         // vals have been checked, proceed with the SQL
         if($vals_ok == 1) {
+
+            // connect to the db
+            include("../core_db_connect.php");
+
+            // test the conn
+            if ($db->connect_errno) {
+                die ('Connection Failed :'.$db->connect_error );
+            }
+
             // create sql query
             try {
                 $sql = "INSERT INTO clubs (clubname,

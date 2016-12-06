@@ -116,8 +116,15 @@ session_start();
                 <script>
                     //Attach waves
                     Waves.attach('.search_button_btn');
+                    Waves.attach('.search_res_btn_link');
                     //Ripple on hover
                     $('.search_button_btn').mouseenter(function() {
+                        Waves.ripple(this, {wait: null});
+                    }).mouseleave(function() {
+                        Waves.calm(this);
+                    });
+                    //Ripple on hover
+                    $('.search_res_btn_link').mouseenter(function() {
                         Waves.ripple(this, {wait: null});
                     }).mouseleave(function() {
                         Waves.calm(this);

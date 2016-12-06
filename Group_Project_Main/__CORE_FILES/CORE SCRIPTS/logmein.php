@@ -82,13 +82,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $last_name === ctype_alpha($last_name) &&
                         $last_name != ""){
                         // last name OK
-                        if($email != ""){
+                        if($email != "" && $email !== ""){
                             // email OK
-                            if($username != ""){
+                            if($username != "" &&
+                                $username !== "" &&
+                                $username === ctype_alpha($username)){
                                 // username OK
-                                if($password != "" && strlen($password) >= 6){
+                                if($password != "" &&
+                                    strlen($password) >= 6 &&
+                                    $password !== ""){
                                     // password OK
-                                    if($sec_a != ""){
+                                    if($sec_a != "" &&
+                                        $sec_a !== ""){
                                         // sec ans OK
                                         // |*|*|*|*|
                                         // Everything OK
@@ -100,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     $err_txt = "Password must be 6+ chars and can't contain empty chars";
                                 }
                             }else{
-                                $err_txt = "Username contains empty char";
+                                $err_txt = "Username contains empty char OR has numbers";
                             }
                         }else{
                             $err_txt = "Email contains empty char";

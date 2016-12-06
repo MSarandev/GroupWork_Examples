@@ -467,6 +467,7 @@ body, html{
     align-items: center;
     /* PERFECT CENTERING */
     flex-direction: row;
+    margin-top: 50px;
 }
 
 .search_text_box{

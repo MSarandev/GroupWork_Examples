@@ -74,9 +74,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // The nesting if/else should be changed if we have the time (MS)
                 // -- -- -- -- -- -- --
                 // Check all fields for empty chars
-                if($first_name != " " && $first_name !== preg_match('~[0-9]~', $first_name)){
+                if($first_name !== " " &&
+                    $first_name !== preg_match('~[0-9]~', $first_name) &&
+                    $first_name != " "){
                     // first name OK
-                    if($last_name != " " && $last_name !== preg_match('~[0-9]~', $last_name)){
+                    if($last_name !== " " &&
+                        $last_name !== preg_match('~[0-9]~', $last_name) &&
+                        $last_name != " "){
                         // last name OK
                         if($email != " "){
                             // email OK

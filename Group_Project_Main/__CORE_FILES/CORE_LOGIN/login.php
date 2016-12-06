@@ -15,6 +15,11 @@ include("../CORE SCRIPTS/logmein.php");
     <meta charset="UTF-8">
     <title>Login Card Flip</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- DO NOT INCLUDE THE SCRIPT
+    I tried to check the fields with JS, failed miserably
+
+    <script src="script.js"></script>
+    -->
     <script src="../jquery.min.js"></script>
     <script>
         // JQUERY CODE TO FLIP THE CARD
@@ -71,12 +76,12 @@ include("../CORE SCRIPTS/logmein.php");
             <label class="generic_label">Email</label>
             <input class="generic_txt_input"
                    type="text"
-                   name="email_txt"/>
+                   name="email_txt" />
             <label class="generic_label">Username</label>
             <input class="generic_txt_input"
                    type="text"
                    name="username_txt"/>
-            <label class="generic_label">Password</label>
+            <label class="generic_label">Password (6+ chars)</label>
             <input class="generic_txt_input"
                    type="password"
                    name="password_txt"/>
@@ -105,7 +110,7 @@ include("../CORE SCRIPTS/logmein.php");
             <input class="generic_txt_input"
                    type="text"
                    name="sec_a_txt"/>
-            <input class="btn" type="submit" name="submit_register">
+            <input id="register_submit_btn" class="btn" type="submit" name="submit_register">
         </form>
         <button class="btn" onclick="rotate()">Back To Login</button>
     </div>

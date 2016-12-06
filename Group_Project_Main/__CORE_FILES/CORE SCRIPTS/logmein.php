@@ -27,6 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sec_a = "";
         $access = 0; // default for security
         $user_dupe = 0; // check if username exists (DEF = 0)
+        $vals_check_out = 0; // data redundancy check (DEF = 0)
+        $err_txt = ""; // tell the user where the issue was
 
         //Check if all fields are filled in
         if(
@@ -66,86 +68,134 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // store the pass in a var
                 $password = trim($_POST["password_txt"]);
 
-                // connect to the db
-                include("../core_db_connect.php");
 
-                // test the conn
-                if ($db->connect_errno) {
-                    die ('Connection Failed :'.$db->connect_error );
-                }
-
-                // grab all usernames
-                $sql = "SELECT * FROM userlogin";
-                // parse as res
-                $result = $db->query($sql);
-
-                // run the query
-                if(mysqli_query($db, $sql)){
-                    // check the return amount
-                    if ($result->num_rows > 0) {
-                        // check each entry for dupes
-                        while($row = $result->fetch_assoc()) {
-                            if(
-                                $username == $row["username"]
-                            ){
-                                $user_dupe = 1; // username repeats
+                // Added on 06/12 after testing
+                // -- -- -- -- -- -- --
+                // The nesting if/else should be changed if we have the time (MS)
+                // -- -- -- -- -- -- --
+                // Check all fields for empty chars
+                if($first_name != " "){
+                    // first name OK
+                    if($last_name != " "){
+                        // last name OK
+                        if($email != " "){
+                            // email OK
+                            if($username != " "){
+                                // username OK
+                                if($password != " "){
+                                    // password OK
+                                    if($sec_a != " "){
+                                        // sec ans OK
+                                        // |*|*|*|*|
+                                        // Everything OK
+                                        $vals_check_out = 1;
+                                    }else{
+                                        $err_txt = "Security Answer contains empty char";
+                                    }
+                                }else{
+                                    $err_txt = "Password contains empty char";
+                                }
+                            }else{
+                                $err_txt = "Username contains empty char";
                             }
+                        }else{
+                            $err_txt = "Email contains empty char";
                         }
-                    } else {
-                        // general get error
-                        echo '<script language="javascript">alert("Interesting, you broke something I see");';
-                        // reload
-                        echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+                    }else{
+                        $err_txt = "Last Name contains empty char";
                     }
                 }else{
-                    // SQL error
-                    echo '<script language="javascript">alert("SQL ERROR!")</script>';
-                    // echo the error
-                    echo mysqli_error($db);
+                    $err_txt = "First Name contains empty char";
                 }
 
-                // check if the username exists
-                if($user_dupe == 1){
-                    // Alert the user to the issue
-                    echo '<script language="javascript">alert("Username Taken. Pick another one");';
-                    // reload
-                    echo 'window.location = "../CORE_LOGIN/login.php";</script>';
-                }else{
-                    // Username is ok, insert the data
-                    // - - - - - -
-                    // create sql query
-                    try {
-                        $sql = "INSERT INTO USERLOGIN (username,pass,accessLvl,email,secQues,secAns,firstName,lastName)
-                            VALUES ('".mysqli_real_escape_string($db,$username)."','"
-                            .mysqli_real_escape_string($db,$password)."','"
-                            .mysqli_real_escape_string($db,$access)."','"
-                            .mysqli_real_escape_string($db,$email)."','"
-                            .mysqli_real_escape_string($db,$sec_q)."','"
-                            .mysqli_real_escape_string($db,$sec_a)."','"
-                            .mysqli_real_escape_string($db,$first_name)."','"
-                            .mysqli_real_escape_string($db,$last_name).
-                            "')";
 
-                        // attach the query to the conn and run it
-                        if(mysqli_query($db, $sql)){
-                            // insert OK
-                            echo '<script language="javascript">alert("Registration complete. Please login");';
+                if($vals_check_out == 1) {
+                    // connect to the db
+                    include("../core_db_connect.php");
+
+                    // test the conn
+                    if ($db->connect_errno) {
+                        die ('Connection Failed :' . $db->connect_error);
+                    }
+
+                    // grab all usernames
+                    $sql = "SELECT * FROM userlogin";
+                    // parse as res
+                    $result = $db->query($sql);
+
+                    // run the query
+                    if (mysqli_query($db, $sql)) {
+                        // check the return amount
+                        if ($result->num_rows > 0) {
+                            // check each entry for dupes
+                            while ($row = $result->fetch_assoc()) {
+                                if (
+                                    $username == $row["username"]
+                                ) {
+                                    $user_dupe = 1; // username repeats
+                                }
+                            }
+                        } else {
+                            // general get error
+                            echo '<script language="javascript">alert("Interesting, you broke something I see");';
                             // reload
                             echo 'window.location = "../CORE_LOGIN/login.php";</script>';
-                        }else{
-                            // SQL error
-                            echo '<script language="javascript">alert("SQL ERROR!")</script>';
-                            // echo the error
-                            echo mysqli_error($db);
                         }
-                    }catch(PDOException $e){
-                        // error while adding record
-                        echo $sql . "<br>" . $e->getMessage();
+                    } else {
+                        // SQL error
+                        echo '<script language="javascript">alert("SQL ERROR!")</script>';
+                        // echo the error
+                        echo mysqli_error($db);
                     }
-                }
 
-                //finally, close the conn
-                $db->close();
+                    // check if the username exists
+                    if ($user_dupe == 1) {
+                        // Alert the user to the issue
+                        echo '<script language="javascript">alert("Username Taken. Pick another one");';
+                        // reload
+                        echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+                    } else {
+                        // Username is ok, insert the data
+                        // - - - - - -
+                        // create sql query
+                        try {
+                            $sql = "INSERT INTO USERLOGIN (username,pass,accessLvl,email,secQues,secAns,firstName,lastName)
+                            VALUES ('" . mysqli_real_escape_string($db, $username) . "','"
+                                . mysqli_real_escape_string($db, $password) . "','"
+                                . mysqli_real_escape_string($db, $access) . "','"
+                                . mysqli_real_escape_string($db, $email) . "','"
+                                . mysqli_real_escape_string($db, $sec_q) . "','"
+                                . mysqli_real_escape_string($db, $sec_a) . "','"
+                                . mysqli_real_escape_string($db, $first_name) . "','"
+                                . mysqli_real_escape_string($db, $last_name) .
+                                "')";
+
+                            // attach the query to the conn and run it
+                            if (mysqli_query($db, $sql)) {
+                                // insert OK
+                                echo '<script language="javascript">alert("Registration complete. Please login");';
+                                // reload
+                                echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+                            } else {
+                                // SQL error
+                                echo '<script language="javascript">alert("SQL ERROR!")</script>';
+                                // echo the error
+                                echo mysqli_error($db);
+                            }
+                        } catch (PDOException $e) {
+                            // error while adding record
+                            echo $sql . "<br>" . $e->getMessage();
+                        }
+                    }
+
+                    //finally, close the conn
+                    $db->close();
+                }else{
+                    // data didn't pass the redundancy tests, display the error
+                    echo '<script language="javascript">alert("Value error<br><br>'.$err_txt.')</script>';
+                    // reload
+                    echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+                }
             }else{
                 // Passwords don't match
                 echo '<script language="javascript">alert("Passwords are different");';
@@ -154,6 +204,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
     }
+    // -------------------------------------------
+    // LOGIN BELOW |*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|
+    // -------------------------------------------
 
     // check if login
     if(isset($_POST['submit_login'])){

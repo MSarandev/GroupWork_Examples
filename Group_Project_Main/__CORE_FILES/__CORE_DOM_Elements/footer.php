@@ -6,4 +6,4 @@
  * Time: 3:41 PM
  */
 
-echo "©Copyright TMR 2016";
+echo "©Copyright Maxim Sarandev, Craig Davies, David Bruce 2016 ";

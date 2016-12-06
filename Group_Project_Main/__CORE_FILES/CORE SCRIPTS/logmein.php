@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sec_a = "";
         $access = 0; // default for security
         $user_dupe = 0; // check if username exists (DEF = 0)
+        $email_dupe = 0; // check if the email exists (DEF = 0)
         $vals_check_out = 0; // data redundancy check (DEF = 0)
         $err_txt = "Generic Error"; // tell the user where the issue was
 
@@ -82,7 +83,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         ctype_alpha($last_name) &&
                         $last_name != ""){
                         // last name OK
-                        if($email != "" && $email !== ""){
+                        if($email != "" &&
+                            $email !== "" &&
+                            strpos($email, '@') !== false &&
+                            strpos($email, '.') !== false){
                             // email OK
                             if($username != "" &&
                                 $username !== "" &&
@@ -108,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 $err_txt = "Username contains empty char OR has numbers";
                             }
                         }else{
-                            $err_txt = "Email contains empty char";
+                            $err_txt = "Email format invalid";
                         }
                     }else{
                         $err_txt = "Last Name contains empty char OR has numbers";
@@ -138,10 +142,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         if ($result->num_rows > 0) {
                             // check each entry for dupes
                             while ($row = $result->fetch_assoc()) {
-                                if (
-                                    $username == $row["username"]
-                                ) {
+                                // loop through res
+                                if ($username == $row["username"]) {
                                     $user_dupe = 1; // username repeats
+                                } else if ($email == $row["email"]) {
+                                    $email_dupe = 1; // email repeats
                                 }
                             }
                         } else {
@@ -163,8 +168,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         echo '<script language="javascript">alert("Username Taken. Pick another one");';
                         // reload
                         echo 'window.location = "../CORE_LOGIN/login.php";</script>';
-                    } else {
-                        // Username is ok, insert the data
+                    }else if($email_dupe == 1){
+                        // Alert the user to the issue
+                        echo '<script language="javascript">alert("Email exists. Try to login.");';
+                        // reload
+                        echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+                    }else {
+                        // Username is ok, email ok, values ok -> insert the data
                         // - - - - - -
                         // create sql query
                         try {

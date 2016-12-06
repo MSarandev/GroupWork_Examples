@@ -144,7 +144,6 @@ session_start();
             <div class="MAIN_DIV" id="div_main_slot_right_bottom">
                 <!-- generate the options here based on user acc. lvl -->
                 <?php
-                    include("../CORE SCRIPTS/buttonClickMuch.php");
                     include("../CORE SCRIPTS/is_admin.php");
                 ?>
             </div>
@@ -153,7 +152,10 @@ session_start();
 
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
-        <?php include("../__CORE_DOM_Elements/footer.php"); ?>
+        <?php
+            echo "Version: 2.1 | ";
+            include("../__CORE_DOM_Elements/footer.php");
+        ?>
     </div>
 </body>
 </html>

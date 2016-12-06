@@ -71,4 +71,6 @@ if($user_a_lvl != 0 && $user_a_lvl > 1){
         echo '<script language="javascript">alert("SQL ERROR!")</script>';
         echo mysqli_error($db);
     }
+}else{
+    echo "<p>You don't have the access level to see these buttons</p>";
 }

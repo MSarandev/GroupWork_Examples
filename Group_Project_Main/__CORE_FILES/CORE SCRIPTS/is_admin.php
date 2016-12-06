@@ -13,44 +13,56 @@ $user_a_lvl = $_SESSION["user_ac_lvl"];
 if($user_a_lvl != 0 && $user_a_lvl > 1){
     // the user is an admin
     // generate the divs
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
-    echo "<p>This</p>";
+
+    // prepare the vars
+    $club_name = "";
+    $age_group = "";
+    $url = "";
+    // ADD THE MARKER DETAILS HERE
+
+    // link to to db
+    include("../core_db_connect.php");
+
+    // test the conn
+    if ($db->connect_errno) {
+        die ('Connection Failed :'.$db->connect_error );
+    }
+
+    // create the query
+    $sql = "SELECT * FROM clubs WHERE approved = '0'";
+
+    // parse as row
+    $result = $db->query($sql);
+
+    // run the query
+    if (mysqli_query($db, $sql)) {
+        // check the return amount
+        if ($result->num_rows > 0) {
+            // data OK
+            while ($row = $result->fetch_assoc()) {
+                // fetch the data for each club
+                $club_name = $row["clubname"];
+                $age_group = $row["age_group"];
+                $url = $row["clubID"];
+
+                // generate the HTML
+                echo "
+                <div id='admin_inner_section'>
+                    <p>".$club_name."</p>
+                    <p>".$age_group."</p>
+                    <a href='".$url."'>LINK</a>
+                    <button type='button'>Approve</button>
+                    <button type='button'>Delete</button>
+                </div>
+                ";
+            }
+        }else{
+            // data false, reload
+            echo '<script language="javascript">alert("Data retrieval error!")</script>';
+        }
+    }else {
+        // SQL error
+        echo '<script language="javascript">alert("SQL ERROR!")</script>';
+        echo mysqli_error($db);
+    }
 }

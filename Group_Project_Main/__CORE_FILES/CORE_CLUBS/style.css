@@ -494,17 +494,17 @@ body, html{
 
 /* Search results container START */
 #search_res_holder{
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.4);
     border: 1px solid black;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    min-width: 0px;
-    max-width: 180px;
-    min-height: 0px;
+    min-width: 0;
+    max-width: 50%;
+    min-height: 0;
     max-height: 200px;
     position: absolute;
     right: 175px;
-    top: 55px;
+    top: 110px;
     overflow-y: scroll;
 }
 .search_res_inner{

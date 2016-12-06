@@ -13,7 +13,5 @@ $user_a_lvl = $_SESSION["user_ac_lvl"];
 if($user_a_lvl != 0 && $user_a_lvl > 1){
     // the user is an admin
     // generate the divs
-    echo "<div id='admin_div_panel'>";
     echo "<button type='button'>BTN1</button>";
-    echo "</div>";
 }

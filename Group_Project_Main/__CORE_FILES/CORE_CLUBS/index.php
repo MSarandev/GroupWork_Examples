@@ -144,9 +144,11 @@ session_start();
             <div class="MAIN_DIV" id="div_main_slot_right_bottom">
                 <!-- generate the options here based on user acc. lvl -->
                 <a href="../CORE_CREATE_CLUB/index.php" class="admin_btn">Create Club</a>
-                <?php
+                <div id="admin_div_panel">
+                    <?php
                     include("../CORE SCRIPTS/is_admin.php");
-                ?>
+                    ?>
+                </div>
             </div>
         </div>
     </div>
@@ -154,7 +156,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Version: 2.2 | ";
+            echo "Version: 2.3 | ";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

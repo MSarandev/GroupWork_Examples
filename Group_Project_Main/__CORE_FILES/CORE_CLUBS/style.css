@@ -150,10 +150,6 @@ body, html{
 /* Wrapping DIV styling below */
 .clubs_container_container_d{
     background: #eac67a;
-    background: -moz-linear-gradient(top, #eac67a 0%, #e5c07b 53%, #e5c07b 100%);
-    background: -webkit-linear-gradient(top, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
-    background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
     overflow-x: hidden;
     width: 100%;
     overflow-y: scroll;
@@ -292,10 +288,6 @@ body, html{
 
 .events_container_container_d{
     background: #eac67a;
-    background: -moz-linear-gradient(top, #eac67a 0%, #e5c07b 53%, #e5c07b 100%);
-    background: -webkit-linear-gradient(top, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
-    background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
     overflow-x: hidden;
     overflow-y: scroll;
     width: 100%;
@@ -415,10 +407,6 @@ body, html{
 /* style the container */
 .filter_buttons_main_container{
     background: #eac67a;
-    background: -moz-linear-gradient(top, #eac67a 0%, #e5c07b 53%, #e5c07b 100%);
-    background: -webkit-linear-gradient(top, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
-    background: linear-gradient(to bottom, #eac67a 0%,#e5c07b 53%,#e5c07b 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eac67a', endColorstr='#e5c07b',GradientType=0 );
     /* PERFECT CENTERING */
     display: flex;                !important;
     justify-content: flex-start;    !important;
@@ -545,8 +533,13 @@ body, html{
     flex-direction: column;
     width: 100%;
     height: 90%;
-    min-width: 300px;
     min-height: 300px;
+    background: #eac67a;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    min-width: 500px;
+    max-height: 250px;  !important;
+    justify-content: center;
 }
 /* ADMIN PHP STYLE End*/
 

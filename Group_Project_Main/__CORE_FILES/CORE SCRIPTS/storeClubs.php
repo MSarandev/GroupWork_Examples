@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // values OK, fill in
             $vals_ok = 1;
         }else{
-            echo '<script language="javascript">alert("Check your values")</script>';
+            //echo '<script language="javascript">alert("Check your values")</script>';
         }
 
         //default the approved to 0

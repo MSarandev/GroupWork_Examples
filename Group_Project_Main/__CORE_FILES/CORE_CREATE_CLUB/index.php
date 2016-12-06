@@ -184,8 +184,8 @@ include("../CORE SCRIPTS/storeClubs.php");
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
+        echo "Version 2.0";
         include("../__CORE_DOM_Elements/footer.php");
-        echo "Version 1.2"
     ?>
 </div>
 </body>

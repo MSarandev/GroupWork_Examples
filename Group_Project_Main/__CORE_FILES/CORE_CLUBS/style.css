@@ -479,23 +479,18 @@ body, html{
     min-width: 100px;
     min-height: 35px;
     height: 35px;
-    /*
-    padding-top: 3px;
-    padding-bottom: 7px;
-    */
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
-    font-size: 20px;
-    color: #ffffff;
+    font-size: 16px;
     border: 1px solid #47231f;
-    background: rgb(152,75,67);
+    background-color: rgb(152,75,67);
 }
 
 /* Search text box & btn code END */
 
 /* Search results container START */
 #search_res_holder{
-    background-color: rgba(255,255,255,0.4);
-    border: 1px solid black;
+    background-color: #fff;
+    border: 1px solid #47231f;
     border-bottom-left-radius: 15px;
     min-width: 0;
     max-width: 50%;

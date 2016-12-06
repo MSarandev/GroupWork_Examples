@@ -555,8 +555,8 @@ body, html{
 #admin_approve, #admin_delete{
     text-decoration: none;
     text-align: center;
-    width: 100px;
-    min-width: 100px;
+    width: auto;
+    min-width: 60px;
     min-height: 20px;
     height: 100%;
     padding-top: 3px;

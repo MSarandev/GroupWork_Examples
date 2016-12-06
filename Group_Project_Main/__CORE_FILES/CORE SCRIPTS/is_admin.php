@@ -53,8 +53,8 @@ if($user_a_lvl != 0 && $user_a_lvl > 1){
                     <a href='".$url."'>LINK</a>
                     <p>\//\\/</p>
                     <form action='' method='post'>
-                        <input type='submit' name='admin_approve' id='admin_approve' value='Approve'/>
-                        <input type='submit' name='admin_delete' id='admin_delete' value='Delete'>
+                        <input type='submit' name='admin_approve?".$row['clubID']."' id='admin_approve' value='Approve'/>
+                        <input type='submit' name='admin_delete?".$row['clubID']."' id='admin_delete' value='Delete'>
                     </form>
                 </div>
                 ";

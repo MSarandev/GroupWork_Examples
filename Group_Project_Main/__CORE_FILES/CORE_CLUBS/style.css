@@ -499,6 +499,7 @@ body, html{
 #div_main_slot_right_bottom{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: inherit;
     width: 100%;
 }

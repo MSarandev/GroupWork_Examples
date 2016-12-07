@@ -291,6 +291,8 @@ alert("The passwords that you have entered do not match. Please try again.");';
                         echo '<script language="javascript">alert("Username or Password incorrect")</script>';
                         // data false, reload
                         echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+
+                        header("location: ../CORE_LOGIN/login.php");
                     }
                 }else{
                     // SQL error

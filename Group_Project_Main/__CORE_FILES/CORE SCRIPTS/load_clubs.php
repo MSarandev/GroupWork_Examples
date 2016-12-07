@@ -121,7 +121,7 @@ if(count($club_array) != 0){
                         </div>
                         <!-- Image section -->
                         <div class="clubs_container_li_left_d">
-                            <img class="clubs_container_img_lg" src="'.$header_img.'"/>
+                            <img class="clubs_container_img_lg" src="../CORE_IMG/PlaceholderLogo.png"/>
                         </div>
                         <!-- Button Section -->
                         <div class="clubs_container_int_d_btn">

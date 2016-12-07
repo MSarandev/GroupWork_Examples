@@ -288,8 +288,9 @@ alert("The passwords that you have entered do not match. Please try again.");';
                         // open the clubs page
                         header("location: ../CORE_CLUBS/index.php");
                     } else {
+                        echo '<script language="javascript">alert("Username or Password incorrect")</script>';
                         // data false, reload
-                        header("location: ../CORE_LOGIN/login.php");
+                        echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                     }
                 }else{
                     // SQL error

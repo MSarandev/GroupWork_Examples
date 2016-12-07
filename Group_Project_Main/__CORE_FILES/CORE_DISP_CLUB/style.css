@@ -33,7 +33,9 @@ body, html{
     background: #eac67a;
     width: 100%;
     /* Give the elements a minimum height to conserve styling */
-    min-height: 90%;
+    min-height: 80%;
+    max-height: 80%;
+    overflow-y: scroll;
     text-align: center;
     margin: 0 auto;
 }

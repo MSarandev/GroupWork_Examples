@@ -54,6 +54,9 @@
                             // echo the error
                             echo mysqli_error($db);
                         }
+
+                        // close the conn
+                        $db->close();
                     }else{
                         // echo a failed message - HEX for something
                         echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20

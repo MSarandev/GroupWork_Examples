@@ -8,7 +8,9 @@
                 if (isset($_GET['cid'])) {
                     // fetch the club ID
                     $club_ID = $_GET['cid'];
+                    $club_name = "";
 
+                    $is_hacker = 0;
 
                     // THIS IS GET, GET IS SUPER DANGEROUS
                     // Perform ALL the security checks to
@@ -42,7 +44,13 @@
                                 // check each entry for dupes
                                 while ($row = $result->fetch_assoc()) {
                                     // club exists
+                                    // - - - - - -
+                                    // Show club name in the title
                                     echo $row['clubname'];
+
+                                    // - - - - - -
+                                    // Pass the other values as
+                                    $club_name = $row['clubname'];
                                 }
                             } else {
                                 // No club found
@@ -58,6 +66,9 @@
                         // close the conn
                         $db->close();
                     }else{
+                        // SOUND THE ALARM
+                        $is_hacker = 1;
+
                         // echo a failed message - HEX for something
                         echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
                               62 61 64 20 61 6e 64 20 79 6f 75 20 73 
@@ -76,7 +87,18 @@
 </div>
 <div class="MAIN_DIV" id="div_main_preview">
     <div id="preview_head_div">
-        <h2 id="preview_head">Club Name</h2>
+        <h2 id="preview_head">
+            <?php
+                if($is_hacker == 0) {
+                    echo $club_name;
+                }else if($is_hacker == 1){
+                    // echo a failed message - HEX for something
+                    echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
+                          62 61 64 20 61 6e 64 20 79 6f 75 20 73 
+                          68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
+                }
+            ?>
+        </h2>
         <hr>
         <h3 id="preview_short">Short Description</h3>
     </div>
@@ -95,7 +117,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 1.6 | ";
+    echo "Version 1.7 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

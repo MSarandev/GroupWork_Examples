@@ -71,6 +71,12 @@
                                     $footer_c_value = $row['footerC'];
                                     $text_c_value = $row['textC'];
                                     $age_group = $row['age_group'];
+
+                                    // check if bck image is empty
+                                    if($bck_img_url == "" || $bck_img_url === ""){
+                                        // set to DEF
+                                        $bck_img_url = "../CORE_IMG/dark-blue-texture-14411.jpg";
+                                    }
                                 }
                             } else {
                                 // No club found

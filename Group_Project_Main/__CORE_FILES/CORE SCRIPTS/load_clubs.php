@@ -125,7 +125,9 @@ if(count($club_array) != 0){
                         </div>
                         <!-- Button Section -->
                         <div class="clubs_container_int_d_btn">
-                            <a href="" class="clubs_container_btn">Club Page</a>
+                            <a 
+                            href="http://tmrgoportlethen.azurewebsites.net/Group_Project_Main/__CORE_FILES/CORE_DISP_CLUB/index.php?cid='.$clubID.'" 
+                            class="clubs_container_btn">Club Page</a>
                         </div>
                         <!-- /\/\/\/\/\/\/\/\/\/\ -->
                         <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->

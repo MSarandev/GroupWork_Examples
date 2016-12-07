@@ -20,6 +20,10 @@
                     $text_c_value = "";
                     $age_group = "";
 
+                    // check if club found
+                    $is_404 = 0;
+
+                    // yes, we check for hackers
                     $is_hacker = 0;
 
                     // THIS IS GET, GET IS SUPER DANGEROUS
@@ -81,6 +85,8 @@
                             } else {
                                 // No club found
                                 echo "404 - Club Not Found";
+
+                                $is_404 = 1;
                             }
                         } else {
                             // SQL error
@@ -121,6 +127,7 @@
      id="div_main_preview"
      style="
      <?php
+     if($is_404 == 0){
         if($is_hacker == 1){
             echo "background-image: url('https://s30.postimg.org/l9l7z3tcx/this1.jpg'); 
             background-color: #000;
@@ -130,6 +137,7 @@
             background-color: #000;
             color: ".$text_c_value."";
         }
+     }
      ?>">
     <div id="preview_head_div" style="
         <?php
@@ -149,7 +157,11 @@
             <?php
                 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                     if ($is_hacker == 0) {
-                        echo $club_name;
+                        if($is_404 == 0){
+                            echo $club_name;
+                        }else{
+                            echo "404 - Club not found";
+                        }
                     } else if ($is_hacker == 1) {
                         // echo a failed message - HEX for something
                         echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
@@ -209,7 +221,13 @@
             <?php
             if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 if ($is_hacker == 0) {
-                    echo $long_desc;
+                    if($is_404 == 0){
+                        echo $long_desc;
+                    }else{
+                        echo "Club with ID: ".$club_ID." doesn't exist.";
+                        echo "<br>";
+                        echo "How did you get here anyway??";
+                    }
                 } else if ($is_hacker == 1) {
                     // echo a failed message - HEX for something
                     echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
@@ -249,7 +267,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 1.13 | ";
+    echo "Version 1.14 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

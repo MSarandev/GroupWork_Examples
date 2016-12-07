@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class='search_res_inner'>
                         <p>".$club_name."</p>
                         <p>".$age_group."</p>
-                        <a href='".$clubID."' 
+                        <a href='../CORE_DISP_CLUB/index.php?cid=".$clubID."' 
                         class='search_res_btn_link'>LINK</a>
                         </div>
                         ";

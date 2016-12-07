@@ -1,19 +1,23 @@
-Updated on 6/12 @ 8PM
+Updated on 7/12 @ 11PM
 
 TO DO:
 ------
 1. Age group button functionality |*| PRIORITY 3 |*|
 2. Subscribe to a club functionality |*| PRIORITY 2 |*|
-3. Generic club page creation |*| PRIORITY 1 |*|
-4. Dynamic pull of clubs to the generic one via url (.../cid=00&cn=name)
-5. Update ALL href elements to point to the above new URL
 6a. Create an event functionality - place it around the create club btn
 6b. Automatically subscribe the creator to the event
 7. Hide event button
 8. Fix the header
 (ON MONDAY && IF WE HAVE THE TIME) 9. Fix the styling, like ALL of it
-10. Default the value of the bck image for clubs to the one uploaded
 
 
 MAP-MAP-MAP-MAP <- Yeah, fml
 1. Well...everything
+
+
+COMPLETED TASKS
+--------- -----
+MOSTLY DONE -> 5. Update ALL href elements to point to the above new URL
+DONE -> 3. Generic club page creation |*| PRIORITY 1 |*|
+DONE -> 4. Dynamic pull of clubs to the generic one via url (.../cid=00)
+DONE -> 10. Default the value of the bck image for clubs to the one uploaded

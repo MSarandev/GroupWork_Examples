@@ -105,7 +105,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // attach the query to the conn and run it
                 if (mysqli_query($db, $sql)) {
                     // insert OK
-                    echo '<script language="javascript">alert("Club submitted for verification. Sit tight");';
+                    echo '<script language="javascript">
+alert("Your club has been submitted and is awaiting verification. Please be patient while your club is processed.");';
                     // reload
                     echo 'window.location = "../CORE_CLUBS/index.php";</script>';
                 } else {
@@ -122,7 +123,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // close the conn
             $db->close();
         }else{
-            echo '<script language="javascript">alert("Something in your values is not OK. Try again!")</script>';
+            echo '<script language="javascript">
+alert("There is missing information in one or more of the fields. " +
+ "Please check that all required information is entered and try again.")</script>';
         }
     }
 }

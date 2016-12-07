@@ -100,22 +100,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         // Everything OK
                                         $vals_check_out = 1;
                                     }else{
-                                        $err_txt = "Security Answer contains empty char";
+                                        $err_txt = "The security answer field is blank. 
+                                        Please answer the security question and try again.";
                                     }
                                 }else{
-                                    $err_txt = "Password must be 6+ chars and can't contain empty chars";
+                                    $err_txt = "The password you entered is invalid. 
+                                    Your password must be at least 6 characters long. Please try again.";
                                 }
                             }else{
-                                $err_txt = "Username contains empty char OR has numbers";
+                                $err_txt = "The username you entered is invalid. 
+                                Your username cannot be left blank or contain numbers. Please try again.";
                             }
                         }else{
-                            $err_txt = "Email format invalid";
+                            $err_txt = "The email you have entered is not a valid email address. Please try again.";
                         }
                     }else{
-                        $err_txt = "Last Name contains empty char OR has numbers";
+                        $err_txt = "The last name that you entered is invalid. 
+                        The last name cannot be left blank or contain numbers. Please try again.";
                     }
                 }else{
-                    $err_txt = "First Name contains empty char OR has numbers";
+                    $err_txt = "The first name that you entered is invalid. 
+                    The last name cannot be left blank or contain numbers. Please try again.";
                 }
 
 
@@ -171,12 +176,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // check if the username exists
                     if ($user_dupe == 1) {
                         // Alert the user to the issue
-                        echo '<script language="javascript">alert("Username Taken. Pick another one");';
+                        echo '<script language="javascript">
+alert("The username that you have entered is already in use. Please enter another username and try again.");';
                         // reload
                         echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                     }else if($email_dupe == 1){
                         // Alert the user to the issue
-                        echo '<script language="javascript">alert("Email exists. Try to login.");';
+                        echo '<script language="javascript">
+alert("The email address you entered is already registered. " +
+ "Please log in with your existing account or enter another email address and try again.");';
                         // reload
                         echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                     }else {
@@ -223,7 +231,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             }else{
                 // Passwords don't match
-                echo '<script language="javascript">alert("Passwords are different");';
+                echo '<script language="javascript">
+alert("The passwords that you have entered do not match. Please try again.");';
                 // reload
                 echo 'window.location = "../CORE_LOGIN/login.php";</script>';
             }

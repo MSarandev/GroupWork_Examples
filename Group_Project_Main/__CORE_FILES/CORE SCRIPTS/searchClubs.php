@@ -78,7 +78,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $db->close();
         }else{
             // Alert the user
-            echo '<script language="javascript">alert("INVALID format. Reloading")</script>';
+            echo '<script language="javascript">
+alert("The search you have entered contains invalid characters. Please try again using only numbers and letters.")
+</script>';
             // reload
             // echo 'window.location = "../CORE_CLUBS/index.php";</script>';
         }

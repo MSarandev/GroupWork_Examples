@@ -75,6 +75,9 @@
                               68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
                     }
                 }
+            }else{
+                // Static response
+                echo "Title";
             }
         ?>
     </title>
@@ -89,13 +92,15 @@
     <div id="preview_head_div">
         <h2 id="preview_head">
             <?php
-                if($is_hacker == 0) {
-                    echo $club_name;
-                }else if($is_hacker == 1){
-                    // echo a failed message - HEX for something
-                    echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
-                          62 61 64 20 61 6e 64 20 79 6f 75 20 73 
-                          68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
+                if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+                    if ($is_hacker == 0) {
+                        echo $club_name;
+                    } else if ($is_hacker == 1) {
+                        // echo a failed message - HEX for something
+                        echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
+                              62 61 64 20 61 6e 64 20 79 6f 75 20 73 
+                              68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
+                    }
                 }else{
                     // Static response
                     echo "Club Name";
@@ -103,24 +108,103 @@
             ?>
         </h2>
         <hr>
-        <h3 id="preview_short">Short Description</h3>
+        <h3 id="preview_short">
+            <?php
+            if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+                if ($is_hacker == 0) {
+                    echo "1";
+                } else if ($is_hacker == 1) {
+                    // echo a failed message - HEX for something
+                    echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
+                              62 61 64 20 61 6e 64 20 79 6f 75 20 73 
+                              68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
+                }
+            }else{
+                // Static response
+                echo "Short Description";
+            }
+            ?>
+        </h3>
     </div>
     <div id="preview_mid_div">
-        <p id="preview_contact">Contact info</p>
-        <p id="preview_location">Location</p>
+        <p id="preview_contact">
+            <?php
+            if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+                if ($is_hacker == 0) {
+                    echo "1";
+                } else if ($is_hacker == 1) {
+                    // echo a failed message - HEX for something
+                    echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
+                              62 61 64 20 61 6e 64 20 79 6f 75 20 73 
+                              68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
+                }
+            }else{
+                // Static response
+                echo "Contact";
+            }
+            ?>
+        </p>
+        <p id="preview_location">
+            <?php
+            if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+                if ($is_hacker == 0) {
+                    echo "1";
+                } else if ($is_hacker == 1) {
+                    // echo a failed message - HEX for something
+                    echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
+                              62 61 64 20 61 6e 64 20 79 6f 75 20 73 
+                              68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
+                }
+            }else{
+                // Static response
+                echo "Location";
+            }
+            ?></p>
         <br>
         <br>
-        <p id="preview_long">Long Description</p>
+        <p id="preview_long">
+            <?php
+            if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+                if ($is_hacker == 0) {
+                    echo "1";
+                } else if ($is_hacker == 1) {
+                    // echo a failed message - HEX for something
+                    echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
+                              62 61 64 20 61 6e 64 20 79 6f 75 20 73 
+                              68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
+                }
+            }else{
+                // Static response
+                echo "Long Description";
+            }
+            ?>
+        </p>
         <hr>
     </div>
     <div id="preview_foot_div">
-        <p id="preview_creator">Creator</p>
+        <p id="preview_creator">
+            <?php
+            if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+                if ($is_hacker == 0) {
+                    echo "1";
+                } else if ($is_hacker == 1) {
+                    // echo a failed message - HEX for something
+                    echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
+                              62 61 64 20 61 6e 64 20 79 6f 75 20 73 
+                              68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
+                }
+            }else{
+                // Static response
+                echo "Creator";
+            }
+            ?>
+        </p>
     </div>
 </div>
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 1.7 | ";
+    echo "Version 1.9 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

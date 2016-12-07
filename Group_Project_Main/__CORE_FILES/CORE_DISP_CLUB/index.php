@@ -2,7 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>
+        <?php
+            if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+                if (isset($_GET['cid'])) {
+                    $title = $_GET['cid'];
+
+                    echo $title;
+                }
+            }
+        ?>
+    </title>
 </head>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <body>
@@ -31,7 +41,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 1.3 | ";
+    echo "Version 1.4 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

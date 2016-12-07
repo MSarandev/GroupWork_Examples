@@ -107,8 +107,9 @@ body, html{
     padding-top: 15px;
     height: 10%;
     min-height: 50px;
-    width: 100%;
+    width: inherit;
     background-color: rgba(0,0,150,0.2);
     position: absolute;
-    bottom: 150px;
+    bottom: 0;
+    margin-left: 4px;
 }

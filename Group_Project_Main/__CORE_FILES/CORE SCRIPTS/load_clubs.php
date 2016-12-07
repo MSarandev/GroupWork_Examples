@@ -126,7 +126,7 @@ if(count($club_array) != 0){
                         <!-- Button Section -->
                         <div class="clubs_container_int_d_btn">
                             <a 
-                            href="../__CORE_FILES/CORE_DISP_CLUB/index.php?cid='.$clubID.'" 
+                            href="../CORE_DISP_CLUB/index.php?cid='.$clubID.'" 
                             class="clubs_container_btn">Club Page</a>
                         </div>
                         <!-- /\/\/\/\/\/\/\/\/\/\ -->

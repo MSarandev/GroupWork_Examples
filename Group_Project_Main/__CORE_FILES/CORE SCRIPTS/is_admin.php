@@ -43,7 +43,7 @@ if($user_a_lvl != 0 && $user_a_lvl > 1){
                 // fetch the data for each club
                 $club_name = $row["clubname"];
                 $age_group = $row["age_group"];
-                $url = "../__CORE_FILES/CORE_DISP_CLUB/index.php?cid=";
+                $url = "../CORE_DISP_CLUB/index.php?cid=";
                 $url += $row['clubID'];
 
                 // generate the HTML
@@ -59,7 +59,7 @@ if($user_a_lvl != 0 && $user_a_lvl > 1){
                         <input type='submit' name='admin_approve?".$row['clubID']."' id='admin_approve' value='Approve'/>
                         <input type='submit' name='admin_delete?".$row['clubID']."' id='admin_delete' value='Delete'>
                     </form>
-                    <p id='admin_version_p'><strong>v. 2.10</strong></p>
+                    <p id='admin_version_p'><strong>v. 2.11</strong></p>
                 </div>
                 ";
             }

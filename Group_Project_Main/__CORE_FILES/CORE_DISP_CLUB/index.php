@@ -117,14 +117,25 @@
      <?php
         if($is_hacker == 1){
             echo "background-image: url('https://s30.postimg.org/l9l7z3tcx/this1.jpg'); 
-            background-color: #000;";
+            background-color: #000;
+            color: #fff;";
         }else if($is_hacker == 0){
             echo "background-image: url('".$bck_img_url."'); 
-            background-color: #000;";
+            background-color: #000;
+            color: ".$text_c_value."";
         }
      ?>">
     <div id="preview_head_div">
-        <h2 id="preview_head">
+        <h2 id="preview_head"
+            style="
+             <?php
+                if($is_hacker == 1){
+                    echo "background-image: url('https://s30.postimg.org/l9l7z3tcx/this1.jpg'); 
+                    background-color: #000;";
+                }else if($is_hacker == 0){
+                    echo "background-color: ".$header_c_value.";";
+                }
+            ?>">
             <?php
                 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                     if ($is_hacker == 0) {
@@ -188,7 +199,7 @@
             <?php
             if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 if ($is_hacker == 0) {
-                    echo "1";
+                    echo $long_desc;
                 } else if ($is_hacker == 1) {
                     // echo a failed message - HEX for something
                     echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
@@ -200,7 +211,15 @@
         </p>
         <hr>
     </div>
-    <div id="preview_foot_div">
+    <div id="preview_foot_div" style="
+        <?php
+            if($is_hacker == 1){
+                echo "background-image: url('https://s30.postimg.org/l9l7z3tcx/this1.jpg'); 
+                            background-color: #000;";
+            }else if($is_hacker == 0){
+                echo "background-color: ".$footer_c_value.";";
+            }
+        ?>">
         <p id="preview_creator">
             <?php
             if ($_SERVER['REQUEST_METHOD'] === 'GET') {
@@ -220,7 +239,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 1.11 | ";
+    echo "Version 1.12 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

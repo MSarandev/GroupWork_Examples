@@ -19,10 +19,46 @@
                     if(ctype_digit($club_ID)){
                         // the id is a digit
 
-                        echo $club_ID;
+                        // let's check the DB for more details
+
+                        // connect to the db
+                        include("../core_db_connect.php");
+
+                        // test the conn
+                        if ($db->connect_errno) {
+                            die ('Connection Failed :' . $db->connect_error);
+                        }
+
+                        // prep the query
+                        $sql = "SELECT * FROM clubs WHERE clubID = '"
+                            .mysqli_real_escape_string($db, $club_ID)."'";
+                        //parse as res
+                        $result = $db->query($sql);
+
+                        // run the query
+                        if (mysqli_query($db, $sql)) {
+                            // check the return amount
+                            if ($result->num_rows > 0) {
+                                // check each entry for dupes
+                                while ($row = $result->fetch_assoc()) {
+                                    // club exists
+                                    echo $row['clubname'];
+                                }
+                            } else {
+                                // No club found
+                                echo "404 - Club Not Found";
+                            }
+                        } else {
+                            // SQL error
+                            echo '<script language="javascript">alert("SQL ERROR!")</script>';
+                            // echo the error
+                            echo mysqli_error($db);
+                        }
                     }else{
                         // echo a failed message - HEX for something
-                        echo "596f7572206861636b2069732062616420616420796f752073686f756c64206665656c20626164";
+                        echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
+                              62 61 64 20 61 6e 64 20 79 6f 75 20 73 
+                              68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
                     }
                 }
             }
@@ -56,7 +92,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 1.5 | ";
+    echo "Version 1.6 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

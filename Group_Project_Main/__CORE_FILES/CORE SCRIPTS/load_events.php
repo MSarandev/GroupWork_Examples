@@ -91,7 +91,7 @@ if(count($_SESSION["GLOBAL_club_ids"]) == 0){
                 }
             } else {
                 // data false, reload
-                echo '<script language="javascript">alert("Events - Data retrieval error!")</script>';
+                echo 'No events at this time';
             }
         } else {
             // SQL error

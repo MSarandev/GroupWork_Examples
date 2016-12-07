@@ -106,7 +106,13 @@
     </title>
 </head>
 <link rel="stylesheet" type="text/css" href="style.css"/>
-<body>
+<body style="
+<?php
+    if($is_hacker == 1){
+        echo "background-color: rgb(255, 0, 0);";
+    }
+?>
+">
 <div class="HEADER_DIV" id="div_header_slot">
     <!-- DYNAMIC HEADER CODE HERE -->
     <?php echo "<p>Browse all the clubs ".$_SESSION["user_fname"]."</p>";?>
@@ -125,15 +131,19 @@
             color: ".$text_c_value."";
         }
      ?>">
-    <div id="preview_head_div">
+    <div id="preview_head_div" style="
+        <?php
+            if($is_hacker == 0){
+                echo "background-color: ".$header_c_value.";";
+            }
+        ?>
+        ">
         <h2 id="preview_head"
             style="
              <?php
                 if($is_hacker == 1){
                     echo "background-image: url('https://s30.postimg.org/l9l7z3tcx/this1.jpg'); 
                     background-color: #000;";
-                }else if($is_hacker == 0){
-                    echo "background-color: ".$header_c_value.";";
                 }
             ?>">
             <?php
@@ -239,7 +249,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 1.12 | ";
+    echo "Version 1.13 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

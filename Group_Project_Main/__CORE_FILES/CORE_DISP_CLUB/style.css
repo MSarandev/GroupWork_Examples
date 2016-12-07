@@ -109,4 +109,6 @@ body, html{
     min-height: 50px;
     width: 100%;
     background-color: rgba(0,0,150,0.2);
+    position: absolute;
+    bottom: 150px;
 }

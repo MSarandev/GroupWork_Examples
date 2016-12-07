@@ -8,6 +8,7 @@ body, html{
     height: 100%;
     margin: 0 auto;
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    overflow-x: hidden;
 }
 
 /* Container styling below */

@@ -52,13 +52,13 @@ if($user_a_lvl != 0 && $user_a_lvl > 1){
                     <br>
                     <p class='admin_p'>Age Group: <em>".$age_group."</em>, </p>
                     <br>
-                    <a href='".$url."'><em>LINK</em></a>
+                    <a href='".$url."' target='_blank'><em>LINK</em></a>
                     <br>
                     <form id='admin_btn_form' action='' method='post'>
                         <input type='submit' name='admin_approve?".$row['clubID']."' id='admin_approve' value='Approve'/>
                         <input type='submit' name='admin_delete?".$row['clubID']."' id='admin_delete' value='Delete'>
                     </form>
-                    <p id='admin_version_p'><strong>v. 2.12</strong></p>
+                    <p id='admin_version_p'><strong>v. 2.13</strong></p>
                 </div>
                 ";
             }

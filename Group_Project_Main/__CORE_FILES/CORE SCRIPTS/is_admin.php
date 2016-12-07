@@ -43,7 +43,8 @@ if($user_a_lvl != 0 && $user_a_lvl > 1){
                 // fetch the data for each club
                 $club_name = $row["clubname"];
                 $age_group = $row["age_group"];
-                $url = $row["clubID"];
+                $url = "../__CORE_FILES/CORE_DISP_CLUB/index.php?cid=";
+                $url += $row['clubID'];
 
                 // generate the HTML
                 echo "

@@ -6,9 +6,24 @@
         <?php
             if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 if (isset($_GET['cid'])) {
-                    $title = $_GET['cid'];
+                    // fetch the club ID
+                    $club_ID = $_GET['cid'];
 
-                    echo $title;
+
+                    // THIS IS GET, GET IS SUPER DANGEROUS
+                    // Perform ALL the security checks to
+                    // protect against SQL Injection
+                    // .. .. .. .. .. .. .. .. .. ..
+
+                    // DEFCON 1 - clubID is a number AND ONLY A NUMBER
+                    if(ctype_digit($club_ID)){
+                        // the id is a digit
+
+                        echo $club_ID;
+                    }else{
+                        // echo a failed message - HEX for something
+                        echo "596f7572206861636b2069732062616420616420796f752073686f756c64206665656c20626164";
+                    }
                 }
             }
         ?>
@@ -41,7 +56,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 1.4 | ";
+    echo "Version 1.5 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

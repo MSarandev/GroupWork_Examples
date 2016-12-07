@@ -9,6 +9,16 @@
                     // fetch the club ID
                     $club_ID = $_GET['cid'];
                     $club_name = "";
+                    $short_des = "";
+                    $contact_info = "";
+                    $location_info = "";
+                    $long_desc = "";
+                    $creator_info = "";
+                    $bck_img_url = "";
+                    $header_c_value = "";
+                    $footer_c_value = "";
+                    $text_c_value = "";
+                    $age_group = "";
 
                     $is_hacker = 0;
 
@@ -51,6 +61,16 @@
                                     // - - - - - -
                                     // Pass the other values as
                                     $club_name = $row['clubname'];
+                                    $short_des = $row['shortDescr'];
+                                    $contact_info = $row['contact'];
+                                    $location_info = $row['location'];
+                                    $long_desc = $row['longDescr'];
+                                    $creator_info = $row['creatorID'];
+                                    $bck_img_url = $row['backgroundImg'];
+                                    $header_c_value = $row['headerImg'];
+                                    $footer_c_value = $row['footerC'];
+                                    $text_c_value = $row['textC'];
+                                    $age_group = $row['age_group'];
                                 }
                             } else {
                                 // No club found
@@ -75,9 +95,6 @@
                               68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
                     }
                 }
-            }else{
-                // Static response
-                echo "Title";
             }
         ?>
     </title>
@@ -88,7 +105,18 @@
     <!-- DYNAMIC HEADER CODE HERE -->
     <?php echo "<p>Browse all the clubs ".$_SESSION["user_fname"]."</p>";?>
 </div>
-<div class="MAIN_DIV" id="div_main_preview">
+<div class="MAIN_DIV"
+     id="div_main_preview"
+     style="
+     <?php
+        if($is_hacker == 1){
+            echo "background-image: url('https://s30.postimg.org/l9l7z3tcx/this1.jpg'); 
+            background-color: #000;";
+        }else if($is_hacker == 0){
+            echo "background-image: url('".$bck_img_url."'); 
+            background-color: #000;";
+        }
+     ?>">
     <div id="preview_head_div">
         <h2 id="preview_head">
             <?php
@@ -101,9 +129,6 @@
                               62 61 64 20 61 6e 64 20 79 6f 75 20 73 
                               68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
                     }
-                }else{
-                    // Static response
-                    echo "Club Name";
                 }
             ?>
         </h2>
@@ -112,16 +137,13 @@
             <?php
             if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 if ($is_hacker == 0) {
-                    echo "1";
+                    echo $short_des;
                 } else if ($is_hacker == 1) {
                     // echo a failed message - HEX for something
                     echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
                               62 61 64 20 61 6e 64 20 79 6f 75 20 73 
                               68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
                 }
-            }else{
-                // Static response
-                echo "Short Description";
             }
             ?>
         </h3>
@@ -131,16 +153,13 @@
             <?php
             if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 if ($is_hacker == 0) {
-                    echo "1";
+                    echo $contact_info;
                 } else if ($is_hacker == 1) {
                     // echo a failed message - HEX for something
                     echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
                               62 61 64 20 61 6e 64 20 79 6f 75 20 73 
                               68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
                 }
-            }else{
-                // Static response
-                echo "Contact";
             }
             ?>
         </p>
@@ -148,16 +167,13 @@
             <?php
             if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 if ($is_hacker == 0) {
-                    echo "1";
+                    echo $location_info;
                 } else if ($is_hacker == 1) {
                     // echo a failed message - HEX for something
                     echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
                               62 61 64 20 61 6e 64 20 79 6f 75 20 73 
                               68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
                 }
-            }else{
-                // Static response
-                echo "Location";
             }
             ?></p>
         <br>
@@ -173,9 +189,6 @@
                               62 61 64 20 61 6e 64 20 79 6f 75 20 73 
                               68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
                 }
-            }else{
-                // Static response
-                echo "Long Description";
             }
             ?>
         </p>
@@ -186,16 +199,13 @@
             <?php
             if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 if ($is_hacker == 0) {
-                    echo "1";
+                    echo $creator_info;
                 } else if ($is_hacker == 1) {
                     // echo a failed message - HEX for something
                     echo "59 6f 75 72 20 68 61 63 6b 20 69 73 20
                               62 61 64 20 61 6e 64 20 79 6f 75 20 73 
                               68 6f 75 6c 64 20 66 65 65 6c 20 62 61 64";
                 }
-            }else{
-                // Static response
-                echo "Creator";
             }
             ?>
         </p>
@@ -204,7 +214,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 1.9 | ";
+    echo "Version 1.11 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

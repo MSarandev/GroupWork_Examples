@@ -89,6 +89,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     headerImg,
                     backgroundImg,
                     shortDescr,
+                    footerC,
+                    textC,
                     approved) VALUES ('"
                     . mysqli_real_escape_string($db, $club_name) . "','"
                     . mysqli_real_escape_string($db, $creator_info) . "','"
@@ -99,6 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     . mysqli_real_escape_string($db, $header_c_value) . "','"
                     . mysqli_real_escape_string($db, $bck_img_url) . "','"
                     . mysqli_real_escape_string($db, $short_des) . "','"
+                    . mysqli_real_escape_string($db, $footer_c_value) . "','"
+                    . mysqli_real_escape_string($db, $text_c_value) . "','"
                     . mysqli_real_escape_string($db, $approved) .
                     "')";
 

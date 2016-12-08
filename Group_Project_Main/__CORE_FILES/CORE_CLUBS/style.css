@@ -428,14 +428,14 @@ body, html{
 .filter_buttons_btn{
     text-decoration: none;
     text-align: center;
-    width: 120px;
-    min-width: 100px;
-    min-height: 20px;
-    height: 20px;
+    width: 130px;
+    min-width: 130px;
+    min-height: 30px;
+    height: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
-    font-size: 18px;
+    font-size: 13px;
     color: #ffffff;
     border: 1px solid #47231f;
     background: rgb(152,75,67);
@@ -483,6 +483,11 @@ body, html{
     font-size: 16px;
     border: 1px solid #47231f;
     background-color: rgb(152,75,67);
+    color: #fff;
+}
+
+.search_button_btn:hover{
+    background-color: #7c3d36;
 }
 
 /* Search text box & btn code END */

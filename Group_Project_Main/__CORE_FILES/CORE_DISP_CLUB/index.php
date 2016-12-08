@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    // !!!!!!!!!!
+    // DO NOT ADD ANY CODE ABOVE. THE SESSION MUST START
+    // !!!!!!!!!!
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -267,7 +273,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 1.14 | ";
+    echo "Version 1.15 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

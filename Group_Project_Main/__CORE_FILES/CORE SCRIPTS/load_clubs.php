@@ -162,6 +162,8 @@ function userSubbedClubs(){
 
     // close the connection
     $db->close();
+
+    unset($_POST);
 }
 
 function ageGroupClubs($param){
@@ -242,6 +244,8 @@ function ageGroupClubs($param){
 
     // close the conn
     $db->close();
+
+    unset($_POST);
 }
 
 

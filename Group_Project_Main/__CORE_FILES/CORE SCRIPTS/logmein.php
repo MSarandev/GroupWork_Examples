@@ -100,27 +100,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         // Everything OK
                                         $vals_check_out = 1;
                                     }else{
-                                        $err_txt = "The security answer field is blank. 
-                                        Please answer the security question and try again.";
+                                        $err_txt = "The security answer field is blank. Please answer the security question and try again.";
                                     }
                                 }else{
-                                    $err_txt = "The password you entered is invalid. 
-                                    Your password must be at least 6 characters long. Please try again.";
+                                    $err_txt = "The password you entered is invalid. Your password must be at least 6 characters long. Please try again.";
                                 }
                             }else{
-                                $err_txt = "The username you entered is invalid. 
-                                Your username cannot be left blank or contain numbers. Please try again.";
+                                $err_txt = "The username you entered is invalid. Your username cannot be left blank or contain numbers. Please try again.";
                             }
                         }else{
                             $err_txt = "The email you have entered is not a valid email address. Please try again.";
                         }
                     }else{
-                        $err_txt = "The last name that you entered is invalid. 
-                        The last name cannot be left blank or contain numbers. Please try again.";
+                        $err_txt = "The last name that you entered is invalid. The last name cannot be left blank or contain numbers. Please try again.";
                     }
                 }else{
-                    $err_txt = "The first name that you entered is invalid. 
-                    The last name cannot be left blank or contain numbers. Please try again.";
+                    $err_txt = "The first name that you entered is invalid. The last name cannot be left blank or contain numbers. Please try again.";
                 }
 
 
@@ -183,8 +178,7 @@ alert("The username that you have entered is already in use. Please enter anothe
                     }else if($email_dupe == 1){
                         // Alert the user to the issue
                         echo '<script language="javascript">
-alert("The email address you entered is already registered.
- "Please log in with your existing account or enter another email address and try again.");';
+alert("The email address you entered is already registered. Please log in with your existing account or enter another email address and try again.");';
                         // reload
                         echo 'window.location = "../CORE_LOGIN/login.php";</script>';
                     }else {
@@ -290,6 +284,7 @@ alert("The passwords that you have entered do not match. Please try again.");';
                     } else {
                         echo '<script language="javascript">alert("Username or Password incorrect")</script>';
                         // data false, reload
+
 
                         header("location: ../CORE_LOGIN/login.php");
                     }

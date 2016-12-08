@@ -37,10 +37,27 @@ session_start();
                 <!-- FILTER BUTTONS START -->
                 <div class="filter_buttons_main_container">
                     <div class="filter_buttons_row">
-                        <a href="" class="filter_buttons_btn">My clubs</a>
-                        <a href="" class="filter_buttons_btn">Age group 1</a>
-                        <a href="" class="filter_buttons_btn">Age group 2</a>
-                        <a href="" class="filter_buttons_btn">Age group 3</a>
+                        <form action="" method="post">
+                            <input type="submit"
+                                   name="my_clubs_call_btn"
+                                   value="My Clubs"
+                                   class="filter_buttons_btn" />
+
+                            <input type="submit"
+                                   name="age_group_1_call_btn"
+                                   value="Age Group 1 (00-12)"
+                                   class="filter_buttons_btn" />
+
+                            <input type="submit"
+                                   name="age_group_2_call_btn"
+                                   value="Age Group 2 (12-16)"
+                                   class="filter_buttons_btn" />
+
+                            <input type="submit"
+                                   name="age_group_3_call_btn"
+                                   value="Age Group 3 (18-99)"
+                                   class="filter_buttons_btn" />
+                        </form>
                         <!-- Attach Waves to these btns -->
                         <script>
                             //Attach waves
@@ -177,7 +194,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Version: 3.10 | ";
+            echo "Main v3.10 && Filter v1.0  | ";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

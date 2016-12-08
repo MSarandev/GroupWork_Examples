@@ -183,7 +183,7 @@ alert("The username that you have entered is already in use. Please enter anothe
                     }else if($email_dupe == 1){
                         // Alert the user to the issue
                         echo '<script language="javascript">
-alert("The email address you entered is already registered. " +
+alert("The email address you entered is already registered.
  "Please log in with your existing account or enter another email address and try again.");';
                         // reload
                         echo 'window.location = "../CORE_LOGIN/login.php";</script>';

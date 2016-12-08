@@ -252,6 +252,7 @@ function ageGroupClubs($param){
 }
 
 
+// Go to the callback
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // We have a callback from the filter buttons
     // Establish which one is requesting info
@@ -264,17 +265,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // The user requested all clubs with AGE GROUP 1 as a param
         // Call the function and parse the age group as a param
 
-        ageGroupClubs(1);
+        ageGroupClubs("1");
     }else if(isset($_POST['age_group_2_call_btn'])){
         // The user requested all clubs with AGE GROUP 2 as a param
         // Call the function and parse the age group as a param
 
-        ageGroupClubs(2);
+        ageGroupClubs("2");
     }else if(isset($_POST['age_group_3_call_btn'])){
         // The user requested all clubs with AGE GROUP 3 as a param
         // Call the function and parse the age group as a param
 
-        ageGroupClubs(3);
+        ageGroupClubs("#");
     }
     // |*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|
     // The code below loads w/o an event

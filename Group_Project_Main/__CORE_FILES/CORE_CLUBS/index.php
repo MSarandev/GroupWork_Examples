@@ -205,12 +205,11 @@ session_start();
                         }
                     </script>
                     <!-- Create event button below -->
-                    <a href=""
-                       id="create_event_master_btn"
-                       onclick="displDiv()">Create Event</a>
+                    <button id="create_event_master_btn"
+                            onclick="displDiv()">Create Event</button>
                 </div>
                 <!-- On load hide the div, so it's not in the way -->
-                <div id="create_event_div" onload="this.style.visibility = 'hidden';">
+                <div id="create_event_div">
                     <!-- This is where the user will add the event -->
                     <form>
                         <input type="number"
@@ -229,6 +228,7 @@ session_start();
                                placeholder="Time"
                                id="create_event_time_txt"
                                name="create_event_time_txt">
+                        <br>
                         <input type="submit"
                                name="submit_new_event_btn"
                                id="submit_new_event_btn"
@@ -249,7 +249,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Build M3.12:F2.1:L3.4:E1.1";
+            echo "Build M3.12:F2.1:L3.4:E1.2";
             echo "<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

@@ -290,7 +290,6 @@ alert("The passwords that you have entered do not match. Please try again.");';
                     }
                 }else{
                     // SQL error
-
                     echo '<script language="javascript">alert("SQL ERROR!")</script>';
 
                     echo mysqli_error($db);

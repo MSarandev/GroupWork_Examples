@@ -50,7 +50,7 @@ session_start();
 
                             <input type="submit"
                                    name="age_group_2_call_btn"
-                                   value="Age Group 2 (12-16)"
+                                   value="Age Group 2 (12-18)"
                                    class="filter_buttons_btn" />
 
                             <input type="submit"
@@ -206,7 +206,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Version 3.12:F2.1:L3.3  ";
+            echo "Version 3.12:F2.1:L3.4  ";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

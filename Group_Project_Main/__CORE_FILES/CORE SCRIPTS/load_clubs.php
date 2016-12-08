@@ -15,6 +15,7 @@
 // It works, but it could work more efficiently.
 // If we have the time we should re-write it.
 // M.S. ON 08/12
+// ----> UPDATE: Nevermind, the function is fine, my brain has started to fade.
 function userSubbedClubs(){
     // echo to the user as to what they are seeing
     echo "Clubs you have subbed to";

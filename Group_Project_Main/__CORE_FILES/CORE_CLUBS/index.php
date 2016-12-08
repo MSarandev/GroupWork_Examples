@@ -130,9 +130,11 @@ session_start();
                 </form>
                 <div id="search_res_holder">
                     <!-- Include the script to handle searches -->
-                    <?php
-                        include("../CORE SCRIPTS/searchClubs.php");
-                    ?>
+                    <div class='search_res_inner'>
+                        <?php
+                            include("../CORE SCRIPTS/searchClubs.php");
+                        ?>
+                    </div>
                 </div>
                 <!-- Attach Waves to these btns -->
                 <!--
@@ -204,7 +206,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Version 3.10:F2.1  ";
+            echo "Version 3.11:F2.1  ";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

@@ -59,6 +59,10 @@ session_start();
                                    class="filter_buttons_btn" />
                         </form>
                         <!-- Attach Waves to these btns -->
+                        <!--
+
+                        STYLING ERROR -- FIX THIS
+
                         <script>
                             //Attach waves
                             Waves.attach('.filter_buttons_btn');
@@ -71,6 +75,7 @@ session_start();
                             //Init
                             Waves.init();
                         </script>
+                        -->
                   </div>
                 </div>
                 <!-- FILTER BUTTONS END -->
@@ -130,6 +135,10 @@ session_start();
                     ?>
                 </div>
                 <!-- Attach Waves to these btns -->
+                <!--
+
+                STYLING ERROR -- FIX THIS
+
                 <script>
                     //Attach waves
                     Waves.attach('.search_button_btn');
@@ -149,6 +158,7 @@ session_start();
                     //Init
                     Waves.init();
                 </script>
+                -->
             </div>
             <!-- Events code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_events">
@@ -194,7 +204,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Main v3.10 && Filter v1.0  | ";
+            echo "Version 3.10.F1.1  | ";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

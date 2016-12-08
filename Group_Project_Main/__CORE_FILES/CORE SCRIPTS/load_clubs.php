@@ -10,6 +10,11 @@
 // .. .. .. .. .. ..
 // the script now loads data with a callback from a btn
 
+
+// THE FUNCTION BELOW NEEDS A RE-MASTER.
+// It works, but it could work more efficiently.
+// If we have the time we should re-write it.
+// M.S. ON 08/12
 function userSubbedClubs(){
     $club_array = array(); // init
     $current_club = ""; //init
@@ -159,17 +164,93 @@ function userSubbedClubs(){
     $db->close();
 }
 
-function ageGroup1Clubs(){
+function ageGroupClubs($param){
     echo "Age Group 1";
+
+    // prepare the variables
+    $club_name = "";
+    $clubID = "";
+    $short_desc = "";
+
+    // connect to the database to pull the clubs
+    include("../core_db_connect.php");
+
+    // test the conn
+    if ($db->connect_errno) {
+        die ('Connection Failed :' . $db->connect_error);
+    }
+
+    // prepare the sql
+    /**
+     *
+     * The query below contains a "naked" param. There's no security checks for injection.
+     * This is done deliberately, as the function is only called from WITHIN.
+     * If a hacker can change the param into an SQL Injection string - that means the server is breached.
+     * The hacker would literary need to have access to the source code to inject into this query.
+     * Should I explain further??
+     *
+     * M.S.
+     */
+    $sql = "SELECT clubname, clubID, shortDescr FROM clubs WHERE age_group = '".$param."'";
+    // parse as res
+    $result = $db->query($sql);
+
+    // run the query
+    if (mysqli_query($db, $sql)) {
+        // check the return amount
+        if ($result->num_rows > 0) {
+            // data checks out
+            while ($row = $result->fetch_assoc()) {
+                // fill in the variables
+                $club_name = $row['clubname'];
+                $clubID = $row['clubID'];
+                $short_desc = $row['shortDescr'];
+
+                // dynamically fill the HTML
+                echo '
+                    <li class="clubs_container_li">
+                        <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
+                        <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                        <!-- Description section -->
+                        <div class="clubs_container_li_main_d">
+                            <div class="clubs_container_int_heading_top">
+                                <p class="clubs_container_int_heading_par">' . $club_name . '</p>
+                            </div>
+                            <div class="clubs_container_int_d_top">
+                                <p class="clubs_container_int_d_par">'
+                    . $short_desc .
+                    '</p>
+                            </div>
+                        </div>
+                        <!-- Image section -->
+                        <div class="clubs_container_li_left_d">
+                            <img class="clubs_container_img_lg" src="../CORE_IMG/newClubLogo.png"/>
+                        </div>
+                        <!-- Button Section -->
+                        <div class="clubs_container_int_d_btn">
+                            <a 
+                            href="../CORE_DISP_CLUB/index.php?cid=' . $clubID . '" 
+                            class="clubs_container_btn">Club Page</a>
+                        </div>
+                        <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                        <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->
+                    </li>
+                    ';
+            }
+        } else {
+            // No clubs matching criteria
+            echo "No clubs found that match the criteria. Sorry";
+        }
+    } else {
+        // SQL error
+        echo '<script language="javascript">alert("SQL ERROR!")</script>';
+        echo mysqli_error($db);
+    }
+
+    // close the conn
+    $db->close();
 }
 
-function ageGroup2Clubs(){
-    echo "Age Group 2";
-}
-
-function ageGroup3Clubs(){
-    echo "Age Group 3";
-}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // We have a callback from the filter buttons
@@ -181,19 +262,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         userSubbedClubs();
     }else if(isset($_POST['age_group_1_call_btn'])){
         // The user requested all clubs with AGE GROUP 1 as a param
-        // Call the function
+        // Call the function and parse the age group as a param
 
-        ageGroup1Clubs();
+        ageGroupClubs(1);
     }else if(isset($_POST['age_group_2_call_btn'])){
         // The user requested all clubs with AGE GROUP 2 as a param
-        // Call the function
+        // Call the function and parse the age group as a param
 
-        ageGroup2Clubs();
+        ageGroupClubs(2);
     }else if(isset($_POST['age_group_3_call_btn'])){
         // The user requested all clubs with AGE GROUP 3 as a param
-        // Call the function
+        // Call the function and parse the age group as a param
 
-        ageGroup3Clubs();
+        ageGroupClubs(3);
     }
     // |*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|
     // The code below loads w/o an event

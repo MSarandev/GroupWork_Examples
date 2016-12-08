@@ -21,7 +21,6 @@ function userSubbedClubs(){
     echo "<hr><br>";
 
     $club_array = array(); // init
-    $current_club = ""; //init
 
     // XSS vars
     $_SESSION["GLOBAL_club_names"] = array();
@@ -72,17 +71,6 @@ function userSubbedClubs(){
     if (count($club_array) != 0) {
         // the clubs array has 1+ elements
         // - - - -
-        // prepare the variables
-        $club_name = "";
-        $clubID = "";
-        $creator_ID = "";
-        $age_group = "";
-        $contact_info = "";
-        $location = "";
-        $long_desc = "";
-        $header_img = "";
-        $bck_img = "";
-        $short_desc = "";
 
         foreach ($club_array as $arr_val) {
             // create another query to pull the clubs' details & gen HTML
@@ -101,14 +89,7 @@ function userSubbedClubs(){
                     while ($row = $result->fetch_assoc()) {
                         // start filling in the variables
                         $club_name = $row["clubname"];
-                        $creator_ID = $row["creatorID"];
-                        $age_group = $row["age_group"];
-                        $contact_info = $row["contact"];
-                        $location = $row["location"];
                         $long_desc = $row["longDescr"];
-                        $header_img = $row["headerImg"];
-                        $bck_img = $row["backgroundImg"];
-                        $short_desc = $row["shortDescr"];
                         $clubID = $row["clubID"];
 
                         // parse to GLOBAL

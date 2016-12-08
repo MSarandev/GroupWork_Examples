@@ -18,6 +18,7 @@
 function userSubbedClubs(){
     // echo to the user as to what they are seeing
     echo "Clubs you have subbed to";
+    echo "<hr><br>";
 
     $club_array = array(); // init
     $current_club = ""; //init
@@ -173,10 +174,13 @@ function ageGroupClubs($param){
     // display a message to the user, as to what they are seeing
     if($param == 1){
         echo "Age Group 1 (00-12)";
+        echo "<hr><br>";
     }else if($param == 2){
         echo "Age Group 2 (12-18)";
+        echo "<hr><br>";
     }else if($param == 3){
         echo "Age Group 3 (18-99)";
+        echo "<hr><br>";
     }
 
 
@@ -247,7 +251,7 @@ function ageGroupClubs($param){
             }
         } else {
             // No clubs matching criteria
-            echo "No clubs found that match the criteria. Sorry";
+            echo "<br>No clubs found that match the criteria. Sorry";
         }
     } else {
         // SQL error

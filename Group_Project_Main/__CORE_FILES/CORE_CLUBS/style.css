@@ -498,12 +498,13 @@ body, html{
     border: 1px solid #47231f;
     border-bottom-left-radius: 15px;
     min-width: 0;
-    max-width: 50%;
+    max-width: 250px;
     min-height: 0;
     max-height: 200px;
     position: absolute;
     right: 140px;
     top: 110px;
+    left: 70%;
     z-index: 0;
     overflow-y: scroll;
 }

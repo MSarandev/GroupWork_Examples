@@ -65,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }else{
                     // no data
+                    echo "No data found";
                 }
             }else{
                 // SQL error
@@ -81,8 +82,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo '<script language="javascript">
 alert("The search you have entered contains invalid characters. Please try again using only numbers and letters.")
 </script>';
-            // reload
-            // echo 'window.location = "../CORE_CLUBS/index.php";</script>';
         }
     }
 }

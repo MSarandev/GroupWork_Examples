@@ -249,7 +249,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Build M3.12:F2.1:L3.4:E1.3";
+            echo "Build M3.13:F2.1:L3.4:E1.3";
             echo "<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

@@ -192,6 +192,33 @@ session_start();
             <div class="MAIN_DIV" id="div_main_slot_right_bottom">
                 <!-- generate the options here based on user acc. lvl -->
                 <a href="../CORE_CREATE_CLUB/index.php" class="admin_btn">Create Club</a>
+                <!-- Create event button below -->
+                <a href="" class="admin_btn">Create Event</a>
+                <div id="create_event_div">
+                    <!-- This is where the user will add the event -->
+                    <form>
+                        <input type="number"
+                               placeholder="Club ID"
+                               name="create_event_id_txt"
+                               id="create_event_id_txt">
+                        <input type="text"
+                               placeholder="Event Text"
+                               id="create_event_txt_txt"
+                               name="create_event_txt_txt">
+                        <input type="text"
+                               placeholder="Day"
+                               id="create_event_day_txt"
+                               name="create_event_day_txt">
+                        <input type="text"
+                               placeholder="Time"
+                               id="create_event_time_txt"
+                               name="create_event_time_txt">
+                        <input type="submit"
+                               name="submit_new_event_btn"
+                               id="submit_new_event_btn"
+                               value="Submit">
+                    </form>
+                </div>
                 <p id="admin_approval_top_p">Approval Section</p>
                 <div id="admin_div_panel">
                     <?php
@@ -206,7 +233,8 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Version 3.12:F2.1:L3.4  ";
+            echo "Build 3.12:F2.1:L3.4:E1.0";
+            echo "<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

@@ -638,6 +638,20 @@ body, html{
 }
 /* ADMIN PHP STYLE End*/
 
+/* Create events START */
+#create_event_div{
+    background-color: #fff;
+    border: 1px solid #47231f;
+    border-bottom-left-radius: 15px;
+    min-width: 0;
+    max-width: 250px;
+    min-height: 0;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+/* Create events END */
+
+
 /* footer slot START */
 #div_footer_slot{
     display: flex;

@@ -191,10 +191,26 @@ session_start();
             <!-- Bottom right container code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_bottom">
                 <!-- generate the options here based on user acc. lvl -->
-                <a href="../CORE_CREATE_CLUB/index.php" class="admin_btn">Create Club</a>
-                <!-- Create event button below -->
-                <a href="" class="admin_btn">Create Event</a>
-                <div id="create_event_div">
+                <div id="div_right_bottom_btn_holder">
+                    <a href="../CORE_CREATE_CLUB/index.php" class="admin_btn">Create Club</a>
+                    <!-- Script to display the div -->
+                    <script>
+                        function displDiv(){
+                            $foo = document.getElementById("create_event_div");
+
+                            if($foo.style.visibility == "hidden"){
+                                // show the div
+                                $foo.style.visibility = "visible";
+                            }
+                        }
+                    </script>
+                    <!-- Create event button below -->
+                    <a href=""
+                       id="create_event_master_btn"
+                       onclick="displDiv()">Create Event</a>
+                </div>
+                <!-- On load hide the div, so it's not in the way -->
+                <div id="create_event_div" onload="this.style.visibility = 'hidden';">
                     <!-- This is where the user will add the event -->
                     <form>
                         <input type="number"
@@ -233,7 +249,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Build 3.12:F2.1:L3.4:E1.0";
+            echo "Build M3.12:F2.1:L3.4:E1.1";
             echo "<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

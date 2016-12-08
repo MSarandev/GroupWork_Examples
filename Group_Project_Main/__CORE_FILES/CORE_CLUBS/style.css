@@ -639,7 +639,29 @@ body, html{
 /* ADMIN PHP STYLE End*/
 
 /* Create events START */
+#div_right_bottom_btn_holder{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#create_event_master_btn{
+    text-align: center;
+    width: 100%;
+    min-width: 100%;
+    min-height: 35px;
+    height: 35px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 15px;
+    color: #ffffff;
+    border: 1px solid #47231f;
+    background: rgb(152,75,67);
+}
 #create_event_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #fff;
     border: 1px solid #47231f;
     border-bottom-left-radius: 15px;
@@ -648,6 +670,33 @@ body, html{
     min-height: 0;
     max-height: 200px;
     overflow-y: scroll;
+}
+#create_event_id_txt,
+#create_event_txt_txt,
+#create_event_day_txt,
+#create_event_time_txt{
+    color: #ffffff;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 18px;
+    width: 60%;
+    background-color: #261d30;
+    border: 1px solid #984B43;
+}
+#submit_new_event_btn{
+    text-align: center;
+    width: 100px;
+    min-width: 100px;
+    min-height: 35px;
+    height: 35px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 16px;
+    border: 1px solid #47231f;
+    background-color: rgb(152,75,67);
+    color: #fff;
+}
+
+#submit_new_event_btn:hover{
+    background-color: #7c3d36;
 }
 /* Create events END */
 

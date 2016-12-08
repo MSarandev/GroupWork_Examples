@@ -577,7 +577,7 @@ body, html{
     overflow-y: scroll;
     min-width: 500px;
     max-height: 250px;  !important;
-    justify-content: center;
+    margin-top: 0;
 }
 #admin_inner_section{
     padding-left: 10px;

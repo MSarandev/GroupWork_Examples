@@ -196,11 +196,11 @@ session_start();
                     <!-- Script to display the div -->
                     <script>
                         function displDiv(){
-                            $foo = document.getElementById("create_event_div");
+                            var foo = document.getElementById("create_event_div");
 
-                            if($foo.style.visibility == "hidden"){
+                            if(foo.style.visibility == "hidden"){
                                 // show the div
-                                $foo.style.visibility = "visible";
+                                foo.style.visibility = "visible";
                             }
                         }
                     </script>
@@ -249,7 +249,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Build M3.12:F2.1:L3.4:E1.2";
+            echo "Build M3.12:F2.1:L3.4:E1.3";
             echo "<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

@@ -648,11 +648,10 @@ body, html{
 #create_event_master_btn{
     text-decoration: none;
     text-align: center;
-    padding-top: 7px;
-    width: 100px;
-    min-width: 100px;
-    min-height: 25px;
-    height: 25px;
+    width: 110px;
+    min-width: 110px;
+    min-height: 35px;
+    height: 35px;
     font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
     font-size: 16px;
     color: #ffffff;

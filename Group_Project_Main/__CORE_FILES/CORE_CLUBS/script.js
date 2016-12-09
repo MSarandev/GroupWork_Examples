@@ -12,7 +12,7 @@ function dispMyClubs() {
         // what is the conn type
         type: "POST",
         // where do you send the request
-        url: "../CORE SCRIPTS/NEW_AJAX_SCRIPTS/filterBtnScript.php",
+        url: "../CORE SCRIPTS/filterBtnScript.php",
         // what data you pass
         data: {action: 'show_my_clubs'},
         // show the thing below on success
@@ -32,7 +32,7 @@ function dispAG1() {
         // what is the conn type
         type: "POST",
         // where do you send the request
-        url: "../CORE SCRIPTS/NEW_AJAX_SCRIPTS/filterBtnScript.php",
+        url: "../CORE SCRIPTS/filterBtnScript.php",
         // what data you pass
         // With the age groups, pass a number as an id
         // passing this will load the correct age group clubs
@@ -54,7 +54,7 @@ function dispAG2() {
         // what is the conn type
         type: "POST",
         // where do you send the request
-        url: "../CORE SCRIPTS/NEW_AJAX_SCRIPTS/filterBtnScript.php",
+        url: "../CORE SCRIPTS/filterBtnScript.php",
         // what data you pass
         // With the age groups, pass a number as an id
         // passing this will load the correct age group clubs
@@ -76,7 +76,7 @@ function dispAG3() {
         // what is the conn type
         type: "POST",
         // where do you send the request
-        url: "../CORE SCRIPTS/NEW_AJAX_SCRIPTS/filterBtnScript.php",
+        url: "../CORE SCRIPTS/filterBtnScript.php",
         // what data you pass
         // With the age groups, pass a number as an id
         // passing this will load the correct age group clubs
@@ -104,7 +104,7 @@ function whatAreYouLookingFor(){
         // what is the conn type
         type: "POST",
         // where do you send the request
-        url: "../CORE SCRIPTS/NEW_AJAX_SCRIPTS/AJAXsearchClubs.php",
+        url: "../CORE SCRIPTS/AJAXsearchClubs.php",
         // what data you pass
         // send the value as an extra param
         data: {action: 'search_my_clubs', val:search_val},

@@ -135,7 +135,7 @@
             url: "../CORE SCRIPTS/subscribeToClub.php",
             data:{action:'sub_me_now'},
             success:function(responce) {
-                if(responce.indexOf("now subscribed") <> -1){
+                if(responce.indexOf("now subscribed") != -1){
                     // the user is subscribed, disable the btn
                     $("subscribe_btn_1").prop('disabled', true);
 
@@ -307,7 +307,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 3.1 | ";
+    echo "Version 3.2 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

@@ -14,6 +14,10 @@ if($_POST['action'] == 'sub_me_now') {
     // get the club ID
     $clubID = $_POST['id'];
 
+
+    echo $clubID;
+
+    /**
     // Security cleanup for the clubID
     if($clubID != "" &&
         $clubID !== "" &&
@@ -53,6 +57,7 @@ if($_POST['action'] == 'sub_me_now') {
         // Alert to the user
         echo "The club ID is corrupt. Refresh the page and try again";
     }
+     */
 
 }
 

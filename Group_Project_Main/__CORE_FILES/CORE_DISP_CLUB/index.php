@@ -144,6 +144,9 @@
 
         // Get the clubID
         clubID = win_loc.substr(ind_e, win_loc.length);
+
+        // DEBUG
+        alert(clubID);
     }else{
         // Deter the hackers, hopefully
         alert("Are you hacking buddy?");
@@ -327,7 +330,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 3.4 | ";
+    echo "Version 3.5 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

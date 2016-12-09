@@ -98,7 +98,7 @@ function dispAG3() {
 // SEARCH FUNCTION
 function whatAreYouLookingFor(){
     // get the search query value
-    var search_val = document.getElementById("search_club_txt").value;
+    var search_val = document.getElementById("search_club_txt").innerHTML;
 
     $.ajax({
         // what is the conn type

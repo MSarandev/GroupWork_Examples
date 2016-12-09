@@ -65,53 +65,7 @@ session_start();
                             //Init
                             Waves.init();
                         </script>
-
                         <!-- AJAX UPDATE END -->
-
-                        <!-- Leave the lines below as comments, this serves as a backup -->
-                        <!--
-
-                        YE OLD WORKING SITE
-
-                        <form action="" method="post">
-                            <input type="submit"
-                                   name="my_clubs_call_btn"
-                                   value="My Clubs"
-                                   class="filter_buttons_btn" />
-
-                            <input type="submit"
-                                   name="age_group_1_call_btn"
-                                   value="Age Group 1 (00-12)"
-                                   class="filter_buttons_btn" />
-
-                            <input type="submit"
-                                   name="age_group_2_call_btn"
-                                   value="Age Group 2 (12-18)"
-                                   class="filter_buttons_btn" />
-
-                            <input type="submit"
-                                   name="age_group_3_call_btn"
-                                   value="Age Group 3 (18-99)"
-                                   class="filter_buttons_btn" />
-                        </form>
-                        <!-- Attach Waves to these btns -->
-                        <!--
-
-                        STYLING ERROR -- FIX THIS
-
-                        <script>
-                            //Attach waves
-                            Waves.attach('.filter_buttons_btn');
-                            //Ripple on hover
-                            $('.filter_buttons_btn').mouseenter(function() {
-                                Waves.ripple(this, {wait: null});
-                            }).mouseleave(function() {
-                                Waves.calm(this);
-                            });
-                            //Init
-                            Waves.init();
-                        </script>
-                        -->
                   </div>
                 </div>
                 <!-- FILTER BUTTONS END -->
@@ -300,7 +254,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "MASTER BUILD X2.2 <br>";
+            echo "MASTER BUILD X2.3 <br>";
             echo "Build M3.13:F2.1:L3.4:E1.3 <br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

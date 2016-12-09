@@ -75,10 +75,7 @@ session_start();
                 <!-- CLUBS CONTAINER START -->
                 <div class="clubs_container_container_d">
                     <ul class="clubs_container_ul">
-                        <!-- Include the php script to load the clubs -->
-                        <?php
-                            include("../CORE SCRIPTS/load_clubs.php");
-                        ?>
+                        <!-- CLUBS GO HERE -->
                     </ul>
                 </div>
                 <!-- Attach Waves to these btns -->
@@ -238,7 +235,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Master Build: X2.1 <br>";
+            echo "Master Build: X2.2 <br>";
             echo "Build M3.13:F2.1:L3.4:E1.3<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

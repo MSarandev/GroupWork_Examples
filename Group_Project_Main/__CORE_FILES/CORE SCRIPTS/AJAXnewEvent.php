@@ -46,7 +46,7 @@ if($_POST['action'] == 'add_new_club') {
                     try{
 
                         // generate the sql
-                        $sql = "INSERT INTO club_events (clubID, eventDescr, eventDay, eventTime, approved) VALUES'"
+                        $sql = "INSERT INTO club_events (clubID, eventDescr, eventDay, eventTime, approved) VALUES ('"
                             .mysqli_real_escape_string($db, $clubID)."','"
                             .mysqli_real_escape_string($db, $event_text)."','"
                             .mysqli_real_escape_string($db, $event_day)."','"

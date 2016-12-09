@@ -3,6 +3,9 @@
  * Modified: SARANDEV 09/12 @ 3:43AM
  */
 
+// |*|*|*|*|*|*|*|
+// CLUBS GENERATION FUNCTIONS
+
 // My Clubs
 function dispMyClubs() {
     $.ajax({
@@ -88,3 +91,31 @@ function dispAG3() {
         }
     });
 }
+
+// |*|*|*|*|*|*|*|
+
+// |*|*|*|*|*|*|*|
+// SEARCH FUNCTION
+function whatAreYouLookingFor(){
+    // get the search query value
+    var search_val = document.getElementById("search_club_txt").value;
+
+    $.ajax({
+        // what is the conn type
+        type: "POST",
+        // where do you send the request
+        url: "../CORE SCRIPTS/NEW_AJAX_SCRIPTS/AJAXsearchClubs.php",
+        // what data you pass
+        // send the value as an extra param
+        data: {action: 'search_my_clubs', val:search_val},
+        // show the thing below on success
+        success: function (response) {
+            // get the element in question
+            var el1 = document.getElementById("search_res_inner");
+
+            // update the innerHTML with the response
+            el1.innerHTML = response;
+        }
+    });
+}
+// |*|*|*|*|*|*|*|

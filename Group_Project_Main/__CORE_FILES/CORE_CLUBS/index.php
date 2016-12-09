@@ -152,22 +152,39 @@ session_start();
         <div class="MAIN_DIV" id="div_main_slot_right">
             <!-- Search code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_search">
-                <form action="" method="post">
-                    <input type="text"
-                           class="search_text_box"
-                           name="search_club_txt"
-                           placeholder="Search Clubs" />
-                    <input type="submit"
-                           class="search_button_btn"
-                           name="search_club_btn"
-                           value="Search" />
-                </form>
-                <div id="search_res_holder">
-                    <!-- Include the script to handle searches -->
-                    <div class='search_res_inner'>
-                        <?php
-                            include("../CORE SCRIPTS/searchClubs.php");
-                        ?>
+                <!-- AJAX UPDATE START -->
+                <input type="text"
+                       class="search_text_box"
+                       name="search_club_txt"
+                       id="search_club_txt"
+                       placeholder="Search Clubs" />
+                <button class="search_button_btn"
+                        id="search_button_btn"
+                        onclick="whatAreYouLookingFor()">Search</button>
+                <!-- AJAX UPDATE END -->
+
+                <!-- Leave the lines below as comments, this serves as a backup -->
+                <!--
+
+                YE OLD WORKING SITE
+
+                    <form action="" method="post">
+                        <input type="text"
+                               class="search_text_box"
+                               name="search_club_txt"
+                               placeholder="Search Clubs" />
+                        <input type="submit"
+                               class="search_button_btn"
+                               name="search_club_btn"
+                               value="Search" />
+                    </form>
+                    <div id="search_res_holder">
+                    -->
+                    <div class='search_res_inner'
+                         id="search_res_inner">
+
+                        <!-- SEARCH RESULTS GO HERE -->
+
                     </div>
                 </div>
                 <!-- Attach Waves to these btns -->
@@ -283,7 +300,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "MASTER BUILD X2.1 <br>";
+            echo "MASTER BUILD X2.2 <br>";
             echo "Build M3.13:F2.1:L3.4:E1.3 <br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

@@ -667,13 +667,15 @@ body, html{
     align-self: center;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.4);
     border: 1px solid #47231f;
-    border-bottom-left-radius: 15px;
+    border-radius: 10px;
     min-width: 0;
     max-width: 250px;
     min-height: 0;
-    max-height: 200px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    max-height: 210px;
     overflow-y: scroll;
 }
 #create_event_id_txt,
@@ -702,6 +704,14 @@ body, html{
 
 #submit_new_event_btn:hover{
     background-color: #7c3d36;
+}
+#create_event_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }
 /* Create events END */
 

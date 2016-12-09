@@ -103,7 +103,7 @@ session_start();
         <div class="MAIN_DIV" id="div_main_slot_right">
             <!-- Search code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_search">
-                <form id="search_form" action="" method="post">
+                <form action="" method="post">
                     <input type="text"
                            class="search_text_box"
                            name="search_club_txt"
@@ -178,17 +178,6 @@ session_start();
                 <!-- generate the options here based on user acc. lvl -->
                 <div id="div_right_bottom_btn_holder">
                     <a href="../CORE_CREATE_CLUB/index.php" class="admin_btn">Create Club</a>
-                    <!-- Script to display the div -->
-                    <script>
-                        function displDiv(){
-                            var foo = document.getElementById("create_event_div");
-
-                            if(foo.style.visibility == "hidden"){
-                                // show the div
-                                foo.style.visibility = "visible";
-                            }
-                        }
-                    </script>
                     <!-- Create event button below -->
                     <button id="create_event_master_btn"
                             onclick="displDiv()">Create Event</button>
@@ -196,7 +185,7 @@ session_start();
                 <!-- On load hide the div, so it's not in the way -->
                 <div id="create_event_div">
                     <!-- This is where the user will add the event -->
-                    <form>
+                    <form id="create_event_form">
                         <input type="number"
                                placeholder="Club ID"
                                name="create_event_id_txt"
@@ -234,7 +223,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Master Build: X2.7 <br>";
+            echo "Master Build: X2.8 <br>";
             echo "Build M3.13:F2.1:L3.4:E1.3<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

@@ -125,7 +125,12 @@ function whatAreYouLookingFor(){
 }
 // |*|*|*|*|*|*|*|
 
-// stop the refreshing of the page on submit
-$('#search_form').submit(function () {
-    return false;
-});
+
+// display the create event div
+displDiv(){
+    // fetch the element
+    var el = document.getElementById("create_event_div");
+
+    // set the hidden
+    el.style.visibility = 'visible';
+}

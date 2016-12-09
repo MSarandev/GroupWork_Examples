@@ -20,7 +20,7 @@ function searchMyClubs($param){
         // string OK
 
         // Connect to the DB
-        include("../../core_db_connect.php");
+        include("../core_db_connect.php");
 
         // test our connection
         if ($db->connect_errno) {
@@ -53,7 +53,7 @@ function searchMyClubs($param){
                     echo "
                         <p>".$club_name."</p>
                         <p>".$age_group."</p>
-                        <a href='../../CORE_DISP_CLUB/index.php?cid=".$clubID."' 
+                        <a href='../CORE_DISP_CLUB/index.php?cid=".$clubID."' 
                         class='search_res_btn_link'>LINK</a>
                         ";
                 }

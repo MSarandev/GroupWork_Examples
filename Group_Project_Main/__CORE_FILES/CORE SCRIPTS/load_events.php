@@ -91,7 +91,8 @@ if(count($_SESSION["GLOBAL_club_ids"]) == 0){
                 }
             } else {
                 // data false, reload
-                echo 'No events at this time';
+                //
+                //echo 'No events at this time';
             }
         } else {
             // SQL error

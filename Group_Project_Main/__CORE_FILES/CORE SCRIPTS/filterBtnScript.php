@@ -20,7 +20,7 @@ function userSubbedClubs(){
     $userID = $_SESSION['userID'];
 
     // connect to the database to pull the clubs
-    include("../../core_db_connect.php");
+    include("../core_db_connect.php");
 
     // test the conn
     if ($db->connect_errno) {
@@ -140,7 +140,7 @@ function userSubbedClubs(){
 
 function ageGroupClubs($param){
     // connect to the database to pull the clubs
-    include("../../core_db_connect.php");
+    include("../core_db_connect.php");
 
     // test the conn
     if ($db->connect_errno) {

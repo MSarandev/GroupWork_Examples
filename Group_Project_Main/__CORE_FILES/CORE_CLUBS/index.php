@@ -206,12 +206,11 @@ session_start();
                 </div>
             </div>
         </div>
-    </div>
 
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "MASTER BUILD X2.4 <br>";
+            echo "MASTER BUILD X2.5 <br>";
             echo "Build M3.13:F2.1:L3.4:E1.3 <br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

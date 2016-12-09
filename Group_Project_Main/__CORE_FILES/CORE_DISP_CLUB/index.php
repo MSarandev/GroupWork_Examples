@@ -132,9 +132,6 @@
     // get the clubID from the window location
     var win_loc = window.location.toString();
 
-    // DEBUG
-    alert(win_loc);
-
     // extract the clubID
     var ind_q = win_loc.indexOf("?");
     var ind_e = win_loc.indexOf("=");
@@ -147,10 +144,7 @@
 
         // Get the clubID
         clubID = win_loc.substr(ind_e, win_loc.length);
-
-        // DEBUG
-        alert(clubID);
-    }else{
+    }else if(ind_q+3 != ind_e){
         // Deter the hackers, hopefully
         alert("Are you hacking buddy?");
     }
@@ -333,7 +327,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 3.6 | ";
+    echo "Version 3.7 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

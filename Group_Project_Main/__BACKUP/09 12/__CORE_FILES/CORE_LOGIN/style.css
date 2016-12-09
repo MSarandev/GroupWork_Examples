@@ -1,0 +1,127 @@
+/* Import Google Fonts selected font */
+@import "https://fonts.googleapis.com/css?family=Ubuntu";
+
+body, html{
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Ubuntu',Arial, "Arial Black", "Times New Roman", serif;
+    background-color: #EAC67A;
+}
+
+.container {
+    width: 200px;
+    height: 260px;
+    position: relative;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+}
+.card {
+    border: 1px solid #fff;
+    color: #ffffff;
+    text-align: center;
+    background-color: #18121E;
+    height: 565px;
+    width: 300px;
+    min-height: 500px;
+    min-width: 300px;
+    margin-top: 10%;
+    margin-left: 40%;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.card div {
+    display: block;
+    height: 500px;
+    width: 300px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card .back {
+    -webkit-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.card.flipped {
+    -webkit-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.btn {
+    float: left;
+    text-align: center;
+    margin-left: 20px;
+    width: 120px;
+    height: 80px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #984B43;
+    border: 2px solid #47231f;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: #733936;
+    text-decoration: none;
+}
+
+/* CSS For the rest of the doc*/
+
+.top_label{
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.generic_label{
+    color: #d9d9d9;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 20px;
+}
+
+.generic_txt_input{
+    color: #ffffff;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 20px;
+    width: 85%;
+    background-color: #261d30;
+    border: 1px solid #984B43;
+}
+#logo_img{
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#front_label1, #front_label2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 55px;
+    margin-left: 35%;
+}
+
+#front_label1{
+    margin-top: 50px;
+}
+
+#front_text2{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    margin-left: 6%;
+}
+
+
+#question_select{
+    color: #ffffff;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 16px;
+    width: 85%;
+    background-color: #261d30;
+    border: 1px solid #984B43;
+}

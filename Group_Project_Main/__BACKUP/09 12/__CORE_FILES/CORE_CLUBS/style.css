@@ -1,0 +1,717 @@
+/*
+    Main Page CSS
+
+    !!!!!!!!
+        THIS IS A CORE FILE!
+        BE CAREFUL OF WHAT YOU DO!
+        DO NOT CHANGE ANYTHING W/O A BACKUP!
+        DO NOT PUSH ANYTHING W/O CHECKING!
+    !!!!!!!!
+*/
+
+/* Import Google Fonts selected font */
+@import "https://fonts.googleapis.com/css?family=Ubuntu";
+
+/* Generic responsive setup for the HTML file */
+body, html{
+    background-color: #EAC67A;
+    width: 100%;
+    height: 90%;
+    margin: 0 auto;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+}
+
+/* Style all the divs and display borders - for now */
+/* Some of the IDs are used to override these styles  */
+
+/* Container styling below */
+.HEADER_DIV{
+    display: flex;
+    border: solid 1px #000000;
+    width: 100%;
+    /* Give the elements a minimum height to conserve styling */
+    min-height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    background: #000;
+    color: #ffffff;
+}
+
+/* Container styling below */
+.MAIN_DIV{
+    display: flex;
+    width: 100%;
+    /* Give the elements a minimum height to conserve styling */
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+/* Container styling below */
+.FOOTER_DIV{
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: solid 1px #000000;
+    width: 100%;
+    /* Give the elements a minimum height to conserve styling */
+    min-height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    float: left;
+    background: #000;
+    color: #ffffff;
+}
+
+/* Container elements styling */
+/* Some elements need to be above/below others */
+#div_main_slot_left{
+    /* WIDTH OVERRIDE */
+    flex-direction: column;
+}
+
+/* Container elements styling */
+/* Some elements need to float to the right of the container */
+#div_main_slot_right{
+    /* WIDTH OVERRIDE */
+    flex-direction: column;
+}
+
+/* Container elements styling */
+#div_main_slot_left_clubs{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
+}
+
+/* Container elements styling */
+#div_main_slot_left_filter{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+}
+
+#div_main_slot_right_events{
+    display: block;
+}
+
+/* Clubs container CSS START */
+/* /\/\/\/\/\/\/\/\/\/\/\/\  */
+/* Button styling below */
+.clubs_container_btn {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 160px;
+    min-width: 80px;
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    border: 1px solid #47231f;
+    border-bottom-left-radius: 20px;
+    text-decoration: none;
+    background: rgb(152,75,67);
+    background: -moz-linear-gradient(top, rgba(152,75,67,1) 0%, rgba(152,75,67,1) 41%, rgba(152,75,67,1) 41%, rgba(147,91,87,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
+}
+/* Club image (logo) styling below */
+.clubs_container_img_lg{
+    display: flex;
+    width: 80px;
+    height: 80px;
+}
+/* LI Container styling below */
+.clubs_container_li{
+    background-color: #efd39a;
+    border-radius: 20px;
+    border: 1px solid #f5e3bd;
+    min-width: 400px;
+    max-width: 600px;
+    margin: 0;
+    height: auto;
+    float: left;
+    list-style: none;
+}
+/* Button wrapping container styling below */
+.clubs_container_int_d_btn{
+    width: auto;
+    max-width: 20%;
+    display: flex;      !important;
+    flex-direction: row;!important;
+    clear: left;        !important;
+    margin-top: 5px;
+}
+/* Wrapping DIV styling below */
+.clubs_container_container_d{
+    background: #eac67a;
+    overflow-x: hidden;
+    width: 100%;
+    overflow-y: scroll;
+    min-width: 500px;
+}
+/* UL styling below */
+.clubs_container_ul{
+    /* PERFECT CENTERING */
+    display: flex;              !important;
+    justify-content: flex-start;    !important;
+    align-content: center;      !important;
+    /* PERFECT CENTERING */
+    flex-direction: column;
+    margin-left: 0;
+    width: auto;
+}
+/* Container Left side styling below */
+.clubs_container_li_left_d{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/*
+    DO NOT EDIT THE CODE BELOW
+*/
+/* Right hand side - heading styling */
+.clubs_container_int_heading_top{
+    /* PERFECT CENTERING */
+    display: flex;                  !important;
+    align-content: center;          !important;
+    align-items: center;            !important;
+    /* PERFECT CENTERING */
+    flex-direction: column;         !important;
+    float: right;                   !important;
+    width: 80%;                     !important;
+    height: 25px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+/* Right hand side - paragraph styling*/
+.clubs_container_int_heading_par{
+    margin-top: 0;
+    margin-bottom: 5px;
+    height: 25px;
+}
+/* Sub-main wrapping DIV styling*/
+.clubs_container_li_main_d{
+    /* PERFECT CENTERING */
+    display: flex;                  !important;
+    align-content: flex-start;      !important;
+    align-items: flex-start;        !important;
+    /* PERFECT CENTERING */
+    flex-direction: column;         !important;
+    float:right;                    !important;
+    width: 80%;                     !important;
+    height: 100%;                   !important;
+}
+
+/*
+    DO NOT EDIT THE CODE ABOVE
+*/
+/* Right hand side - heading styling */
+.clubs_container_int_d_top{
+    margin-top: 0;
+    width: auto;
+}
+/* Right hand side - paragraph styling*/
+.clubs_container_int_d_par{
+    margin-top: 0;
+    margin-bottom: 5px;
+    height: 100%;
+}
+
+/* Clubs container CSS END */
+
+/*
+    THE EVENTS CSS IS A COPY OF THE CLUBS
+    /\/\/\/\/\
+    Minor changes include:
+        floating right, instead of left
+        Generally lining up to the right of the screen
+    The comments describing the elements apply for the events as well
+
+    M.S.
+    30/11/2016
+*/
+
+/* Events container CSS START */
+
+.events_container_btn {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    min-height: 20px; !important;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    border: 1px solid #47231f;
+    border-bottom-right-radius: 20px;
+    text-decoration: none;
+    background: rgb(152,75,67);
+    background: -moz-linear-gradient(top, rgba(152,75,67,1) 0%, rgba(152,75,67,1) 41%, rgba(152,75,67,1) 41%, rgba(147,91,87,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
+}
+
+.events_container_li{
+    background-color: #efd39a;
+    border-radius: 20px;
+    border: 1px solid #f5e3bd;
+    min-width: 350px;
+    max-width: 430px;
+    margin-top: 5px;
+    margin-right: 40px;
+    height: auto;
+    min-height: 50px; !important;
+    float: right;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.events_container_int_d_btn{
+    min-width: 80px;
+    max-width: 80px;
+    display: flex;              !important;
+    flex-direction: column;     !important;
+    align-items: flex-end;
+    align-self: flex-end;
+    float: right;
+}
+
+.events_container_container_d{
+    background: #eac67a;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    min-width: 500px;
+    max-height: 250px;  !important;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*
+    DO NOT EDIT THE CODE BELOW
+*/
+.events_container_ul{
+    /* PERFECT CENTERING */
+    display: flex;              !important;
+    justify-content: flex-start;    !important;
+    align-content: center;      !important;
+    /* PERFECT CENTERING */
+    flex-direction: column;
+    margin-left: 0;
+    width: auto;
+}
+
+.events_container_int_heading_top{
+    /* PERFECT CENTERING */
+    display: flex;                  !important;
+    align-content: center;          !important;
+    align-items: center;            !important;
+    /* PERFECT CENTERING */
+    flex-direction: column;         !important;
+    float: left;                   !important;
+    min-width: 350px;
+    max-width: 600px;
+    height: 25px;
+    min-height: 25px; !important;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.events_container_int_heading_par{
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 25px;
+    min-height: 25px; !important;
+}
+
+.events_container_li_main_d{
+    /* PERFECT CENTERING */
+    display: flex;                  !important;
+    align-content: flex-start;      !important;
+    align-items: flex-start;        !important;
+    /* PERFECT CENTERING */
+    flex-direction: column;         !important;
+    float: left;                    !important;
+    height: 100%;                   !important;
+    min-height: 50px; !important;
+    margin-top: 0;
+}
+
+/*
+    DO NOT EDIT THE CODE ABOVE
+*/
+.events_container_int_d_top{
+    margin-top: 0;
+    width: auto;
+}
+
+.events_container_int_d_par{
+    margin-top: 0;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    height: 100%;
+}
+/* Events container CSS END */
+
+/* Custom Scrollbars code START */
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border: 0 none #ffffff;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #aeb4f9;
+}
+::-webkit-scrollbar-thumb:active {
+    background: #000000;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+    border: 0 none #ffffff;
+    border-radius: 61px;
+}
+::-webkit-scrollbar-track:hover {
+    background: #000000;
+}
+::-webkit-scrollbar-track:active {
+    background: #329a9a;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* Custom Scrollbars code END */
+
+
+/* Filter buttons code START */
+/* ######################### */
+/* style the container */
+.filter_buttons_main_container{
+    background: #eac67a;
+    /* PERFECT CENTERING */
+    display: flex;                !important;
+    justify-content: flex-start;    !important;
+    align-items: center;
+    /* PERFECT CENTERING */
+    flex-direction: row;
+    margin-left: 40px;
+}
+
+.filter_buttons_row{
+    /* PERFECT CENTERING */
+    display: flex;                !important;
+    justify-content: flex-start;    !important;
+    align-items: center;
+    /* PERFECT CENTERING */
+    flex-direction: row;
+}
+/* style the actual buttons */
+.filter_buttons_btn{
+    text-decoration: none;
+    text-align: center;
+    width: 130px;
+    min-width: 130px;
+    min-height: 30px;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 13px;
+    color: #ffffff;
+    border: 1px solid #47231f;
+    background: rgb(152,75,67);
+    background: -moz-linear-gradient(top, rgba(152,75,67,1) 0%, rgba(152,75,67,1) 41%, rgba(152,75,67,1) 41%, rgba(147,91,87,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
+}
+/* Filter buttons code END */
+
+/* Search text box & btn code START */
+#div_main_slot_right_search{
+    /* PERFECT CENTERING */
+    display: flex;              !important;
+    justify-content: flex-end;    !important;
+    align-content: center;      !important;
+    align-items: center;
+    /* PERFECT CENTERING */
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.search_text_box{
+    min-width: 50%;
+    max-width: 50%;
+    min-height: 30px;
+    max-height: 50px;
+    color: #000;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 20px;
+    background-color: #fff;
+    border: 1px solid #e0ab38;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 10px;
+}
+
+.search_button_btn{
+    text-align: center;
+    width: 100px;
+    min-width: 100px;
+    min-height: 35px;
+    height: 35px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 16px;
+    border: 1px solid #47231f;
+    background-color: rgb(152,75,67);
+    color: #fff;
+}
+
+.search_button_btn:hover{
+    background-color: #7c3d36;
+}
+
+/* Search text box & btn code END */
+
+/* Search results container START */
+#search_res_holder{
+    background-color: #fff;
+    border: 1px solid #47231f;
+    border-bottom-left-radius: 15px;
+    min-width: 0;
+    max-width: 250px;
+    min-height: 0;
+    max-height: 200px;
+    position: absolute;
+    right: 7.7%;
+    top: 105px;
+    left: 81.5%;
+    z-index: 0;
+    overflow-y: scroll;
+}
+.search_res_inner{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.search_res_btn_link{
+    text-align: center;
+    width: 100%;
+    min-width: 100%;
+    min-height: 20px;
+    height: 20px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 15px;
+    color: #ffffff;
+    border: 1px solid #47231f;
+    background: rgb(152,75,67);
+}
+/* Search results container END */
+
+/* Bottom Right Box code START*/
+#div_main_slot_right_bottom{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: inherit;
+    width: 100%;
+}
+/* Bottom Right Box code END*/
+
+/* Admin buttons START*/
+.admin_btn{
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+    min-width: 100px;
+    min-height: 20px;
+    height: 20px;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 18px;
+    color: #ffffff;
+    border: 1px solid #47231f;
+    margin-right: 20px;
+    background: rgb(152,75,67);
+    background: -moz-linear-gradient(top, rgba(152,75,67,1) 0%, rgba(152,75,67,1) 41%, rgba(152,75,67,1) 41%, rgba(147,91,87,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
+}
+/* Admin buttons END*/
+
+/* ADMIN PHP STYLE Start*/
+#admin_div_panel{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    background: #e7be65;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    min-width: 500px;
+    max-height: 250px;  !important;
+    margin-top: 0;
+}
+#admin_inner_section{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    min-height: 40px;
+    background-color: #7a7b7b;
+    color: #fff;
+    border: 1px solid #fff;
+    z-index: 0;
+}
+#admin_approve, #admin_delete{
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+    min-width: 60px;
+    min-height: 20px;
+    height: 100%;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 16px;
+    color: #ffffff;
+    border: 1px solid #47231f;
+    background: rgb(152,75,67);
+    background: -moz-linear-gradient(top, rgba(152,75,67,1) 0%, rgba(152,75,67,1) 41%, rgba(152,75,67,1) 41%, rgba(147,91,87,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(152,75,67,1) 0%,rgba(152,75,67,1) 41%,rgba(152,75,67,1) 41%,rgba(147,91,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#984b43', endColorstr='#935b57',GradientType=0 );
+}
+#admin_btn_form{
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+.admin_p{
+    margin-right: 10px;
+}
+#admin_version_p{
+    color: #e5e7e7;
+    position: absolute;
+    right: 0;
+    padding-bottom: 20px;
+    padding-right: 5px;
+}
+#admin_approval_top_p{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    color: #000;
+}
+/* ADMIN PHP STYLE End*/
+
+/* Create events START */
+#div_right_bottom_btn_holder{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#create_event_master_btn{
+    text-decoration: none;
+    text-align: center;
+    width: 110px;
+    min-width: 110px;
+    min-height: 35px;
+    height: 35px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 16px;
+    color: #ffffff;
+    border: 1px solid #47231f;
+    background: rgb(152,75,67);
+}
+#create_event_div{
+    /*DEF: hidden*/
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #47231f;
+    border-bottom-left-radius: 15px;
+    min-width: 0;
+    max-width: 250px;
+    min-height: 0;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+#create_event_id_txt,
+#create_event_txt_txt,
+#create_event_day_txt,
+#create_event_time_txt{
+    color: #ffffff;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 18px;
+    width: 60%;
+    background-color: #261d30;
+    border: 1px solid #984B43;
+}
+#submit_new_event_btn{
+    text-align: center;
+    width: 100px;
+    min-width: 100px;
+    min-height: 35px;
+    height: 35px;
+    font-family: 'Ubuntu', Arial, "Arial Black", "Times New Roman", serif;
+    font-size: 16px;
+    border: 1px solid #47231f;
+    background-color: rgb(152,75,67);
+    color: #fff;
+}
+
+#submit_new_event_btn:hover{
+    background-color: #7c3d36;
+}
+/* Create events END */
+
+
+/* footer slot START */
+#div_footer_slot{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+/* footer slot END */

@@ -7,5 +7,8 @@
  */
 
 if($_POST['action'] == 'sub_me_now') {
-    echo "Hello from the other side";
+    // get the user ID
+    $userID = $_SESSION["userID"];
+
+    echo $userID;
 }

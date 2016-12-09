@@ -137,7 +137,7 @@
 
     // extract the clubID
     var ind_e = win_loc.indexOf("=");
-    clubID = win_loc.substr(ind_e, win_loc.length);
+    clubID = win_loc.substr(ind_e+1, win_loc.length);
 
     function subToClub() {
         $.ajax({
@@ -317,7 +317,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 3.8 | ";
+    echo "Version 3.10 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

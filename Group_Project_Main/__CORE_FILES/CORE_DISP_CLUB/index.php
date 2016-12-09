@@ -152,17 +152,17 @@
     function subToClub() {
         $.ajax({
             type: "POST",
-            url: "../CORE SCRIPTS/subscribeToClub.php?cid="+clubID,
-            data:{action:'sub_me_now'},
-            success:function(responce) {
-                if(responce.indexOf("now subscribed") != -1){
+            url: "../CORE SCRIPTS/subscribeToClub.php",
+            data:{action:'sub_me_now', id:clubID},
+            success:function(response) {
+                if(response.indexOf("now subscribed") != -1){
                     // the user is subscribed, disable the btn
                     $("subscribe_btn_1").prop('disabled', true);
 
                     // alert the php echo
-                    alert(responce);
+                    alert(response);
                 }else{
-                    alert(responce);
+                    alert(response);
                 }
             }
         });
@@ -327,7 +327,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 3.3 | ";
+    echo "Version 3.4 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

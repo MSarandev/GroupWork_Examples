@@ -12,7 +12,7 @@ if($_POST['action'] == 'sub_me_now') {
     $userID = $_SESSION["userID"];
 
     // get the club ID
-    $clubID = $_GET["cid"];
+    $clubID = $_POST['id'];
 
     // Security cleanup for the clubID
     if($clubID != "" &&

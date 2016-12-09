@@ -61,6 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     echo '<script language="javascript">alert("Club approved. Refreshing");';
                     // reload
                     echo 'window.location = "../CORE_CLUBS/index.php";</script>';
+
+                    // session storage fix
+                    exit();
                 } else {
                     // SQL error
                     echo '<script language="javascript">alert("SQL ERROR!")</script>';
@@ -104,6 +107,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     echo '<script language="javascript">alert("Club deleted. Refreshing");';
                     // reload
                     echo 'window.location = "../CORE_CLUBS/index.php";</script>';
+
+                    // session storage fix
+                    exit();
                 } else {
                     // SQL error
                     echo '<script language="javascript">alert("SQL ERROR!")</script>';

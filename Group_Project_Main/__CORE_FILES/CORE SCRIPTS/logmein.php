@@ -160,6 +160,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             echo '<script language="javascript">alert("Interesting, you broke something I see");';
                             // reload
                             echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+
+                            // session storage fix
+                            exit();
                         }
                     } else {
                         // SQL error
@@ -175,12 +178,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 alert("The username that you have entered is already in use. Please enter another username and try again.");';
                         // reload
                         echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+
+                        // session storage fix
+                        exit();
                     }else if($email_dupe == 1){
                         // Alert the user to the issue
                         echo '<script language="javascript">
 alert("The email address you entered is already registered. Please log in with your existing account or enter another email address and try again.");';
                         // reload
                         echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+
+                        // session storage fix
+                        exit();
                     }else {
                         // Username is ok, email ok, values ok -> insert the data
                         // - - - - - -
@@ -203,6 +212,9 @@ alert("The email address you entered is already registered. Please log in with y
                                 echo '<script language="javascript">alert("Registration complete. Please login");';
                                 // reload
                                 echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+
+                                // session storage fix
+                                exit();
                             } else {
                                 // SQL error
                                 echo '<script language="javascript">alert("SQL ERROR!")</script>';
@@ -222,6 +234,8 @@ alert("The email address you entered is already registered. Please log in with y
                     echo '<script language="javascript">alert("'.$err_txt.'");';
                     // reload
                     echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+                    // session storage fix
+                    exit();
                 }
             }else{
                 // Passwords don't match
@@ -229,6 +243,9 @@ alert("The email address you entered is already registered. Please log in with y
 alert("The passwords that you have entered do not match. Please try again.");';
                 // reload
                 echo 'window.location = "../CORE_LOGIN/login.php";</script>';
+
+                // session storage fix
+                exit();
             }
         }
     }
@@ -285,8 +302,10 @@ alert("The passwords that you have entered do not match. Please try again.");';
                         echo '<script language="javascript">alert("Username or Password incorrect")</script>';
                         // data false, reload
 
-
                         header("location: ../CORE_LOGIN/login.php");
+
+                        // session storage fix
+                        exit();
                     }
                 }else{
                     // SQL error

@@ -39,16 +39,20 @@ session_start();
                     <div class="filter_buttons_row">
                         <!-- AJAX UPDATE BELOW -->
                         <button class="filter_buttons_btn"
-                                id="filter_my_clubs_btn">My Clubs</button>
+                                id="filter_my_clubs_btn"
+                                onclick="dispMyClubs()">My Clubs</button>
 
                         <button class="filter_buttons_btn"
-                                id="filter_age_g_1_btn">Age Group 1 (00-12)</button>
+                                id="filter_age_g_1_btn"
+                                onclick="dispAG1()">Age Group 1 (00-12)</button>
 
                         <button class="filter_buttons_btn"
-                                id="filter_age_g_2_btn">Age Group 2 (12-18)</button>
+                                id="filter_age_g_2_btn"
+                                onclick="dispAG2()">Age Group 2 (12-18)</button>
 
                         <button class="filter_buttons_btn"
-                                id="filter_age_g_3_btn">Age Group 3 (18-99)</button>
+                                id="filter_age_g_3_btn"
+                                onclick="dispAG3()">Age Group 3 (18-99)</button>
                         <!-- AJAX UPDATE END -->
 
                         <!-- Leave the lines below as comments, this serves as a backup -->

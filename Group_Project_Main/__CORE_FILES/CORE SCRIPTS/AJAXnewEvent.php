@@ -25,7 +25,7 @@ if($_POST['action'] == 'add_new_club') {
 
             if($event_day != "" &&
                 $event_day !== "" &&
-                ctype_alnum($event_time)){
+                ctype_alnum($event_day)){
                 //event day is ok
 
                 if($event_time != "" &&
@@ -81,8 +81,8 @@ if($_POST['action'] == 'add_new_club') {
                     exit();
                 }
             }else{
-                echo "
-ERROR - Event day contains invalid characters<br>If the event spans over 2+ days - create separate events";
+                echo "ERROR - Event day contains invalid characters
+                If the event spans over several days - create separate events";
                 // stop execution
                 exit();
             }

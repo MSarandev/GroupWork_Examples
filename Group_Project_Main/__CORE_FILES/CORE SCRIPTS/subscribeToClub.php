@@ -5,6 +5,7 @@
  * Date: 09-Dec-16
  * Time: 1:46 AM
  */
+session_start();
 
 if($_POST['action'] == 'sub_me_now') {
     // get the user ID
@@ -12,3 +13,5 @@ if($_POST['action'] == 'sub_me_now') {
 
     echo $userID;
 }
+
+session_destroy();

@@ -296,7 +296,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 2.10 | ";
+    echo "Version 2.11 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

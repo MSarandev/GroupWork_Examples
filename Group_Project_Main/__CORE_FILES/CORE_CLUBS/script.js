@@ -127,7 +127,7 @@ function whatAreYouLookingFor(){
 
 
 // display the create event div
-displDiv(){
+function displDiv(){
     // fetch the element
     var el = document.getElementById("create_event_div");
 

@@ -124,3 +124,8 @@ function whatAreYouLookingFor(){
     });
 }
 // |*|*|*|*|*|*|*|
+
+// stop the refreshing of the page on submit
+$('#search_form').submit(function () {
+    return false;
+});

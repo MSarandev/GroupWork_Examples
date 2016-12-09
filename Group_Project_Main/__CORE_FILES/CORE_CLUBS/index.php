@@ -103,7 +103,7 @@ session_start();
         <div class="MAIN_DIV" id="div_main_slot_right">
             <!-- Search code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_search">
-                <form action="" method="post">
+                <form id="search_form" action="" method="post">
                     <input type="text"
                            class="search_text_box"
                            name="search_club_txt"
@@ -234,7 +234,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Master Build: X2.6 <br>";
+            echo "Master Build: X2.7 <br>";
             echo "Build M3.13:F2.1:L3.4:E1.3<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

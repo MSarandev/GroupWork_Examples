@@ -143,7 +143,8 @@
                              background-color: #f61123;
                              border: 1px solid #fff;
                              border-radius: 10px;
-                             font-family: 'Ubuntu', sans-serif;
+                             color: #fff;
+                             font-family: Ubuntu, sans-serif;
                              font-size: 16px;'>Subscribe</button>";
     ?>
 </div>
@@ -291,7 +292,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 2.2 | ";
+    echo "Version 2.3 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

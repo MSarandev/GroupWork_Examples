@@ -37,6 +37,25 @@ session_start();
                 <!-- FILTER BUTTONS START -->
                 <div class="filter_buttons_main_container">
                     <div class="filter_buttons_row">
+                        <!-- AJAX UPDATE BELOW -->
+                        <button class="filter_buttons_btn"
+                                id="filter_my_clubs_btn">My Clubs</button>
+
+                        <button class="filter_buttons_btn"
+                                id="filter_age_g_1_btn">Age Group 1 (00-12)</button>
+
+                        <button class="filter_buttons_btn"
+                                id="filter_age_g_2_btn">Age Group 2 (12-18)</button>
+
+                        <button class="filter_buttons_btn"
+                                id="filter_age_g_3_btn">Age Group 3 (18-99)</button>
+                        <!-- AJAX UPDATE END -->
+
+                        <!-- Leave the lines below as comments, this serves as a backup -->
+                        <!--
+
+                        YE OLD WORKING SITE
+
                         <form action="" method="post">
                             <input type="submit"
                                    name="my_clubs_call_btn"
@@ -249,8 +268,8 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Build M3.13:F2.1:L3.4:E1.3";
-            echo "<br>";
+            echo "MASTER BUILD X1.0 <br>";
+            echo "Build M3.13:F2.1:L3.4:E1.3 <br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

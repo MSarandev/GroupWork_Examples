@@ -129,10 +129,30 @@
     // One function does not a script file make
     // thus, it lives here now
 
+    // get the clubID from the window location
+    var win_loc = window.location.toString();
+
+    // extract the clubID
+    var ind_q = wind_loc.indexOf("?");
+    var ind_e = wind_loc.indexOf("=");
+
+    var clubID = ""; // init
+
+    // check the structure (Extra Safe Security Thing)
+    if(ind_q+3 == ind_e){
+        // Everything is ok
+
+        // Get the clubID
+        clubID = win_loc.substr(ind_e, win_loc.length);
+    }else{
+        // Deter the hackers, hopefully
+        alert("Are you hacking buddy?");
+    }
+
     function subToClub() {
         $.ajax({
             type: "POST",
-            url: "../CORE SCRIPTS/subscribeToClub.php",
+            url: "../CORE SCRIPTS/subscribeToClub.php?cid="+clubID,
             data:{action:'sub_me_now'},
             success:function(responce) {
                 if(responce.indexOf("now subscribed") != -1){
@@ -307,7 +327,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 3.2 | ";
+    echo "Version 3.3 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

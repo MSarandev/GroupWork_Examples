@@ -131,7 +131,7 @@ body, html{
     background-color: #efd39a;
     border-radius: 20px;
     border: 1px solid #f5e3bd;
-    min-width: 600px;
+    min-width: 400px;
     max-width: 600px;
     margin: 0;
     height: auto;
@@ -428,8 +428,8 @@ body, html{
 .filter_buttons_btn{
     text-decoration: none;
     text-align: center;
-    width: 140px;
-    min-width: 140px;
+    width: 130px;
+    min-width: 130px;
     min-height: 30px;
     height: 30px;
     padding-top: 5px;

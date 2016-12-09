@@ -11,6 +11,8 @@ session_start();
     <title>Clubs</title>
     <!-- External CSS + JS -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+
     <!-- WAVES FILES BELOW -->
 
     <link rel="stylesheet" type="text/css" href="../CORE%20WAVES/waves.min.css"/>
@@ -24,7 +26,7 @@ session_start();
     <!-- JQUERY IMPORT -->
     <!-- VERY IMPORTANT -->
 </head>
-<body onload="dispMyClubs()">
+<body>
     <div class="HEADER_DIV" id="div_header_slot">
         <!-- DYNAMIC HEADER CODE HERE -->
         <?php echo "<p>Welcome, ".$_SESSION["user_fname"]."</p>";?>
@@ -40,15 +42,12 @@ session_start();
                         <button class="filter_buttons_btn"
                                 id="filter_my_clubs_btn"
                                 onclick="dispMyClubs()">My Clubs</button>
-
                         <button class="filter_buttons_btn"
                                 id="filter_age_g_1_btn"
                                 onclick="dispAG1()">Age Group 1 (00-12)</button>
-
                         <button class="filter_buttons_btn"
                                 id="filter_age_g_2_btn"
                                 onclick="dispAG2()">Age Group 2 (12-18)</button>
-
                         <button class="filter_buttons_btn"
                                 id="filter_age_g_3_btn"
                                 onclick="dispAG3()">Age Group 3 (18-99)</button>
@@ -74,10 +73,12 @@ session_start();
             <div class="MAIN_DIV" id="div_main_slot_left_clubs">
                 <!-- Added code from container file 28/11/2016 -->
                 <!-- CLUBS CONTAINER START -->
-                <div id="clubs_container_container_d"
-                     class="clubs_container_container_d">
+                <div class="clubs_container_container_d">
                     <ul class="clubs_container_ul">
-                        <!-- CLUBS GO HERE -->
+                        <!-- Include the php script to load the clubs -->
+                        <?php
+                            include("../CORE SCRIPTS/load_clubs.php");
+                        ?>
                     </ul>
                 </div>
                 <!-- Attach Waves to these btns -->
@@ -106,23 +107,49 @@ session_start();
         <div class="MAIN_DIV" id="div_main_slot_right">
             <!-- Search code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_search">
-                <!-- AJAX UPDATE START -->
-                <input type="text"
-                       class="search_text_box"
-                       name="search_club_txt"
-                       id="search_club_txt"
-                       placeholder="Search Clubs" />
-                <button class="search_button_btn"
-                        id="search_button_btn"
-                        onclick="whatAreYouLookingFor()">Search</button>
-                <!-- AJAX UPDATE END -->
-                    <div class='search_res_inner'
-                         id="search_res_inner">
-
-                        <!-- SEARCH RESULTS GO HERE -->
-
+                <form action="" method="post">
+                    <input type="text"
+                           class="search_text_box"
+                           name="search_club_txt"
+                           placeholder="Search Clubs" />
+                    <input type="submit"
+                           class="search_button_btn"
+                           name="search_club_btn"
+                           value="Search" />
+                </form>
+                <div id="search_res_holder">
+                    <!-- Include the script to handle searches -->
+                    <div class='search_res_inner'>
+                        <?php
+                            include("../CORE SCRIPTS/searchClubs.php");
+                        ?>
                     </div>
                 </div>
+                <!-- Attach Waves to these btns -->
+                <!--
+
+                STYLING ERROR -- FIX THIS
+
+                <script>
+                    //Attach waves
+                    Waves.attach('.search_button_btn');
+                    Waves.attach('.search_res_btn_link');
+                    //Ripple on hover
+                    $('.search_button_btn').mouseenter(function() {
+                        Waves.ripple(this, {wait: null});
+                    }).mouseleave(function() {
+                        Waves.calm(this);
+                    });
+                    //Ripple on hover
+                    $('.search_res_btn_link').mouseenter(function() {
+                        Waves.ripple(this, {wait: null});
+                    }).mouseleave(function() {
+                        Waves.calm(this);
+                    });
+                    //Init
+                    Waves.init();
+                </script>
+                -->
             </div>
             <!-- Events code below -->
             <div class="MAIN_DIV" id="div_main_slot_right_events">
@@ -206,12 +233,13 @@ session_start();
                 </div>
             </div>
         </div>
+    </div>
 
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "MASTER BUILD X2.5 <br>";
-            echo "Build M3.13:F2.1:L3.4:E1.3 <br>";
+            echo "Master Build: X2.0 <br>";
+            echo "Build M3.13:F2.1:L3.4:E1.3<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

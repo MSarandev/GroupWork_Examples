@@ -660,7 +660,6 @@ body, html{
     background: rgb(152,75,67);
 }
 #create_event_div{
-    /*DEF: hidden*/
     visibility: hidden;
     display: flex;
     flex-direction: column;

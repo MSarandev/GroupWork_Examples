@@ -147,7 +147,7 @@
             success:function(response) {
                 if(response.indexOf("now subscribed") != -1){
                     // the user is subscribed, disable the btn
-                    $("subscribe_btn_1").disable();
+                    $(this).prop("disabled",true);
 
                     // alert the php echo
                     alert(response);
@@ -317,7 +317,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 4.1 | ";
+    echo "Version 4.2 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

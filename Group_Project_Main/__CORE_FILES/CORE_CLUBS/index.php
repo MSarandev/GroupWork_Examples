@@ -225,7 +225,7 @@ session_start();
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
             echo "Master Build: X2.15 <br>";
-            echo "Build M3.13:F2.1:L3.4:E1.3<br>";
+            echo "Build M3.13:F2.1:L3.4:E2.3<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

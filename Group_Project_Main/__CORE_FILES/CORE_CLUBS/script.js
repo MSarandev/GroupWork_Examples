@@ -134,6 +134,11 @@ function displDiv(){
     // set the param
     if(el.style.visibility == 'visible'){
         el.style.visibility = 'hidden';
+        // when the element is hidden, flush the contents
+        document.getElementById("create_event_id_txt").value = "";
+        document.getElementById("create_event_txt_txt").value = "";
+        document.getElementById("create_event_day_txt").value = "";
+        document.getElementById("create_event_time_txt").value = "";
     }else{
         el.style.visibility = 'visible'
     }

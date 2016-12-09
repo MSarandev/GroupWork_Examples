@@ -113,3 +113,24 @@ body, html{
     bottom: 0;
     margin-left: 4px;
 }
+
+#subscribe_btn{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 30px;
+    min-height: 30px;
+    width: 150px;
+    min-width: 150px;
+    background-color: #f61123;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-family: Ubuntu, sans-serif;
+    font-size: 16px;
+}
+
+#subscribe_btn:hover{
+    background-color: #aa0f1d;
+}

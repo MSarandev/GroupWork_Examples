@@ -132,20 +132,7 @@
     <!-- DYNAMIC HEADER CODE HERE -->
     <?php echo "<p>Browse all the clubs ".$_SESSION["user_fname"]."</p>";?>
     <?php
-        echo "<button style='display: block;
-                             position: absolute;
-                             right: 10px;
-                             top: 10px;
-                             height: 30px;
-                             min-height: 30px;
-                             width: 150px;
-                             min-width: 150px;
-                             background-color: #f61123;
-                             border: 1px solid #fff;
-                             border-radius: 10px;
-                             color: #fff;
-                             font-family: Ubuntu, sans-serif;
-                             font-size: 16px;'>Subscribe</button>";
+        echo "<button id='subscribe_btn'>Subscribe</button>";
     ?>
 </div>
 <div class="MAIN_DIV"
@@ -292,7 +279,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 2.3 | ";
+    echo "Version 2.4 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

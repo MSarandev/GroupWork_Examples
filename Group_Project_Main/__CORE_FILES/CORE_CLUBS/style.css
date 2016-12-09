@@ -576,8 +576,10 @@ body, html{
     overflow-x: hidden;
     overflow-y: scroll;
     min-width: 500px;
-    max-height: 250px;  !important;
+    max-height: 200px;
     margin-top: 0;
+    margin-bottom: 0;
+    z-index: 0;
 }
 #admin_inner_section{
     padding-left: 10px;
@@ -636,6 +638,7 @@ body, html{
     align-content: center;
     justify-content: center;
     color: #000;
+    margin-top: -130px;
 }
 /* ADMIN PHP STYLE End*/
 
@@ -666,7 +669,7 @@ body, html{
     align-self: center;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.8);
     border: 1px solid #47231f;
     border-radius: 10px;
     min-width: 0;
@@ -676,6 +679,7 @@ body, html{
     padding-top: 5px;
     max-height: 210px;
     overflow-y: scroll;
+    z-index: 1;
 }
 #create_event_id_txt,
 #create_event_txt_txt,

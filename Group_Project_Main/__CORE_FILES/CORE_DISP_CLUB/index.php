@@ -10,6 +10,8 @@
     <meta charset="UTF-8">
     <!-- Include the font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- |*|*|*|*| -->
     <title>
         <?php
@@ -279,7 +281,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 2.4 | ";
+    echo "Version 2.5 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

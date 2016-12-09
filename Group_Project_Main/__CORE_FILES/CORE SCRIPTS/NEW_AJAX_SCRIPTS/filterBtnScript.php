@@ -9,10 +9,6 @@ session_start();
 
 // the functions are the same, as they were before AJAX
 function userSubbedClubs(){
-    // echo to the user as to what they are seeing
-    echo "Clubs you have subbed to";
-    echo "<hr><br>";
-
     $club_array = array(); // init
 
     // XSS vars

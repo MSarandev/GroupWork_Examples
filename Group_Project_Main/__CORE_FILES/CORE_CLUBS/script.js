@@ -13,6 +13,9 @@ function dispMyClubs() {
             // get the element in question
             var el1 = document.getElementById("clubs_container_container_d");
 
+            // colour the btn
+            var btn = document.getElementById("filter_my_clubs_btn");
+            btn.style.backgroundColor = "#66ccff";
             // update the innerHTML with the response
             el1.innerHTML = response;
         }

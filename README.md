@@ -3,12 +3,12 @@ PROJECT LIVE SRC: http://tmrgoportlethen.azurewebsites.net/Group_Project_Main/in
 <strong>ADMINER: </strong>http://tmrgoportlethen.azurewebsites.net/Group_Project_Main/__CORE_FILES/adminer.php
 
 #Update 09/12
-I played around with AJAX and I decided to re-write a large part of the PHP scripts on the site. 
-Ok, stop screaming. I know this is dangerous. Yes, yes we are 4 days away from submitting...
-STOP SCREAMING!
-It will be fine. (famous last words)
-Seriously though - I've created a BACKUP directory. **DO NOT BREATHE AROUND IT**
-If anything goes very wrong we will just roll back, ok? OK.
+I played around with AJAX and I decided to re-write a large part of the PHP scripts on the site. <br>
+Ok, stop screaming. I know this is dangerous. Yes, yes we are 4 days away from submitting...<br>
+STOP SCREAMING!<br>
+It will be fine. (famous last words)<br>
+Seriously though - I've created a BACKUP directory. <br>**DO NOT BREATHE AROUND IT**<br>
+If anything goes wrong we will just roll back, ok? OK.<br>
 
 
 #Colour Scheme

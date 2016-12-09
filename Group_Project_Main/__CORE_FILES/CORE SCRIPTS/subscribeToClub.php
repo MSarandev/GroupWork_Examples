@@ -33,7 +33,7 @@ if($_POST['action'] == 'sub_me_now') {
         // try/catch
         try {
             // build the SQL query
-            $sql = "INSERT INTO subscriptionn (userID, clubID)
+            $sql = "INSERT INTO subscription (userID, clubID)
                             VALUES ('" . mysqli_real_escape_string($db, $userID) . "','"
                 . mysqli_real_escape_string($db, $clubID) .
                 "')";

@@ -131,6 +131,50 @@ function displDiv(){
     // fetch the element
     var el = document.getElementById("create_event_div");
 
-    // set the hidden
-    el.style.visibility = 'visible';
+    // set the param
+    if(el.style.visibility == 'visible'){
+        el.style.visibility = 'hidden';
+    }else{
+        el.style.visibility = 'visible'
+    }
 }
+
+// |*|*|*|*|*|*|
+// New event function
+function aNewEvent(){
+    // get all the values
+    var clubID = document.getElementById("create_event_id_txt").value;
+    var event_text = document.getElementById("create_event_txt_txt").value;
+    var event_day = document.getElementById("create_event_day_txt").value;
+    var event_time = document.getElementById("create_event_time_txt").value;
+
+
+    $.ajax({
+        // what is the conn type
+        type: "POST",
+        // where do you send the request
+        url: "../CORE SCRIPTS/AJAXnewEvent.php",
+        // what data you pass
+        // send the values as extra params
+        data: {action: 'add_new_club',
+            clubID:clubID,
+            event_text:event_text,
+            event_day:event_day,
+            event_time:event_time},
+        // show the thing below on success
+        success: function (response) {
+            // check for errors
+            if(response.includes("ERROR")){
+                // show the error
+                alert(response);
+            }else {
+                // hide the div
+                displDiv();
+
+                // show the msg
+                alert(response);
+            }
+        }
+    });
+}
+// |*|*|*|*|*|*|

@@ -206,36 +206,9 @@ session_start();
                            id="create_event_time_txt"
                            name="create_event_time_txt">
                     <br>
-                    <button id="submit_new_event_btn">Submit</button>
+                    <button id="submit_new_event_btn"
+                            onclick="aNewEvent()">Submit</button>
                     <!-- AJAX UPDATE END -->
-                    <!--
-
-                    Ye old code
-
-                    <form id="create_event_form">
-                        <input type="number"
-                               placeholder="Club ID"
-                               name="create_event_id_txt"
-                               id="create_event_id_txt">
-                        <input type="text"
-                               placeholder="Event Text"
-                               id="create_event_txt_txt"
-                               name="create_event_txt_txt">
-                        <input type="text"
-                               placeholder="Day"
-                               id="create_event_day_txt"
-                               name="create_event_day_txt">
-                        <input type="text"
-                               placeholder="Time"
-                               id="create_event_time_txt"
-                               name="create_event_time_txt">
-                        <br>
-                        <input type="submit"
-                               name="submit_new_event_btn"
-                               id="submit_new_event_btn"
-                               value="Submit">
-                    </form>
-                    -->
                 </div>
                 <p id="admin_approval_top_p">Approval Section</p>
                 <div id="admin_div_panel">
@@ -251,7 +224,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Master Build: X2.10 <br>";
+            echo "Master Build: X2.11 <br>";
             echo "Build M3.13:F2.1:L3.4:E1.3<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

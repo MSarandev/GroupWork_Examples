@@ -20,18 +20,16 @@ if($_POST['action'] == 'add_new_club') {
         // clubID is ok
 
         if($event_text != "" &&
-            $event_text !== "" &&
-            ctype_alnum($event_text)){
+            $event_text !== ""){
             //event text is ok
 
             if($event_day != "" &&
                 $event_day !== "" &&
-                ctype_alnum($event_day)){
+                ctype_alnum($event_time)){
                 //event day is ok
 
                 if($event_time != "" &&
-                    $event_time !== "" &&
-                    ctype_alnum($event_time)){
+                    $event_time !== ""){
                     // event time is ok
 
                     // ALL VARS ARE OK - proceed
@@ -83,7 +81,8 @@ if($_POST['action'] == 'add_new_club') {
                     exit();
                 }
             }else{
-                echo "ERROR - Event day contains invalid characters";
+                echo "
+ERROR - Event day contains invalid characters<br>If the event spans over 2+ days - create separate events";
                 // stop execution
                 exit();
             }

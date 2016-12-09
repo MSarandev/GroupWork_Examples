@@ -89,7 +89,7 @@ function userSubbedClubs(){
                         // - - - - - - -
                         // echo the html to show the club as a tab
                         echo '
-                    <li class="clubs_container_li">
+                        <li class="clubs_container_li">
                         <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
                         <!-- /\/\/\/\/\/\/\/\/\/\ -->
                         <!-- Description section -->
@@ -142,8 +142,7 @@ function userSubbedClubs(){
 if($_POST['action'] == 'show_my_clubs') {
     // Call the function
     //userSubbedClubs();
-    echo "HELLO";
-
+    echo "<p>Hello</p>";
 }elseif($_POST['action'] == 'show_AG1') {
     echo "New Clubs, ".$_POST['param1'];
 

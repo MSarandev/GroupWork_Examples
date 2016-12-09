@@ -8,6 +8,9 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
     <title>Clubs</title>
     <!-- External CSS + JS -->
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -185,6 +188,30 @@ session_start();
                 <!-- On load hide the div, so it's not in the way -->
                 <div id="create_event_div">
                     <!-- This is where the user will add the event -->
+                    <!-- AJAX UPDATE START -->
+                    <input type="number"
+                           placeholder="Club ID"
+                           name="create_event_id_txt"
+                           id="create_event_id_txt">
+                    <input type="text"
+                           placeholder="Event Text"
+                           id="create_event_txt_txt"
+                           name="create_event_txt_txt">
+                    <input type="text"
+                           placeholder="Day"
+                           id="create_event_day_txt"
+                           name="create_event_day_txt">
+                    <input type="text"
+                           placeholder="Time"
+                           id="create_event_time_txt"
+                           name="create_event_time_txt">
+                    <br>
+                    <button id="submit_new_event_btn">Submit</button>
+                    <!-- AJAX UPDATE END -->
+                    <!--
+
+                    Ye old code
+
                     <form id="create_event_form">
                         <input type="number"
                                placeholder="Club ID"
@@ -208,6 +235,7 @@ session_start();
                                id="submit_new_event_btn"
                                value="Submit">
                     </form>
+                    -->
                 </div>
                 <p id="admin_approval_top_p">Approval Section</p>
                 <div id="admin_div_panel">
@@ -223,7 +251,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Master Build: X2.8 <br>";
+            echo "Master Build: X2.10 <br>";
             echo "Build M3.13:F2.1:L3.4:E1.3<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

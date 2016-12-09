@@ -128,6 +128,9 @@
 <div class="HEADER_DIV" id="div_header_slot">
     <!-- DYNAMIC HEADER CODE HERE -->
     <?php echo "<p>Browse all the clubs ".$_SESSION["user_fname"]."</p>";?>
+    <?php
+        echo "<button style='display: flex; align-self: flex-end;'>Subscribe</button>";
+    ?>
 </div>
 <div class="MAIN_DIV"
      id="div_main_preview"
@@ -273,7 +276,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 1.15 | ";
+    echo "Version 2.1 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

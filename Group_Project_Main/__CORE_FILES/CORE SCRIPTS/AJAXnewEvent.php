@@ -47,12 +47,11 @@ if($_POST['action'] == 'add_new_club') {
 
                         // generate the sql
                         $sql = "INSERT INTO club_events (clubID, eventDescr, eventDay, eventTime, approved) VALUES'"
-                            .mysqli_real_escape_string($db, $clubID).","
-                            .mysqli_real_escape_string($db, $event_text).","
-                            .mysqli_real_escape_string($db, $event_day).","
-                            .mysqli_real_escape_string($db, $event_time).","
-                            .mysqli_real_escape_string($db, 0).
-                            "')";
+                            .mysqli_real_escape_string($db, $clubID)."','"
+                            .mysqli_real_escape_string($db, $event_text)."','"
+                            .mysqli_real_escape_string($db, $event_day)."','"
+                            .mysqli_real_escape_string($db, $event_time).
+                            "','0')";
 
                         // attach the query and execute
                         if(mysqli_query($db, $sql)){

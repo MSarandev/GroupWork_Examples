@@ -139,21 +139,8 @@ function userSubbedClubs(){
 }
 
 function ageGroupClubs($param){
-    // display a message to the user, as to what they are seeing
-    if($param == 1){
-        echo "Age Group 1 (00-12)";
-        echo "<hr><br>";
-    }else if($param == 2){
-        echo "Age Group 2 (12-18)";
-        echo "<hr><br>";
-    }else if($param == 3){
-        echo "Age Group 3 (18-99)";
-        echo "<hr><br>";
-    }
-
-
     // connect to the database to pull the clubs
-    include("../core_db_connect.php");
+    include("../../core_db_connect.php");
 
     // test the conn
     if ($db->connect_errno) {

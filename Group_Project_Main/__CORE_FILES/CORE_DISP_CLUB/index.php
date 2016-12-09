@@ -10,8 +10,9 @@
     <meta charset="UTF-8">
     <!-- Include the font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <!-- External CSS -->
+    <!-- External CSS + JS -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
     <!-- |*|*|*|*| -->
     <title>
         <?php
@@ -131,34 +132,9 @@
 ">
 <div class="HEADER_DIV" id="div_header_slot">
     <!-- DYNAMIC HEADER CODE HERE -->
-    <?php echo "<p>Browse all the clubs ".$_SESSION["user_fname"]."</p>";?>
     <?php
-        echo "<button id='subscribe_btn'>Subscribe</button>";
-
-        // I need to echo the styling as well, because the btn doesn't recognise it in the style
-        echo "
-        <style>
-        #subscribe_btn{
-            display: block;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            height: 30px;
-            min-height: 30px;
-            width: 150px;
-            min-width: 150px;
-            background-color: #f61123;
-            border: 1px solid #fff;
-            border-radius: 10px;
-            color: #fff;
-            font-family: Ubuntu, sans-serif;
-            font-size: 16px;
-        }
-        
-        #subscribe_btn:hover{
-            background-color: #aa0f1d;
-        }
-        </style>";
+        echo "<p>Browse all the clubs ".$_SESSION["user_fname"]."</p>";
+        echo "<button id='subscribe_btn_1' onclick='subToClub()'>Subscribe</button>";
     ?>
 </div>
 <div class="MAIN_DIV"
@@ -305,7 +281,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 2.6 | ";
+    echo "Version 2.7 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

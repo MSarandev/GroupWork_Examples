@@ -141,7 +141,8 @@ function userSubbedClubs(){
 
 if($_POST['action'] == 'show_my_clubs') {
     // Call the function
-    userSubbedClubs();
+    //userSubbedClubs();
+    echo "HELLO";
 
 }elseif($_POST['action'] == 'show_AG1') {
     echo "New Clubs, ".$_POST['param1'];

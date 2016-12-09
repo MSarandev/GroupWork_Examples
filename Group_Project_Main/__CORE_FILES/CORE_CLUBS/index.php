@@ -52,6 +52,20 @@ session_start();
                         <button class="filter_buttons_btn"
                                 id="filter_age_g_3_btn"
                                 onclick="dispAG3()">Age Group 3 (18-99)</button>
+                        <!-- Attach Waves to these btns -->
+                        <script>
+                            //Attach waves
+                            Waves.attach('.filter_buttons_btn');
+                            //Ripple on hover
+                            $('.filter_buttons_btn').mouseenter(function() {
+                                Waves.ripple(this, {wait: null});
+                            }).mouseleave(function() {
+                                Waves.calm(this);
+                            });
+                            //Init
+                            Waves.init();
+                        </script>
+
                         <!-- AJAX UPDATE END -->
 
                         <!-- Leave the lines below as comments, this serves as a backup -->
@@ -269,7 +283,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "MASTER BUILD X2.0 <br>";
+            echo "MASTER BUILD X2.1 <br>";
             echo "Build M3.13:F2.1:L3.4:E1.3 <br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

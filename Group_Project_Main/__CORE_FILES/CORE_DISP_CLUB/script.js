@@ -10,6 +10,5 @@ function subToClub() {
         success:function(html) {
             alert(html);
         }
-
     });
 }

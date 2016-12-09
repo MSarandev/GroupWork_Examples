@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <!-- External CSS + JS -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
+    <!-- INCLUDE jQuery as well -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- |*|*|*|*| -->
     <title>
         <?php
@@ -123,6 +124,20 @@
         ?>
     </title>
 </head>
+<!-- AJAX FUNCTION START -->
+<script type="text/javascript">
+    function subToClub() {
+        $.ajax({
+            type: "POST",
+            url: "../CORE SCRIPTS/subscribeToClub.php",
+            data:{action:'sub_me_now'},
+            success:function(html) {
+                alert(html);
+            }
+        });
+    }
+</script>
+<!-- AJAX FUNCTION END -->
 <body style="
 <?php
     if($is_hacker == 1){
@@ -281,7 +296,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 2.7 | ";
+    echo "Version 2.9 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

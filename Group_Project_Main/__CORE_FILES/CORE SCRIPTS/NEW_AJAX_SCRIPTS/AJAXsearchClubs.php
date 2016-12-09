@@ -53,7 +53,7 @@ function searchMyClubs($param){
                     echo "
                         <p>".$club_name."</p>
                         <p>".$age_group."</p>
-                        <a href='../CORE_DISP_CLUB/index.php?cid=".$clubID."' 
+                        <a href='../../CORE_DISP_CLUB/index.php?cid=".$clubID."' 
                         class='search_res_btn_link'>LINK</a>
                         ";
                 }
@@ -64,18 +64,14 @@ function searchMyClubs($param){
         }else{
             // SQL error
 
-            echo '<script language="javascript">alert("SQL ERROR!")</script>';
-
-            echo mysqli_error($db);
+            echo "SQL ERROR! <br>".mysqli_error($db);
         }
 
         // close the conn
         $db->close();
     }else{
         // Alert the user
-        echo '<script language="javascript">
-alert("The search you have entered contains invalid characters. Please try again using only numbers and letters.")
-</script>';
+    echo "ERROR - The search you have entered contains invalid characters.";
     }
 }
 

@@ -98,7 +98,7 @@ function dispAG3() {
 // SEARCH FUNCTION
 function whatAreYouLookingFor(){
     // get the search query value
-    var search_val = document.getElementById("search_club_txt").innerHTML;
+    var search_val = document.getElementById("search_club_txt").value;
 
     $.ajax({
         // what is the conn type
@@ -110,11 +110,16 @@ function whatAreYouLookingFor(){
         data: {action: 'search_my_clubs', val:search_val},
         // show the thing below on success
         success: function (response) {
-            // get the element in question
-            var el1 = document.getElementById("search_res_inner");
+            // check for errors
+            if(response.includes("ERROR")){
+                alert(response);
+            }else {
+                // get the element in question
+                var el1 = document.getElementById("search_res_inner");
 
-            // update the innerHTML with the response
-            el1.innerHTML = response;
+                // update the innerHTML with the response
+                el1.innerHTML = response;
+            }
         }
     });
 }

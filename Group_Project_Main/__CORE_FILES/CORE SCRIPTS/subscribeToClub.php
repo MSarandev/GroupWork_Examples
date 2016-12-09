@@ -15,16 +15,17 @@ if($_POST['action'] == 'sub_me_now') {
     $clubID = $_POST['id'];
 
     // Security cleanup for the clubID
-    if($clubID != "" &&
+    if ($clubID != "" &&
         $clubID !== "" &&
-        ctype_digit($clubID)){
+        ctype_digit($clubID)
+    ) {
         // The club ID is fine
 
         // Check if the user is already a sub
-        if(in_array($clubID, $_SESSION['GLOBAL_club_ids'])){
+        if (in_array($clubID, $_SESSION['GLOBAL_club_ids'])) {
             // The user is a sub
             echo "You are already a subscriber";
-        }else{
+        } else {
             // Standard procedure from here on
 
             // link to to db
@@ -32,7 +33,7 @@ if($_POST['action'] == 'sub_me_now') {
 
             // test the conn
             if ($db->connect_errno) {
-                die ('Connection Failed :'.$db->connect_error );
+                die ('Connection Failed :' . $db->connect_error);
             }
 
             // try/catch
@@ -49,18 +50,18 @@ if($_POST['action'] == 'sub_me_now') {
                     echo "You are now subscribed";
                 } else {
                     // SQL error
-                    echo "SQL Error"."<br>".mysqli_error($db);
+                    echo "SQL Error" . "<br>" . mysqli_error($db);
                 }
-            } catch (PDOException $e){
+            } catch (PDOException $e) {
                 // error while adding record
-                echo "Script error"."<br>".$e->getMessage();
+                echo "Script error" . "<br>" . $e->getMessage();
             }
-        }else{
-            // Alert to the user
-            echo "The club ID is corrupt. Refresh the page and try again";
-        }
 
-        // close the conn
-        $db->close();
+            // close the conn
+            $db->close();
+        }
+    } else {
+        // Alert to the user
+        echo "The club ID is corrupt. Refresh the page and try again";
     }
 }

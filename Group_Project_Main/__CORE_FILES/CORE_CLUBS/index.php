@@ -74,7 +74,8 @@ session_start();
                 <!-- Added code from container file 28/11/2016 -->
                 <!-- CLUBS CONTAINER START -->
                 <div class="clubs_container_container_d">
-                    <ul class="clubs_container_ul">
+                    <ul class="clubs_container_ul"
+                        id="clubs_container_container_d">
                         <!-- CLUBS GO HERE -->
                     </ul>
                 </div>
@@ -235,7 +236,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Master Build: X2.2 <br>";
+            echo "Master Build: X2.3 <br>";
             echo "Build M3.13:F2.1:L3.4:E1.3<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

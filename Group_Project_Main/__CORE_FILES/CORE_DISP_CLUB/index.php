@@ -126,13 +126,24 @@
 </head>
 <!-- AJAX FUNCTION START -->
 <script type="text/javascript">
+    // One function does not a script file make
+    // thus, it lives here now
+
     function subToClub() {
         $.ajax({
             type: "POST",
             url: "../CORE SCRIPTS/subscribeToClub.php",
             data:{action:'sub_me_now'},
-            success:function(html) {
-                alert(html);
+            success:function(responce) {
+                if(responce.indexOf("now subscribed") <> -1){
+                    // the user is subscribed, disable the btn
+                    $("subscribe_btn_1").prop('disabled', true);
+
+                    // alert the php echo
+                    alert(responce);
+                }else{
+                    alert(responce);
+                }
             }
         });
     }
@@ -296,7 +307,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 2.11 | ";
+    echo "Version 3.1 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

@@ -132,9 +132,12 @@
     // get the clubID from the window location
     var win_loc = window.location.toString();
 
+    // DEBUG
+    alert(win_loc);
+
     // extract the clubID
-    var ind_q = wind_loc.indexOf("?");
-    var ind_e = wind_loc.indexOf("=");
+    var ind_q = win_loc.indexOf("?");
+    var ind_e = win_loc.indexOf("=");
 
     var clubID = ""; // init
 
@@ -330,7 +333,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 3.5 | ";
+    echo "Version 3.6 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

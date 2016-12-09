@@ -11,8 +11,6 @@ session_start();
     <title>Clubs</title>
     <!-- External CSS + JS -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
-
     <!-- WAVES FILES BELOW -->
 
     <link rel="stylesheet" type="text/css" href="../CORE%20WAVES/waves.min.css"/>
@@ -236,7 +234,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Master Build: X2.4 <br>";
+            echo "Master Build: X2.5 <br>";
             echo "Build M3.13:F2.1:L3.4:E1.3<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

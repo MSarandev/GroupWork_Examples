@@ -132,22 +132,12 @@
     // get the clubID from the window location
     var win_loc = window.location.toString();
 
+    // To avoid undefined error -> init
+    var clubID = "DEF";
+
     // extract the clubID
-    var ind_q = win_loc.indexOf("?");
     var ind_e = win_loc.indexOf("=");
-
-    var clubID = ""; // init
-
-    // check the structure (Extra Safe Security Thing)
-    if(ind_q+3 == ind_e){
-        // Everything is ok
-
-        // Get the clubID
-        clubID = win_loc.substr(ind_e, win_loc.length);
-    }else if(ind_q+3 != ind_e){
-        // Deter the hackers, hopefully
-        alert("Are you hacking buddy?");
-    }
+    clubID = win_loc.substr(ind_e, win_loc.length);
 
     function subToClub() {
         $.ajax({
@@ -327,7 +317,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version 3.7 | ";
+    echo "Version 3.8 | ";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

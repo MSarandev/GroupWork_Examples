@@ -60,5 +60,3 @@ if($_POST['action'] == 'sub_me_now') {
      */
 
 }
-
-session_destroy();

@@ -138,17 +138,118 @@ function userSubbedClubs(){
     $db->close();
 }
 
+function ageGroupClubs($param){
+    // display a message to the user, as to what they are seeing
+    if($param == 1){
+        echo "Age Group 1 (00-12)";
+        echo "<hr><br>";
+    }else if($param == 2){
+        echo "Age Group 2 (12-18)";
+        echo "<hr><br>";
+    }else if($param == 3){
+        echo "Age Group 3 (18-99)";
+        echo "<hr><br>";
+    }
+
+
+    // connect to the database to pull the clubs
+    include("../core_db_connect.php");
+
+    // test the conn
+    if ($db->connect_errno) {
+        die ('Connection Failed :' . $db->connect_error);
+    }
+
+    // prepare the sql
+    /**
+     *
+     * The query below contains a "naked" param. There's no security checks for injection.
+     * This is done deliberately, as the function is only called from WITHIN.
+     * If a hacker can change the param into an SQL Injection string - that means the server is breached.
+     * The hacker would literary need to have access to the source code to inject into this query.
+     * Should I explain further??
+     *
+     * M.S.
+     */
+    $sql = "SELECT clubname, clubID, shortDescr FROM clubs WHERE age_group = 'group_".$param."'";
+    // parse as res
+    $result = $db->query($sql);
+
+    // run the query
+    if (mysqli_query($db, $sql)) {
+        // check the return amount
+        if ($result->num_rows > 0) {
+            // data checks out
+            while ($row = $result->fetch_assoc()) {
+                // fill in the variables
+                $club_name = $row['clubname'];
+                $clubID = $row['clubID'];
+                $short_desc = $row['shortDescr'];
+
+                // dynamically fill the HTML
+                echo '
+                    <li class="clubs_container_li">
+                        <!-- DO NOT CHANGE THE STRUCTURE BELOW -->
+                        <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                        <!-- Description section -->
+                        <div class="clubs_container_li_main_d">
+                            <div class="clubs_container_int_heading_top">
+                                <p class="clubs_container_int_heading_par">' . $club_name . '</p>
+                            </div>
+                            <div class="clubs_container_int_d_top">
+                                <p class="clubs_container_int_d_par">'
+                    . $short_desc .
+                    '</p>
+                            </div>
+                        </div>
+                        <!-- Image section -->
+                        <div class="clubs_container_li_left_d">
+                            <img class="clubs_container_img_lg" src="../CORE_IMG/newClubLogo.png"/>
+                        </div>
+                        <!-- Button Section -->
+                        <div class="clubs_container_int_d_btn">
+                            <a 
+                            href="../CORE_DISP_CLUB/index.php?cid=' . $clubID . '" 
+                            class="clubs_container_btn">Club Page</a>
+                        </div>
+                        <!-- /\/\/\/\/\/\/\/\/\/\ -->
+                        <!-- DO NOT CHANGE THE STRUCTURE ABOVE -->
+                    </li>
+                    ';
+            }
+        } else {
+            // No clubs matching criteria
+            echo "<br>No clubs found that match the criteria. Sorry";
+        }
+    } else {
+        // SQL error
+        echo '<script language="javascript">alert("SQL ERROR!")</script>';
+        echo mysqli_error($db);
+    }
+
+    // close the conn
+    $db->close();
+}
 
 if($_POST['action'] == 'show_my_clubs') {
     // Call the function
     userSubbedClubs();
 }elseif($_POST['action'] == 'show_AG1') {
-    echo "New Clubs, ".$_POST['param1'];
+    // get the age group requested
+    $p1 = $_POST['param1'];
 
+    // call the function with the param
+    ageGroupClubs($p1);
 }elseif($_POST['action'] == 'show_AG2') {
-    echo "Even newer clubs, ".$_POST['param1'];
+    // get the age group requested
+    $p1 = $_POST['param1'];
 
+    // call the function with the param
+    ageGroupClubs($p1);
 }elseif($_POST['action'] == 'show_AG3') {
-    echo "The newest clubs, ".$_POST['param1'];
+    // get the age group requested
+    $p1 = $_POST['param1'];
 
+    // call the function with the param
+    ageGroupClubs($p1);
 }

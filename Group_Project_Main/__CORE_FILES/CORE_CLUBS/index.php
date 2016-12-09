@@ -26,7 +26,7 @@ session_start();
     <!-- JQUERY IMPORT -->
     <!-- VERY IMPORTANT -->
 </head>
-<body>
+<body onload="dispMyClubs()">
     <div class="HEADER_DIV" id="div_header_slot">
         <!-- DYNAMIC HEADER CODE HERE -->
         <?php echo "<p>Welcome, ".$_SESSION["user_fname"]."</p>";?>
@@ -236,7 +236,7 @@ session_start();
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Master Build: X2.3 <br>";
+            echo "Master Build: X2.4 <br>";
             echo "Build M3.13:F2.1:L3.4:E1.3<br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>

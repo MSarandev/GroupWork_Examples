@@ -20,9 +20,46 @@
     <!-- VERY IMPORTANT -->
     <script src="../jquery.min.js"></script>
     <script src="script.js"></script>
+    <!-- GOOGLE MAPS SCRIPT -->
+    <script>
+        function initMap() {
+            var uluru = {lat: 57.061681, lng: -2.1294679999999744};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: uluru
+            });
+
+            // create a void marker
+            var marker = new google.maps.Marker({
+                position: null,
+                map: null,
+                animation: google.maps.Animation.DROP
+            }); //init
+
+            google.maps.event.addListener(map, "rightclick", function(event) {
+
+                // check if we have a marker
+                if(marker.getMap() == null){
+                    // no marker, create it
+                    marker.setPosition(event.latLng);
+                    marker.setMap(map);
+
+                    // update storage
+                    up_lat_lng = event.latLng;
+                }else{
+                    // marker moved, update position
+                    marker.setPosition(event.latLng);
+
+                    // update storage
+                    up_lat_lng = event.latLng;
+                }
+            });
+        }
+    </script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmS3TIPC5DwmYxSnlFwOx1ScFqMEH-zUs&callback=initMap">
     </script>
+    <!-- GOOGLE MAPS SCRIPT -->
     <!-- JQUERY IMPORT -->
     <!-- VERY IMPORTANT -->
 </head>
@@ -135,7 +172,7 @@
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Version: 3.5 <br>";
+            echo "Version: 3.6 <br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

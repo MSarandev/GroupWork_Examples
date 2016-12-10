@@ -145,7 +145,7 @@
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Version: 2.4 <br>";
+            echo "Version: 2.5 <br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

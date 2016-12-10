@@ -8,7 +8,6 @@
     <title>Explore Portlethen</title>
     <!-- External CSS + JS -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
 
     <!-- WAVES FILES BELOW -->
 
@@ -20,10 +19,14 @@
     <!-- JQUERY IMPORT -->
     <!-- VERY IMPORTANT -->
     <script src="../jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmS3TIPC5DwmYxSnlFwOx1ScFqMEH-zUs&callback=initMap">
+    </script>
     <!-- JQUERY IMPORT -->
     <!-- VERY IMPORTANT -->
 </head>
-<body>
+<body onload="initMap()">
     <div class="HEADER_DIV" id="div_header_slot">
         <!-- DYNAMIC HEADER CODE HERE -->
         <?php
@@ -110,15 +113,15 @@
                            class="marker_a_text_input"
                            id="new_marker_url_txt"
                            placeholder="URL to your image" />
-                    <p>Step 3: Click the button and select the place</p>
-                    <button class="marker_a_btn">Map Click</button>
+                    <p>Step 3: Right click on where you want the marker to appear</p>
                     <p>Step 4: Add a description</p>
                     <input type="text"
                            class="marker_a_text_input"
                            id="new_marker_descr_txt"
                            placeholder="Short Description" />
                     <button class="marker_a_btn"
-                            id="new_marker_submit_btn">Submit</button>
+                            id="new_marker_submit_btn"
+                            onclick="storeThisMarker()">Submit</button>
                 </div>
             </div>
         </div>
@@ -126,26 +129,13 @@
             <div id="map">
 
             </div>
-            <!-- Google Maps loading script -->
-            <script>
-                function initMap() {
-                    var uluru = {lat: 57.061681, lng: -2.1294679999999744};
-                    var map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 12,
-                        center: uluru
-                    });
-                }
-            </script>
-            <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmS3TIPC5DwmYxSnlFwOx1ScFqMEH-zUs&callback=initMap">
-            </script>
         </div>
     </div>
 
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Version: 2.5 <br>";
+            echo "Version: 3.5 <br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

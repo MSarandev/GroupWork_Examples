@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>Explore Portlethen</title>
     <!-- External CSS + JS -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
@@ -142,7 +145,7 @@
     <div class="FOOTER_DIV" id="div_footer_slot">
         <!-- DYNAMIC FOOTER CODE HERE -->
         <?php
-            echo "Version: 2.3 <br>";
+            echo "Version: 2.4 <br>";
             include("../__CORE_DOM_Elements/footer.php");
         ?>
     </div>

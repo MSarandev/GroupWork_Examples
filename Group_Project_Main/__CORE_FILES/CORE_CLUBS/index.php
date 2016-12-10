@@ -30,7 +30,9 @@ session_start();
 <body onload="dispMyClubs()">
     <div class="HEADER_DIV" id="div_header_slot">
         <!-- DYNAMIC HEADER CODE HERE -->
-        <?php echo "<p>Welcome, ".$_SESSION["user_fname"]."</p>";?>
+        <?php echo "<p>Welcome, ".$_SESSION["user_fname"]."</p>";
+            //include("../__CORE_DOM_Elements/header.php");
+        ?>
     </div>
 
     <div class="MAIN_DIV" id="div_main_slot">

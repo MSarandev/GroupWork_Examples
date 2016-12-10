@@ -6,4 +6,6 @@
  * Time: 15:47
  */
 
-echo "<p>I'm the header now</p>";
+echo "<img id='header_img' src='../CORE_IMG/logo_blue.png' 
+style='width:200px; 
+        height: 50px;'/>";

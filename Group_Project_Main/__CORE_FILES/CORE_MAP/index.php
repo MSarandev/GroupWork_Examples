@@ -142,6 +142,8 @@
                 // This event listener will call addMarker() when the map is clicked.
                 map.addListener('rightclick', function(event) {
                     addMarker(event.latLng, "", "User submitted");
+                    location_storage = event.latLng.toString();
+                    alert(location_storage);
                 });
             }
 
@@ -153,9 +155,6 @@
                     label: label_t,
                     title: info_t
                 });
-                if(location != null){
-                    location_storage = location;
-                }
             }
 
             function clearMarkers() {
@@ -294,7 +293,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 3.22 <br>";
+    echo "Version: 3.23 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

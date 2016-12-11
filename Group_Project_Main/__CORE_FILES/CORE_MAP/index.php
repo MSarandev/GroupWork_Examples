@@ -131,7 +131,6 @@
             var map = new google.maps.Marker();
             var marker = map = new google.maps.Map(document.getElementById('map'));
             var location_storage = "Define me";
-            var is_pinned = 0;
 
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
@@ -147,6 +146,9 @@
                         map: map,
                         animation: google.maps.Animation.DROP
                     });
+
+                    // set the var
+                    location_storage = event.latLng;
                 });
             }
 
@@ -193,7 +195,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.35a <br>";
+    echo "Version: 2.36 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

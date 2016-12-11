@@ -12,9 +12,6 @@ if($_POST['action'] == 'store_a_marker') {
     $descr_text = $_POST['des_txt'];
     $coordinates = $_POST['coor'];
 
-    echo $image_url.", ".$descr_text.",".$coordinates;
-    /*
-
     // Standard string checks
     if($image_url != "" && $image_url !== ""){
         // img ok
@@ -78,5 +75,4 @@ if($_POST['action'] == 'store_a_marker') {
         echo "ERROR - Please take a picture and re-submit";
         exit();
     }
-    */
 }

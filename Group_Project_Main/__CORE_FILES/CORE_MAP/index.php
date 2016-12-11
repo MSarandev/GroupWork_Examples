@@ -155,10 +155,10 @@
             function storeThisMarker(){
                 // check with the user
                 if(confirm("Submit the marker?")) {
-
                     // fetch all the values
                     var img_url = document.getElementById("new_marker_url_txt").value;
                     var des_txt = document.getElementById("new_marker_descr_txt").value;
+                    var latLng = marker.getPosition();
 
                     $.ajax({
                         // what is the conn type
@@ -170,7 +170,7 @@
                             action: 'store_a_marker',
                             img_u: img_url,
                             des_txt: des_txt,
-                            coor: marker.getPosition()
+                            coor: latLng
                         },
                         // show the thing below on success
                         success: function (response) {
@@ -195,7 +195,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.13 <br>";
+    echo "Version: 2.14 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

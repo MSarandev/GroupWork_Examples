@@ -136,48 +136,20 @@
                     zoom: 12,
                     center: uluru
                 });
+            }
 
-                google.maps.event.addListener(map, 'rightclick', function(event) {
-                    placeMarker(event.latLng);
+            google.maps.event.addListener(map, 'rightclick', function(event) {
+                placeMarker(event.latLng);
+            });
+
+            function placeMarker(location) {
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    animation: google.maps.Animation.DROP
                 });
 
-                function placeMarker(location) {
-                    var marker = new google.maps.Marker({
-                        position: location,
-                        map: map,
-                        animation: google.maps.Animation.DROP
-                    });
-
-                    up_lat_lng = location;
-                }
-
-                /*
-                google.maps.event.addListener(map, "rightclick", function(event) {
-
-                    // create a void marker
-                    var marker = new google.maps.Marker({
-                        position: event.latLng,
-                        map: map,
-                        animation: google.maps.Animation.DROP
-                    }); //init
-
-                    /*
-                    // check if we have a marker
-                    if(marker.getMap() == null){
-                        // no marker, create it
-                        marker.setPosition(event.latLng);
-                        marker.setMap(map);
-
-                        // update storage
-                        up_lat_lng = event.latLng;
-                    }else{
-                        // marker moved, update position
-                        marker.setPosition(event.latLng);
-
-                        // update storage
-                        up_lat_lng = event.latLng;
-                    }
-                    */
+                up_lat_lng = location;
             }
 
             // storage AJAX
@@ -224,7 +196,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.9 <br>";
+    echo "Version: 2.10 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

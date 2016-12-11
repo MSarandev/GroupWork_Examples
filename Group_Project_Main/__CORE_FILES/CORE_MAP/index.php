@@ -128,14 +128,15 @@
         <!-- Google Maps loading script -->
         <script>
             // declare var
-            var map = "";
-            var marker = "";
+            var map;
+            var marker;
+            //var portlethen;
 
             function initMap() {
-                var portlethen = {lat: 57.061681, lng: -2.1294679999999744};
+                //portlethen = {lat: 57.061681, lng: -2.1294679999999744};
                 map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 13,
-                    center: portlethen
+                    center: {lat: 57.061681, lng: -2.1294679999999744}
                 });
 
                 google.maps.event.addListener(map, 'rightclick', function(event) {
@@ -195,7 +196,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.14 <br>";
+    echo "Version: 2.15 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

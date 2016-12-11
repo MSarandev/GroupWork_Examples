@@ -23,7 +23,7 @@
     <!-- JQUERY IMPORT -->
     <!-- VERY IMPORTANT -->
 </head>
-<body>
+<body onload="initMap()">
 <div class="HEADER_DIV" id="div_header_slot">
     <!-- DYNAMIC HEADER CODE HERE -->
     <?php
@@ -196,7 +196,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.15 <br>";
+    echo "Version: 2.16 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

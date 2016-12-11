@@ -133,7 +133,8 @@
             //define the vars, to avoid undefined errors
             var user_m_descr = [];
             var user_m_img = [];
-            var user_m_coor = [];
+            var user_m_lat = [];
+            var user_m_lng = [];
 
             <?php
                 // the script below echos an array of markers
@@ -167,7 +168,7 @@
                         // get the index to use in the other array
                         var index1 = user_m_descr.indexOf(element);
 
-                        addMarker(user_m_coor[index1], "", element);
+                        addMarker({lat:user_m_lat[index1], lng:user_m_lng[index1]}, "", element);
                     });
                 }
             }
@@ -317,7 +318,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 4.3 <br>";
+    echo "Version: 4.4 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

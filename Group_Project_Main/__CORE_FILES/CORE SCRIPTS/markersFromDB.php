@@ -50,7 +50,14 @@ if(mysqli_query($db, $sql)){
         }
 
         foreach($array_coor as $i){
-            echo "user_m_coor.push('".$i."');";
+            $coma_at = strpos($i, ",");
+            $lat = substr($i, 0, $coma_at);
+            $lng = substr($i, $coma_at+1, strlen($i));
+
+            // push to JS
+            echo "user_m_lat.push('".$lat."');";
+            echo "user_m_lng.push('".$lng."');";
+
         }
     }else{
         // NO DATA

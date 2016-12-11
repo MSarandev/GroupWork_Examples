@@ -51,8 +51,8 @@ if(mysqli_query($db, $sql)){
 
         foreach($array_coor as $i){
             $coma_at = strpos($i, ",");
-            $lat = substr($i, 0, $coma_at);
-            $lng = substr($i, $coma_at+2, strlen($i));
+            $lat = substr($i, 1, $coma_at);
+            $lng = substr($i, $coma_at+2, strlen($i)-1);
 
             // push to JS
             echo "user_m_lat.push('".$lat."');";

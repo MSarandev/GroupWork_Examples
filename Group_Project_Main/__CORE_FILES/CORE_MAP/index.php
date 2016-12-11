@@ -138,18 +138,15 @@
                     center: {lat:57.061681, lng:-2.1294679999999744} // Portlethen
                 });
 
-                google.maps.event.addListener(map, "rightclick", function(event) {
-                    // check if we have a marker
-                    marker = new google.maps.Marker({
-                        //position: {lat:57.06425694727913, lng:-2.1323776245117188},
-                        position: event.latLng,
-                        map: map,
-                        animation: google.maps.Animation.DROP
-                    });
-
-                    // set the var
-                    location_storage = marker.getPosition();
+                marker = new google.maps.Marker({
+                    position: {lat:57.06425694727913, lng:-2.1323776245117188},
+                    //position: event.latLng,
+                    map: map,
+                    animation: google.maps.Animation.DROP
                 });
+
+                // set the var
+                location_storage = marker.getPosition();
             }
 
             // storage AJAX
@@ -195,7 +192,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.37 <br>";
+    echo "Version: 2.38 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

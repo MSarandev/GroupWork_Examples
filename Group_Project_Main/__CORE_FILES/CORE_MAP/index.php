@@ -138,7 +138,7 @@
                 //    center: {lat:57.061681, lng:-2.1294679999999744} // Portlethen
                 //});
 
-                map.setZoom(zoom:13);
+                map.setZoom({zoom:13});
                 map.setCenter({lat:57.061681, lng:-2.1294679999999744});
 
                 marker = new google.maps.Marker({
@@ -195,7 +195,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.39 <br>";
+    echo "Version: 2.40 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

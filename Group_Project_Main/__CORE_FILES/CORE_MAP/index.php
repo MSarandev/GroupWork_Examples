@@ -131,23 +131,23 @@
             var map = new google.maps.Marker();
             var marker = map = new google.maps.Map(document.getElementById('map'));
             var location_storage = "Define me";
+            var is_pinned = 0;
 
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 13,
                     center: {lat:57.061681, lng:-2.1294679999999744} // Portlethen
                 });
-                placeMarker();
-            }
 
-            function placeMarker() {
-                marker = new google.maps.Marker({
-                    position: {lat:57.06425694727913, lng:-2.1323776245117188},
-                    map: map,
-                    animation: google.maps.Animation.DROP
+                google.maps.event.addListener(map, "rightclick", function(event) {
+                    // check if we have a marker
+                    marker = new google.maps.Marker({
+                        //position: {lat:57.06425694727913, lng:-2.1323776245117188},
+                        position: event.latLng,
+                        map: map,
+                        animation: google.maps.Animation.DROP
+                    });
                 });
-
-                location_storage = marker.getPosition();
             }
 
             // storage AJAX
@@ -193,7 +193,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.30 <br>";
+    echo "Version: 2.35a <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

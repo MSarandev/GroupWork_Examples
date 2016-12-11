@@ -164,8 +164,6 @@
                     user_m_lat.length != 0 &&
                     user_m_lng.length != 0){
 
-                    alert("YAY");
-
                     // add the markers to the map
                     user_m_descr.forEach(function(element){
                         // get the index to use in the other array
@@ -174,7 +172,9 @@
                         alert(user_m_lat[index1]);
                         alert(user_m_lng[index1]);
 
-                        addMarker({user_m_lat[index1],user_m_lng[index1]}, "", element);
+                        var location = {lat:user_m_lat[index1], lng:user_m_lng[index1]};
+
+                        addMarker(location, "", element);
                     });
                 }
             }
@@ -324,7 +324,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 4.7 <br>";
+    echo "Version: 4.8 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

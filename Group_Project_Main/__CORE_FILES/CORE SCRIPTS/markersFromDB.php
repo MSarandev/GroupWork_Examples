@@ -55,8 +55,9 @@ if(mysqli_query($db, $sql)){
     }else{
         // NO DATA
     }
-    // stop execution
-    exit();
+
+    // close the conn
+    $db->close();
 }else{
     // SQL Error
     echo "SQL ERROR - " . mysqli_error($db);

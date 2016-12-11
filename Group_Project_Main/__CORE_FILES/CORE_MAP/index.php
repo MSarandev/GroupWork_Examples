@@ -169,10 +169,10 @@
                         var fixed_lng = user_m_lng[i].substr(0, user_m_lng[i].length -1);
 
                         var marker = new google.maps.Marker({
-                            position: {lat: user_m_lat[i].toString(), lng:fixed_lng.toString()},
+                            position: {lat: user_m_lat[i], lng:fixed_lng.toString()},
                             map: map,
                             animation: google.maps.Animation.DROP,
-                            title: element.toString()
+                            title: user_m_descr[i]
                         });
                     }
                 }
@@ -323,7 +323,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 4.15<br>";
+    echo "Version: 4.16<br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

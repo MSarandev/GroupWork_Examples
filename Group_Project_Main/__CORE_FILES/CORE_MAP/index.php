@@ -143,9 +143,9 @@
                 });
 
                 // This event listener will call addMarker() when the map is clicked.
-                //map.addListener('rightclick', function(event) {
-                //    addMarker(event.latLng, ".");
-                //});
+                map.addListener('rightclick', function(event) {
+                    addMarker(event.latLng, "", "User submitted");
+                });
             }
 
             function addMarker(location, label_t, info_t) {
@@ -159,8 +159,14 @@
             }
 
             function clearMarkers() {
-                // reload the map (clean + fast)
+                // reload the map
                 initMap();
+
+                /*
+                for (var i = 0; i < markers.length; i++) {
+                    markers[i].setMap(null);
+                }
+                */
             }
 
             function setInfoText(text){
@@ -181,61 +187,66 @@
                     // clear the old markers
                     clearMarkers();
 
-                    // generate the start marker
-                    lat_txt = 57.05431867895687;
-                    lng_txt = -2.1475750207901;
-                    lat_lng = {lat: lat_txt, lng: lng_txt}; // G Maps Format
+                    setTimeout(function(){
+                            // generate the start marker
+                            lat_txt = 57.05431867895687;
+                            lng_txt = -2.1475750207901;
+                            lat_lng = {lat: lat_txt, lng: lng_txt}; // G Maps Format
 
-                    // drop the start marker
-                    addMarker(lat_lng, "A", "Start here");
+                            // drop the start marker
+                            addMarker(lat_lng, "A", "Start here");
 
-                    // set the map center on start
-                    map.setCenter(lat_lng);
-                    map.setZoom(15);
+                            // set the map center on start
+                            map.setCenter(lat_lng);
+                            map.setZoom(15);
 
-                    // generate the end marker
-                    lat_txt = 57.05709011021065;
-                    lng_txt = -2.1485406160354614;
-                    lat_lng = {lat: lat_txt, lng: lng_txt}; // G Maps Format
+                            // generate the end marker
+                            lat_txt = 57.05709011021065;
+                            lng_txt = -2.1485406160354614;
+                            lat_lng = {lat: lat_txt, lng: lng_txt}; // G Maps Format
 
-                    // drop the start marker
-                    addMarker(lat_lng, "B", "Walk complete!");
+                            // drop the start marker
+                            addMarker(lat_lng, "B", "Walk complete!");
 
-                    // update the walk info container
-                    var text = "1km or around ¾ mile. <hr>Portlethen Moss is a rare area of natural raised acidic bog which supports a wide variety of plant and animal species.<br>" +
-                        "The moss formed after the last ice age. The glacial retreat left an undulating landscape with a hollow that filled with water creating a lake, which over time filled in with decomposing vegetation. It takes about 100 years to form a mere 5cm of peat, formed from decomposing plant residues that are compacted, which then build up slowly over time. In recent coring studies, certain areas of the living bog have been measured to more than 3 metres in depth! In recent years the moss has been subject to development and much of what was the Moss has been lost. Now in the care of the community and supported by volunteers, it will hopefully remain a vibrant natural area of North Kincardine.";
+                            // update the walk info container
+                            var text = "1km or around ¾ mile. <hr>Portlethen Moss is a rare area of natural raised acidic bog which supports a wide variety of plant and animal species.<br>" +
+                                "The moss formed after the last ice age. The glacial retreat left an undulating landscape with a hollow that filled with water creating a lake, which over time filled in with decomposing vegetation. It takes about 100 years to form a mere 5cm of peat, formed from decomposing plant residues that are compacted, which then build up slowly over time. In recent coring studies, certain areas of the living bog have been measured to more than 3 metres in depth! In recent years the moss has been subject to development and much of what was the Moss has been lost. Now in the care of the community and supported by volunteers, it will hopefully remain a vibrant natural area of North Kincardine.";
 
-                    // update the text
-                    setInfoText(text);
+                            // update the text
+                            setInfoText(text);
+                        }, 1000);
+
                 }else if(walk_name.includes("viewpoint")){
                     // clear the old markers
                     clearMarkers();
 
-                    // generate the start marker
-                    lat_txt = 57.00874129091307;
-                    lng_txt = -2.228872776031494;
-                    lat_lng = {lat: lat_txt, lng: lng_txt}; // G Maps Format
+                    setTimeout(function(){
+                            // generate the start marker
+                            lat_txt = 57.00874129091307;
+                            lng_txt = -2.228872776031494;
+                            lat_lng = {lat: lat_txt, lng: lng_txt}; // G Maps Format
 
-                    // drop the start marker
-                    addMarker(lat_lng, "A", "Start here");
+                            // drop the start marker
+                            addMarker(lat_lng, "A", "Start here");
 
-                    // set the map center on start
-                    map.setCenter(lat_lng);
-                    map.setZoom(13);
+                            // set the map center on start
+                            map.setCenter(lat_lng);
+                            map.setZoom(13);
 
-                    // generate the end marker
-                    lat_txt = 57.014874853723825;
-                    lng_txt = -2.2713804244995117;
-                    lat_lng = {lat: lat_txt, lng: lng_txt}; // G Maps Format
+                            // generate the end marker
+                            lat_txt = 57.014874853723825;
+                            lng_txt = -2.2713804244995117;
+                            lat_lng = {lat: lat_txt, lng: lng_txt}; // G Maps Format
 
-                    // drop the start marker
-                    addMarker(lat_lng, "B", "Walk complete!");
+                            // drop the start marker
+                            addMarker(lat_lng, "B", "Walk complete!");
 
-                    // update the walk info container
-                    var text = "Roughly 5km or 3 miles <hr>The rocks of North Kincardine are predominately deep marine deposits metamorphosed during the Caledonian mountain building era. These metamorphic rocks are separated from the south by the Highland Boundary Fault. The fault was formed 460–420 Million years ago and stretches from Helensburgh in the West of Scotland to Craigeven Bay, south of Muchalls, in the East. The fault created a deep basin to the south-east which, over time, filled with debris from the northwest, producing the fertile rolling hills of the Midland Valley between Stonehaven and Perth.";
+                            // update the walk info container
+                            var text = "Roughly 5km or 3 miles <hr>The rocks of North Kincardine are predominately deep marine deposits metamorphosed during the Caledonian mountain building era. These metamorphic rocks are separated from the south by the Highland Boundary Fault. The fault was formed 460–420 Million years ago and stretches from Helensburgh in the West of Scotland to Craigeven Bay, south of Muchalls, in the East. The fault created a deep basin to the south-east which, over time, filled with debris from the northwest, producing the fertile rolling hills of the Midland Valley between Stonehaven and Perth.";
 
-                    // update the text
-                    setInfoText(text);
+                            // update the text
+                            setInfoText(text);
+                        }, 1000);
                 }
             }
 
@@ -243,9 +254,6 @@
             // storage AJAX
             function storeThisMarker(){
                 // check with the user
-                alert("403 - Function incomplete");
-
-                /*
                 if(confirm("Submit the marker?")) {
                     // fetch all the values
                     var img_url = document.getElementById("new_marker_url_txt").value;
@@ -274,8 +282,7 @@
                             }
                         }
                     });
-
-                }*/
+                }
             }
         </script>
         <script async defer
@@ -287,7 +294,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 3.20 <br>";
+    echo "Version: 3.21 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

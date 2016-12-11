@@ -128,8 +128,8 @@
         <!-- Google Maps loading script -->
         <script>
             // declare var
-            var up_lat_lng = "";
             var map = "";
+            var marker = "";
 
             function initMap() {
                 var portlethen = {lat: 57.061681, lng: -2.1294679999999744};
@@ -144,13 +144,11 @@
             }
 
             function placeMarker(location) {
-                var marker = new google.maps.Marker({
+                marker = new google.maps.Marker({
                     position: location,
                     map: map,
                     animation: google.maps.Animation.DROP
                 });
-
-                up_lat_lng = location;
             }
 
             // storage AJAX
@@ -172,7 +170,7 @@
                             action: 'store_a_marker',
                             img_u: img_url,
                             des_txt: des_txt,
-                            coor: up_lat_lng
+                            coor: marker.getPosition()
                         },
                         // show the thing below on success
                         success: function (response) {
@@ -197,7 +195,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.12 <br>";
+    echo "Version: 2.13 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

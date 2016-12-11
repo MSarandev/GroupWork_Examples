@@ -129,12 +129,13 @@
         <script>
             // declare var
             var up_lat_lng = "";
+            var map = "";
 
             function initMap() {
-                var uluru = {lat: 57.061681, lng: -2.1294679999999744};
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 12,
-                    center: uluru
+                var portlethen = {lat: 57.061681, lng: -2.1294679999999744};
+                map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 13,
+                    center: portlethen
                 });
 
                 google.maps.event.addListener(map, 'rightclick', function(event) {
@@ -196,7 +197,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.11 <br>";
+    echo "Version: 2.12 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

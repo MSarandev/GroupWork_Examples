@@ -142,9 +142,9 @@
             ?>
 
             // declare var
-            var map  = new google.maps.Map(document.getElementById('map'));
-            var marker = new google.maps.Marker();
-            var location_storage = "Define me";
+            var map;
+            var marker;
+            var location_storage;
 
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
@@ -321,7 +321,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 4.5 <br>";
+    echo "Version: 4.6 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

@@ -136,11 +136,11 @@
                     zoom: 12,
                     center: uluru
                 });
-            }
 
-            google.maps.event.addListener(map, 'rightclick', function(event) {
-                placeMarker(event.latLng);
-            });
+                google.maps.event.addListener(map, 'rightclick', function(event) {
+                    placeMarker(event.latLng);
+                });
+            }
 
             function placeMarker(location) {
                 var marker = new google.maps.Marker({
@@ -196,7 +196,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.10 <br>";
+    echo "Version: 2.11 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

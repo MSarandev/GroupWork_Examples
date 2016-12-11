@@ -171,10 +171,10 @@
                         var fixed_lng = user_m_lng[index1].substr(0, user_m_lng[index1].length -1);
 
                         var marker = new google.maps.Marker({
-                            position: {lat: user_m_lat[index1], lng:fixed_lng},
+                            position: {lat: user_m_lat[index1].toString(), lng:fixed_lng.toString()},
                             map: map,
                             animation: google.maps.Animation.DROP,
-                            title: user_m_descr
+                            title: element.toString()
                         });
                     });
                 }
@@ -325,7 +325,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 4.13<br>";
+    echo "Version: 4.14<br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

@@ -137,14 +137,31 @@
                     center: uluru
                 });
 
-                // create a void marker
-                var marker = new google.maps.Marker({
-                    position: "0,0",
-                    map: null,
-                    animation: google.maps.Animation.DROP
-                }); //init
+                google.maps.event.addListener(map, 'rightclick', function(event) {
+                    placeMarker(event.latLng);
+                });
 
+                function placeMarker(location) {
+                    var marker = new google.maps.Marker({
+                        position: location,
+                        map: map,
+                        animation: google.maps.Animation.DROP
+                    });
+
+                    up_lat_lng = location;
+                }
+
+                /*
                 google.maps.event.addListener(map, "rightclick", function(event) {
+
+                    // create a void marker
+                    var marker = new google.maps.Marker({
+                        position: event.latLng,
+                        map: map,
+                        animation: google.maps.Animation.DROP
+                    }); //init
+
+                    /*
                     // check if we have a marker
                     if(marker.getMap() == null){
                         // no marker, create it
@@ -160,13 +177,13 @@
                         // update storage
                         up_lat_lng = event.latLng;
                     }
-                });
+                    */
             }
 
             // storage AJAX
             function storeThisMarker(){
                 // check with the user
-                if(confirm("Are you sure?")) {
+                if(confirm("Submit the marker?")) {
 
                     // fetch all the values
                     var img_url = document.getElementById("new_marker_url_txt").value;
@@ -207,7 +224,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.7 <br>";
+    echo "Version: 2.9 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

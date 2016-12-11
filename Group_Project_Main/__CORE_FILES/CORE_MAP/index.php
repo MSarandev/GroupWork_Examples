@@ -171,7 +171,10 @@
                         // get the index to use in the other array
                         var index1 = user_m_descr.indexOf(element);
 
-                        addMarker({lat:user_m_lat[index1], lng:user_m_lng[index1]}, "", element);
+                        alert(user_m_lat[index1]);
+                        alert(user_m_lng[index1]);
+
+                        addMarker({user_m_lat[index1],user_m_lng[index1]}, "", element);
                     });
                 }
             }
@@ -321,7 +324,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 4.6 <br>";
+    echo "Version: 4.7 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

@@ -123,33 +123,31 @@
         </div>
     </div>
     <div class="MAIN_DIV" id="div_map_container">
-        <div id="map">
+        <div id="map" onload="initMap()">
         </div>
         <!-- Google Maps loading script -->
         <script>
             // declare var
-            var map;
-            var marker;
-            //var portlethen;
+            var map = new google.maps.Marker();
+            var marker = map = new google.maps.Map(document.getElementById('map'));
+            var location_storage = "Define me";
 
             function initMap() {
-                //portlethen = {lat: 57.061681, lng: -2.1294679999999744};
                 map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 13,
-                    center: {lat:"57.061681", lng:"-2.1294679999999744"}
+                    center: {lat:57.061681, lng:-2.1294679999999744} // Portlethen
                 });
-
-                google.maps.event.addListener(map, 'rightclick', function(event) {
-                    placeMarker(event.latLng);
-                });
+                placeMarker();
             }
 
-            function placeMarker(location) {
+            function placeMarker() {
                 marker = new google.maps.Marker({
-                    position: location,
+                    position: {lat:57.06425694727913, lng:-2.1323776245117188},
                     map: map,
                     animation: google.maps.Animation.DROP
                 });
+
+                location_storage = marker.getPosition();
             }
 
             // storage AJAX
@@ -159,9 +157,6 @@
                     // fetch all the values
                     var img_url = document.getElementById("new_marker_url_txt").value;
                     var des_txt = document.getElementById("new_marker_descr_txt").value;
-                    var latLng = marker.getPosition();
-
-                    alert(latLng);
 
                     $.ajax({
                         // what is the conn type
@@ -173,7 +168,7 @@
                             action: 'store_a_marker',
                             img_u: img_url,
                             des_txt: des_txt,
-                            coor: latLng
+                            coor: location_storage
                         },
                         // show the thing below on success
                         success: function (response) {
@@ -198,7 +193,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.20 <br>";
+    echo "Version: 2.30 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

@@ -168,17 +168,15 @@
                     user_m_descr.forEach(function(element){
                         // get the index to use in the other array
                         var index1 = user_m_descr.indexOf(element);
-
-                        alert(user_m_lat[index1]);
-                        alert(user_m_lng[index1]);
-
                         var fixed_lng = user_m_lng[index1].substr(0, user_m_lng[index1].length -1);
-
-                        alert(fixed_lng);
 
                         var location = {lat:user_m_lat[index1], lng:fixed_lng};
 
-                        addMarker(location, "", element);
+                        alert(location);
+
+
+                        var loc1 = user_m_lat[index1].toString() + ", " + fixed_lng;
+                        addMarker(loc1, "", element);
                     });
                 }
             }
@@ -328,7 +326,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 4.11<br>";
+    echo "Version: 4.12<br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

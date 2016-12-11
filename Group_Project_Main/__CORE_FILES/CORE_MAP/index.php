@@ -128,6 +128,18 @@
         </div>
         <!-- Google Maps loading script -->
         <script>
+            // grab all the markers from the db
+
+            //define the vars, to avoid undefined errors
+            var user_m_descr = [];
+            var user_m_img = [];
+            var user_m_coor = [];
+
+            <?php
+                // the script below echos an array of markers
+                include("../CORE SCRIPTS/markersFromDB.php");
+            ?>
+
             // declare var
             var map  = new google.maps.Map(document.getElementById('map'));
             var marker = new google.maps.Marker();
@@ -143,8 +155,21 @@
                 map.addListener('rightclick', function(event) {
                     addMarker(event.latLng, "", "User submitted");
                     location_storage = event.latLng.toString();
-                    alert(location_storage);
                 });
+
+                // on map init, check if any user submitted markers are avail.
+                if(user_m_descr.length != 0 &&
+                    user_m_img.length != 0 &&
+                    user_m_coor.length != 0){
+
+                    // add the markers to the map
+                    user_m_descr.forEach(function(element){
+                        // get the index to use in the other array
+                        var index1 = user_m_descr.indexOf(element);
+
+                        addMarker(user_m_coor[index1], "", element);
+                    });
+                }
             }
 
             function addMarker(location, label_t, info_t) {
@@ -249,7 +274,6 @@
                 }
             }
 
-
             // storage AJAX
             function storeThisMarker(){
                 // check with the user
@@ -293,7 +317,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 3.23 <br>";
+    echo "Version: 4.1 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

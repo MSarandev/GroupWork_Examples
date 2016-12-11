@@ -41,16 +41,16 @@ if(mysqli_query($db, $sql)){
             array_push($array_coor, $coor);
         }
 
-        foreach($array_descr as $i => $value){
-            echo "user_m_descr.push('".$i."')";
+        foreach($array_descr as $i){
+            echo "user_m_descr.push('".$i."');";
         }
 
-        foreach($array_img as $i => $value){
-            echo "user_m_img.push('".$i."')";
+        foreach($array_img as $i){
+            echo "user_m_img.push('".$i."');";
         }
 
-        foreach($array_coor as $i => $value){
-            echo "user_m_coor.push('".$i."')";
+        foreach($array_coor as $i){
+            echo "user_m_coor.push('".$i."');";
         }
     }else{
         // NO DATA

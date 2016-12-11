@@ -149,7 +149,10 @@
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 13,
-                    center: {lat:57.061681, lng:-2.1294679999999744} // Portlethen
+                    center: {lat:57.061681, lng:-2.1294679999999744},
+                    scaleControl: true,
+                    streetViewControl: true,
+                    rotateControl: true
                 });
 
                 // This event listener will call addMarker() when the map is clicked.
@@ -323,7 +326,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 4.20<br>";
+    echo "Version: 4.21<br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

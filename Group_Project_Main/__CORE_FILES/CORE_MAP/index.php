@@ -149,7 +149,8 @@
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 13,
-                    center: {lat:57.061681, lng:-2.1294679999999744} // Portlethen
+                    //center: {lat:57.061681, lng:-2.1294679999999744} // Portlethen
+                    center: "57.061681, lng:-2.1294679999999744"
                 });
 
                 // This event listener will call addMarker() when the map is clicked.
@@ -166,16 +167,10 @@
 
                     // add the markers to the map
                     for (var i = 0; i < user_m_descr.length; i++) {
-                        alert(user_m_lng[i].toString());
-
                         var fixed_lng = user_m_lng[i].substr(0, user_m_lng[i].length -1);
 
-
-                        alert(user_m_lat[i].toString() + "\n" + fixed_lng.toString() + "\n" +
-                        user_m_descr[i].toString());
-
                         var marker = new google.maps.Marker({
-                            position: {lat: user_m_lat[i].toString(), lng:fixed_lng.toString()},
+                            position: user_m_lat[i].toString() + ", " + fixed_lng.toString(),
                             map: map,
                             animation: google.maps.Animation.DROP,
                             title: user_m_descr[i].toString()
@@ -329,7 +324,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 4.18<br>";
+    echo "Version: 4.19<br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

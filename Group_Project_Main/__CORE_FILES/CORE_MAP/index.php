@@ -161,7 +161,10 @@
                 // on map init, check if any user submitted markers are avail.
                 if(user_m_descr.length != 0 &&
                     user_m_img.length != 0 &&
-                    user_m_coor.length != 0){
+                    user_m_lat.length != 0 &&
+                    user_m_lng.length != 0){
+
+                    alert("YAY");
 
                     // add the markers to the map
                     user_m_descr.forEach(function(element){
@@ -318,7 +321,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 4.4 <br>";
+    echo "Version: 4.5 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

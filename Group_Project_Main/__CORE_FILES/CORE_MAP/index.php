@@ -23,7 +23,7 @@
     <!-- JQUERY IMPORT -->
     <!-- VERY IMPORTANT -->
 </head>
-<body onload="initMap()">
+<body>
 <div class="HEADER_DIV" id="div_header_slot">
     <!-- DYNAMIC HEADER CODE HERE -->
     <?php
@@ -136,7 +136,7 @@
                 //portlethen = {lat: 57.061681, lng: -2.1294679999999744};
                 map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 13,
-                    center: {lat: 57.061681, lng: -2.1294679999999744}
+                    center: ("57.061681, -2.1294679999999744")
                 });
 
                 google.maps.event.addListener(map, 'rightclick', function(event) {
@@ -160,6 +160,8 @@
                     var img_url = document.getElementById("new_marker_url_txt").value;
                     var des_txt = document.getElementById("new_marker_descr_txt").value;
                     var latLng = marker.getPosition();
+
+                    alert(latLng);
 
                     $.ajax({
                         // what is the conn type
@@ -196,7 +198,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.17 <br>";
+    echo "Version: 2.18 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

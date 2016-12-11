@@ -156,6 +156,9 @@
                     label: label_t,
                     title: info_t
                 });
+                if(location != null){
+                    location_storage = location;
+                }
             }
 
             function clearMarkers() {
@@ -294,7 +297,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 3.21 <br>";
+    echo "Version: 3.22 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

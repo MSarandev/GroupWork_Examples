@@ -148,7 +148,7 @@
                     });
 
                     // set the var
-                    location_storage = event.latLng;
+                    location_storage = marker.getPosition();
                 });
             }
 
@@ -195,7 +195,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.36 <br>";
+    echo "Version: 2.37 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

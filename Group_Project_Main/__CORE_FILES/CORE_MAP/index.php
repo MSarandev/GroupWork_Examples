@@ -172,7 +172,11 @@
                         alert(user_m_lat[index1]);
                         alert(user_m_lng[index1]);
 
-                        var location = {lat:user_m_lat[index1], lng:user_m_lng[index1]};
+                        var fixed_lng = user_m_lng[index1].substr(0, user_m_lng[index1].length -1);
+
+                        alert(fixed_lng);
+
+                        var location = {lat:user_m_lat[index1], lng:fixed_lng};
 
                         addMarker(location, "", element);
                     });
@@ -324,7 +328,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 4.10<br>";
+    echo "Version: 4.11<br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>

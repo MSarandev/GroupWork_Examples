@@ -133,10 +133,13 @@
             var location_storage = "Define me";
 
             function initMap() {
-                map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 13,
-                    center: {lat:57.061681, lng:-2.1294679999999744} // Portlethen
-                });
+                //map = new google.maps.Map(document.getElementById('map'), {
+                //    zoom: 13,
+                //    center: {lat:57.061681, lng:-2.1294679999999744} // Portlethen
+                //});
+
+                map.setZoom(zoom:13);
+                map.setCenter({lat:57.061681, lng:-2.1294679999999744});
 
                 marker = new google.maps.Marker({
                     position: {lat:57.06425694727913, lng:-2.1323776245117188},
@@ -192,7 +195,7 @@
 <div class="FOOTER_DIV" id="div_footer_slot">
     <!-- DYNAMIC FOOTER CODE HERE -->
     <?php
-    echo "Version: 2.38 <br>";
+    echo "Version: 2.39 <br>";
     include("../__CORE_DOM_Elements/footer.php");
     ?>
 </div>
